@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "remote": "https://github.com/apollogens/sbertech.git",
+  "branch": "main",
+  "verified_commit": "cc8a707110ac6a14d49bb5aa595595ca45ee052e",
+  "checkout": "C:\\Users\\apollo\\AppData\\Local\\Temp\\nonton-github-verification-1eca71h6",
+  "selective_lfs_include": "bundles/equal4-rc1/*.txt,reports/remediation/original_release.zip,consolidation/nonton_consolidated_verified.zip",
+  "source_files_byte_identical": 20,
+  "tests": "222 passed",
+  "model_bundle_ids": [
+    "9267e65f0ca9e62b636d185fe7731a71b4e24a8b5110fa830701d5beb0d0f50a",
+    "ed3f58bc05c50a05080734bf81b332091c3bffc3bb87b589fb561b4676c437de"
+  ],
+  "remote_archive_sha256": "d2306a62b61e7817ccaaa7c2036e4d6019995df72e7a737dc16b73f3a7466803",
+  "actual_forecasts_lf_normalized_byte_identical": true,
+  "operations": [
+    {
+      "label": "clone",
+      "elapsed_seconds": 8.91990629999782,
+      "exit_code": 0
+    },
+    {
+      "label": "revision",
+      "elapsed_seconds": 0.022599899995839223,
+      "exit_code": 0
+    },
+    {
+      "label": "remote",
+      "elapsed_seconds": 0.6121726000128547,
+      "exit_code": 0
+    },
+    {
+      "label": "lfs",
+      "elapsed_seconds": 54.23497010000574,
+      "exit_code": 0
+    },
+    {
+      "label": "tests",
+      "elapsed_seconds": 45.901567200009595,
+      "exit_code": 0
+    },
+    {
+      "label": "models",
+      "elapsed_seconds": 3.2572060999955283,
+      "exit_code": 0
+    },
+    {
+      "label": "incumbent",
+      "elapsed_seconds": 11.746453100000508,
+      "exit_code": 0
+    },
+    {
+      "label": "ensemble",
+      "elapsed_seconds": 22.52170299999125,
+      "exit_code": 0
+    }
+  ],
+  "scope": "Fresh remote checkout; existing verified dev interpreter; private CSV supplied from original workspace, not repository. Full historical LFS corpus was not downloaded again.",
+  "forecasts": {
+    "incumbent": {
+      "rows": 562496,
+      "output_sha256": "ec1423820e9d13689f38b5d9dd2d82b2eb067f7e06fe123fecab9898991d98c3",
+      "reference_lf_sha256": "ec1423820e9d13689f38b5d9dd2d82b2eb067f7e06fe123fecab9898991d98c3",
+      "input_sales_sha256": "925fa8b15ca668b0213e038a5250e289c2d6e76b4f821fe33cf875e3abd23b2a",
+      "input_stock_sha256": "2570c8121ecfadeaa72d98000c4c94ed6745ab4b04e3ae337053efe1f5fddf49"
+    },
+    "ensemble": {
+      "rows": 562496,
+      "output_sha256": "2d03b46160c62d33f540259b5f4aba94a932e752c10a48ad8efeb77b9bf159a9",
+      "reference_lf_sha256": "2d03b46160c62d33f540259b5f4aba94a932e752c10a48ad8efeb77b9bf159a9",
+      "input_sales_sha256": "925fa8b15ca668b0213e038a5250e289c2d6e76b4f821fe33cf875e3abd23b2a",
+      "input_stock_sha256": "2570c8121ecfadeaa72d98000c4c94ed6745ab4b04e3ae337053efe1f5fddf49"
+    }
+  }
+}

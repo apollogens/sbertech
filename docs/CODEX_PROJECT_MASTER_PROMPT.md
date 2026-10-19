@@ -95,10 +95,10 @@ Default tests cover tests plus the independent backend fixture. The larger expli
 Training is supported for the incumbent by the CLI. The following requires a prepared private cache and frozen selection. Do not run it just to verify documentation, and use a new output directory:
 
 ```powershell
-.venv_consolidated/Scripts/python.exe -m src.cli train --cache-dir cache --selection reports/selection_frozen.json --output-dir model/new-incumbent
+.venv_consolidated/Scripts/python.exe -m src.cli train --cache-dir cache --selection reports/selection_frozen.json --output-dir bundles/incumbent-next
 ```
 
-Historical component fitting remains research code in `integration/corrected_models.py` and `integration/train_experimental_final.py`; do not advertise a generic production component trainer that does not exist. Training entrypoints were exercised with small real fixtures; full retraining was not repeated during software consolidation.
+`bundles/incumbent-next` is an intentionally new output directory, not a claimed existing model. Keep training outputs outside the active `model/` and `bundles/equal4-rc1` directories, including their subdirectories: Docker copies the selected bundle recursively. Historical component fitting remains research code in `integration/corrected_models.py` and `integration/train_experimental_final.py`; do not advertise a generic production component trainer that does not exist. Training entrypoints were exercised with small real fixtures; full retraining was not repeated during software consolidation.
 
 These verified workflows require the ignored original-machine 180-day input fixtures. Provision compatible private CSV on a new checkout; use their actual paths instead. `cache/panel.npz` and historical weights/references are additionally needed for backtest. Backtest is expensive; inspect prior results before rerunning.
 
