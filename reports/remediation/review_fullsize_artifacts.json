@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "rows": 562496,
+  "dates": [
+    "2026-08-01",
+    "2026-10-03"
+  ],
+  "grid_exact": true,
+  "model_id": "9267e65f0ca9e62b636d185fe7731a71b4e24a8b5110fa830701d5beb0d0f50a",
+  "http_artifact_hashes": {
+    "first": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1",
+    "second": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1",
+    "during": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1",
+    "cached": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1"
+  },
+  "actual_input_hashes_match": true,
+  "api_offline_max_abs": 0.0,
+  "api_submission_max_abs": 4.9918806865889565e-09,
+  "submission_sha256": "57cf81142dc312c87230a02d48d9d9714263d50f454dfb8470cd275a872abf0d",
+  "probe_reported_peak_server_tree_rss": 3278405632,
+  "probe_reported_post_seconds": 35.68345709999994,
+  "probe_reported_replacement_seconds": 36.102847199999815,
+  "concurrency_failure_artifacts_verified": true,
+  "limitation": "Reviewer пересчитал настоящие HTTP outputs и сверил input/model hashes; runtime/RSS измерил отдельный выполнявшийся probe, не повторный reviewer request"
+}

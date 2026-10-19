@@ -1,0 +1,290 @@
+{
+  "research\\scoring_audit\\analysis_run.json": {
+    "bytes": 483,
+    "sha256": "abfe396904261339b306ba45c450fd6ef7c84b6960c7c56dc8058515f7e10d52"
+  },
+  "research\\scoring_audit\\analysis_run.txt": {
+    "bytes": 1142,
+    "sha256": "de3b4d001d0a73e682c0ad59713141dc58d491ffe1d036404ab832911fac3807"
+  },
+  "research\\scoring_audit\\candidate_pools.json": {
+    "bytes": 76988,
+    "sha256": "89021af5640be7dd6e96b390b2984a200db5ab87c420c52056503c6fbc57ed07"
+  },
+  "research\\scoring_audit\\catalog_common_survivor_metrics.csv": {
+    "bytes": 4592,
+    "sha256": "3041fb54bc4f80dcfd68038508abfaee25e4edbfb97d9c33a4299d45b953de10"
+  },
+  "research\\scoring_audit\\catalog_feature_sensitivity.csv": {
+    "bytes": 26392,
+    "sha256": "a263eeb7f37851828947d84ce5f16745a04a4db8a04aee198de03965d135528b"
+  },
+  "research\\scoring_audit\\catalog_first_observed.csv": {
+    "bytes": 1051218,
+    "sha256": "4e79fba00487314d0862a152a16d052183607a41dceff049faabd5d07421543c"
+  },
+  "research\\scoring_audit\\catalog_metric_sensitivity.csv": {
+    "bytes": 95837,
+    "sha256": "83facec891b1b8d7bf6bb5788f7f2c4fe7a3e54e670a4697b4b4803299c806f6"
+  },
+  "research\\scoring_audit\\catalog_origin_summary.csv": {
+    "bytes": 1012,
+    "sha256": "514742c348a456e0c88d12426f924878fe93936389b2fed07612abdb2ac55e6c"
+  },
+  "research\\scoring_audit\\catalog_provenance_audit.md": {
+    "bytes": 10977,
+    "sha256": "89c91c7babc0a8527121940aea6bb172f3181ee8b1dce84efea15d7d108ce863"
+  },
+  "research\\scoring_audit\\catalog_selection_audit.py": {
+    "bytes": 8009,
+    "sha256": "9659845f0af2b4eca13f4880ff063acc2e1a9160126cadfb96944e81d1c85d79"
+  },
+  "research\\scoring_audit\\catalog_selection_result.json": {
+    "bytes": 22095,
+    "sha256": "d02b37b0f34c3ca2e1522e3f9469283f380504cea564aa136fcd3d39b91a1ac9"
+  },
+  "research\\scoring_audit\\catalog_survivor_sensitivity.py": {
+    "bytes": 1549,
+    "sha256": "4b20a100155a27251298be6bb11039a169cf7bb26e4c27245d7ff02486dc8c00"
+  },
+  "research\\scoring_audit\\catalog_training_features.py": {
+    "bytes": 2239,
+    "sha256": "6956207c71254d60dea2107ee6aa0652b08eb419b2ea901a4301ff48c9a0ec65"
+  },
+  "research\\scoring_audit\\catalog_training_feature_sensitivity.csv": {
+    "bytes": 15953,
+    "sha256": "a631e50092d2508a4fa93703d1c4168bb5c059e570fbef55decfeac38a0fcb3d"
+  },
+  "research\\scoring_audit\\catalog_training_origin_summary.csv": {
+    "bytes": 3240,
+    "sha256": "e158eda2b8decb8fb8804760c09bb9e8e361083cc5f03992e16e6d80fa474e82"
+  },
+  "research\\scoring_audit\\catalog_unknown_prediction_mass.csv": {
+    "bytes": 1819,
+    "sha256": "c933c7dff47efec569231d28c44f054c2a1a52ffe9de8c13ee36838a0d6e81f2"
+  },
+  "research\\scoring_audit\\delivery_validation.json": {
+    "bytes": 522,
+    "sha256": "8161eb4138e6334882c43ab856d8a503c5144fd35e567e9ba3ec008355a3a5bf"
+  },
+  "research\\scoring_audit\\development_group_contributions.csv": {
+    "bytes": 2830,
+    "sha256": "955ba1037522ea8e5a85eb0c3eb4dcbe731cc5e52b25a1a6e60b3edc68b1381e"
+  },
+  "research\\scoring_audit\\development_mean_metrics.csv": {
+    "bytes": 2761,
+    "sha256": "bb2f87145bee5f3d1fa4f9f5ff383ff7697309bbcbf3559d4e92c80c5575a48b"
+  },
+  "research\\scoring_audit\\development_minmax_summary.csv": {
+    "bytes": 7261,
+    "sha256": "9a123b9e580ecbbc2e95e63392d4d28751b8ec02be7239d90189c58b7bc61631"
+  },
+  "research\\scoring_audit\\development_rank_scenario_winners.csv": {
+    "bytes": 141008,
+    "sha256": "495cd1f008b6c40632a8f3594acdcf106e4beaecb9dae33ea00b865b18bbd22a"
+  },
+  "research\\scoring_audit\\development_rank_summary.csv": {
+    "bytes": 1860537,
+    "sha256": "150017bc462d86dcd279fbc6e3c04a99ae6c7161cb5c8e0507e5df2b0af8650d"
+  },
+  "research\\scoring_audit\\finalize_audit_report.py": {
+    "bytes": 25967,
+    "sha256": "73d7eee63ed329ead4fb0714f939313a8d43f1ae499eea056103a5129bab971f"
+  },
+  "research\\scoring_audit\\final_recommendation_ru.md": {
+    "bytes": 19646,
+    "sha256": "7806abf29cd3833fc0abf0faad7e9f576928b3b6536a31dc4af44c6d4aed2fd6"
+  },
+  "research\\scoring_audit\\focus_group_contributions.csv": {
+    "bytes": 16128,
+    "sha256": "392d80587b7aef16df1a194d3b71a40cd10273c54f908f4aaa25cb31740c9b9a"
+  },
+  "research\\scoring_audit\\focus_long_horizon_deltas.csv": {
+    "bytes": 443,
+    "sha256": "569c40de13d6b51d562b0119265c9f91c3832fc44b388c01119542f6999e6a09"
+  },
+  "research\\scoring_audit\\focus_objective_comparison.csv": {
+    "bytes": 455,
+    "sha256": "8e42e02bff5a7454b97994e5ced10ba05519fd03e871723ca035c0dcbe52bae2"
+  },
+  "research\\scoring_audit\\focus_per_fold_deltas.csv": {
+    "bytes": 1829,
+    "sha256": "44d66b3c6b9cf4154504641b9d30063b4c226ba59106d43ab0fe4a4a5bbc9f28"
+  },
+  "research\\scoring_audit\\focus_per_fold_rank.csv": {
+    "bytes": 1113,
+    "sha256": "380abcda12f23bbd17336830ad2811ed5d7182486efe82a74c8902f20cc5f093"
+  },
+  "research\\scoring_audit\\focus_rank_scenarios.csv": {
+    "bytes": 56902,
+    "sha256": "76da0d9e6bdf9f179d0b111af13e04a4347cdd096d384a2b6fe26704470dcd40"
+  },
+  "research\\scoring_audit\\focus_rank_sensitivity_range.csv": {
+    "bytes": 262,
+    "sha256": "6267b099bdba7ef1ef174add82b6fcced8836d63edcfa977cb2a716514cab45f"
+  },
+  "research\\scoring_audit\\focus_series_differences.csv.gz": {
+    "bytes": 3852934,
+    "sha256": "d2d1a234c68d7a752dacfb5f21f79d01faa09402f57473a85dafc0ee40ba8c15"
+  },
+  "research\\scoring_audit\\horizon_candidate_metrics.csv": {
+    "bytes": 67410,
+    "sha256": "7026fab98ad2ac5e722f57e0c831de62b3294cff21a7c4febbba2f397b049bf1"
+  },
+  "research\\scoring_audit\\independent_verification.md": {
+    "bytes": 4443,
+    "sha256": "b8bc105686736f66af7b9f82df9bd64dcd1b841ad719609db969159371587c61"
+  },
+  "research\\scoring_audit\\metric_drivers.csv": {
+    "bytes": 9391,
+    "sha256": "b0f11223cefdbca3521b878cc536861d57ce5db8d91430da74c2d526dccc09cc"
+  },
+  "research\\scoring_audit\\minmax_sensitivity.csv": {
+    "bytes": 121551,
+    "sha256": "ddbf9b0dbacb582bedbaf2b1b0bf55a46b282654aced902f3f2e7c5e6f9d8185"
+  },
+  "research\\scoring_audit\\normalization_sensitivity.md": {
+    "bytes": 12074,
+    "sha256": "8977e7396db4624664cf20018e554e3fd1938b22b04d17b5d0c6dc40d9b43d4e"
+  },
+  "research\\scoring_audit\\paired_incumbent_differences.csv": {
+    "bytes": 56652,
+    "sha256": "d2092d36f61377e3d786d09cd207509367a2255bb7f3b4cf5875e73a954278e8"
+  },
+  "research\\scoring_audit\\pareto_dominance_pairs.csv": {
+    "bytes": 20611,
+    "sha256": "986c83a6107ccc54b802de6137350f1262ce6a23d9887ce2c9e530d2181ee498"
+  },
+  "research\\scoring_audit\\pareto_frontier.csv": {
+    "bytes": 44289,
+    "sha256": "371db45ffbc71ae31b918980a550c402416cf8b777e1bd62de3acc3856a2be14"
+  },
+  "research\\scoring_audit\\per_fold_candidate_metrics.csv": {
+    "bytes": 37932,
+    "sha256": "a2565e5d52e44ec48718d8f83a043cac22c8f2548fc646c0aa7546757b501f72"
+  },
+  "research\\scoring_audit\\prediction_aliases.csv": {
+    "bytes": 3609,
+    "sha256": "895919613ea003324ed0707ced27ec63cf1255be620f5848225b87ed9166cd94"
+  },
+  "research\\scoring_audit\\prediction_inventory.csv": {
+    "bytes": 32242,
+    "sha256": "3238d30886250811b03815d57735565b84cd18bdfe75cb01b31a0c19027ac5fb"
+  },
+  "research\\scoring_audit\\README.md": {
+    "bytes": 2390,
+    "sha256": "5930e3254135d1b1b1cfd93dd4a1b12511298c912d82af705673fa6aa479d3ee"
+  },
+  "research\\scoring_audit\\reviewer_a_rank_crosscheck.json": {
+    "bytes": 5570,
+    "sha256": "b20f792ba15c2defec294f1583cd19caafa6c3da2bf07fe52b7f76b172208be4"
+  },
+  "research\\scoring_audit\\reviewer_a_rank_crosscheck.md": {
+    "bytes": 5324,
+    "sha256": "0b88b5df66e25054797320b5f16d51c1dd2cb5ec99e06771113966fb4c6e30c4"
+  },
+  "research\\scoring_audit\\reviewer_a_rank_crosscheck.py": {
+    "bytes": 5486,
+    "sha256": "7a9371f59e2bd1e354b572fe0116fa0a5f0fccf8acb55a0a4b3b4030b60ed0c6"
+  },
+  "research\\scoring_audit\\reviewer_a_score_crosscheck.csv": {
+    "bytes": 290969,
+    "sha256": "5c1ec3784c7d4ffd52eff0253dfe6f47eb0ba5f99909d7d92d049ef30d1ae54c"
+  },
+  "research\\scoring_audit\\reviewer_a_score_development_means.csv": {
+    "bytes": 19024,
+    "sha256": "af4c73dc2799b6c4c01c0485eab9b280dab907b3f69e71dfc3ec51a43a36f691"
+  },
+  "research\\scoring_audit\\reviewer_a_score_winners.csv": {
+    "bytes": 1900,
+    "sha256": "144b1e8d018f2ea06c395a4019e11549b0788cb6a97bb063f9291a530a3ace36"
+  },
+  "research\\scoring_audit\\reviewer_a_scoring.json": {
+    "bytes": 3374,
+    "sha256": "86d1019f67160b5a4cae0806e114939e63393a65886fffa1dc10c200db4cff33"
+  },
+  "research\\scoring_audit\\reviewer_a_scoring.py": {
+    "bytes": 5638,
+    "sha256": "76e19a5886fc116c09ccf658bd772e5a419f49b26cea7efd5c3614e0b75d4283"
+  },
+  "research\\scoring_audit\\reviewer_b_paired_differences.csv": {
+    "bytes": 4420,
+    "sha256": "5e2d5633d0e2b0be745d445986e2e90af55f5cf64b27abd1e10b9a24a2c8b9b2"
+  },
+  "research\\scoring_audit\\reviewer_b_selection.md": {
+    "bytes": 9958,
+    "sha256": "c028bc0ed279bb97f90c96b86fb5973f466c5ef163c3c0101f654a58560030fc"
+  },
+  "research\\scoring_audit\\reviewer_b_window_overlap.csv": {
+    "bytes": 289,
+    "sha256": "0c33baf41c917200411b63809b5e6afcfd71a9edc5d177f48777a0f7e00984f3"
+  },
+  "research\\scoring_audit\\reviewer_c_integrity.md": {
+    "bytes": 5254,
+    "sha256": "02fb9d1ccf412a33aa80bc961d8a5a49a585ce947d9bd38ededb2dda0ed00ef9"
+  },
+  "research\\scoring_audit\\reviewer_c_metrics.csv": {
+    "bytes": 68619,
+    "sha256": "dde663bb14d22cf0850c26adf50b2eb8b111e2025ae04751479273af12ad0820"
+  },
+  "research\\scoring_audit\\reviewer_c_release_hashes.csv": {
+    "bytes": 72596,
+    "sha256": "95adf4f94e168ed34c9493c2715356f1eaa13ca84271a7422d94756a087c8f0d"
+  },
+  "research\\scoring_audit\\reviewer_c_run.txt": {
+    "bytes": 16070,
+    "sha256": "0beae51f38e6ca31b919e12a15f9b70b7bf11e2acc9753e59b5921262a966137"
+  },
+  "research\\scoring_audit\\reviewer_c_unique_forecasts.csv": {
+    "bytes": 54927,
+    "sha256": "2e50c2b56e5ba529a36dd4ba4c0dd0377a4b26479db43e4f4cecd89cefaefd91"
+  },
+  "research\\scoring_audit\\reviewer_c_verification.json": {
+    "bytes": 1381,
+    "sha256": "c5f5ca90e3411925ee741f39e611d27e7a08d7cf9a6ff10a9f92c15ccedf8c2f"
+  },
+  "research\\scoring_audit\\reviewer_c_verify.py": {
+    "bytes": 7604,
+    "sha256": "adbcbcb8efed7378523832ca115375676a85a411b6aa30c6e4bb720ea5fc6e2e"
+  },
+  "research\\scoring_audit\\revised_model_selection_policy.md": {
+    "bytes": 9671,
+    "sha256": "d5135450b80a354f70ed5a0118f55eb2fef0bdb6479948f0d391d49d4ad2a985"
+  },
+  "research\\scoring_audit\\root_reviewer_c_crosscheck.json": {
+    "bytes": 166,
+    "sha256": "f35b99c957124423a2748d2a9c9494f872694ddb7918c9cd6d0b638498044098"
+  },
+  "research\\scoring_audit\\run_scoring_analysis.py": {
+    "bytes": 14239,
+    "sha256": "597e6968d444503e4fea7ea8b11f4fbb67f7a1da692059760b9ed806a9a0a22c"
+  },
+  "research\\scoring_audit\\scoring_objective_audit.md": {
+    "bytes": 12260,
+    "sha256": "46d19eb603d76bcd32a112f74129df3bae3a6f8ea248fdf8905080833cb8b9b9"
+  },
+  "research\\scoring_audit\\segment_candidate_metrics.csv": {
+    "bytes": 338454,
+    "sha256": "76c6598936a538437c30850c99d901d3ece814e3352b8d35f9d7fd98b1ce241f"
+  },
+  "research\\scoring_audit\\summarize_scoring_audit.py": {
+    "bytes": 14918,
+    "sha256": "c9a5e718f335d006078c62875468eb3ab58032f1685ff864421b290ef31d20a0"
+  },
+  "research\\scoring_audit\\summary_run.txt": {
+    "bytes": 19402,
+    "sha256": "7dfdc234d0e000e64e13abfaf5149fbfd3dbeb9a5564c30a0d85969963bf356d"
+  },
+  "research\\scoring_audit\\tradeoff_diagnostics.md": {
+    "bytes": 5451,
+    "sha256": "7b82adbe39008fb69e94883b760edd1850576ecc6143b6aecfed2ef02a5e104d"
+  },
+  "research\\scoring_audit\\validate_audit_delivery.py": {
+    "bytes": 3575,
+    "sha256": "ece751439b070aac9baa4f0e97452df7e70e5fe4f2b76ac4ceed4388c3f5cbca"
+  },
+  "research\\scoring_audit\\weighted_rank_sensitivity.csv": {
+    "bytes": 19940554,
+    "sha256": "d4dd2611c0aae74df87ed98482a7766d55ef430f4a7402ae88e9d49d58e612ad"
+  }
+}

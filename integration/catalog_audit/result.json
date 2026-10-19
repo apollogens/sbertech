@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    {
+      "source": "sales",
+      "path": "C:\\Users\\apollo\\Desktop\\выборка\\sales_dataset_hakaton_train.csv",
+      "rows": 1492370,
+      "sha256": "34fe562dc1e0742aac1387d71ae20711e2f533fb56bbf34ce6363318e59a8e6b"
+    },
+    {
+      "source": "stock",
+      "path": "C:\\Users\\apollo\\Desktop\\выборка\\stock_dataset_hakaton_train.csv",
+      "rows": 6153988,
+      "sha256": "d744cac7f82fb14ec42e12818f6257c07392ea315f050355d357d3865ec8b166"
+    }
+  ],
+  "prior_first_observed_matches": true,
+  "distinct_origins": 25,
+  "fixed_output_pairs": 8789,
+  "known_id_hash_collisions": 0,
+  "fits_performed": 0
+}

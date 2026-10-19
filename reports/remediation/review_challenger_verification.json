@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "rows": 85,
+  "origins": [
+    "2025-09-14",
+    "2025-11-17",
+    "2026-01-20",
+    "2026-03-25",
+    "2026-05-28"
+  ],
+  "candidates": [
+    "current_tweedie_z0.25",
+    "tweedie_raw",
+    "lgb_l1",
+    "lgb_l1_z0.25",
+    "two_part_gamma",
+    "two_part_gamma_z0.25",
+    "sba_official",
+    "tsb_official",
+    "adida_official",
+    "mean28",
+    "mean90",
+    "seasonal56",
+    "tsb",
+    "last",
+    "zero",
+    "lgb_l2",
+    "lgb_l2_z0.25"
+  ],
+  "all_prediction_hashes_valid": true,
+  "max_metric_or_score_difference": 5.684341886080802e-14,
+  "official_local_rank_order": [
+    "two_part_gamma_z0.25",
+    "lgb_l2_z0.25",
+    "current_tweedie_z0.25",
+    "mean28",
+    "lgb_l1",
+    "lgb_l1_z0.25",
+    "mean90",
+    "tsb_official",
+    "tsb",
+    "seasonal56",
+    "adida_official",
+    "last",
+    "sba_official",
+    "two_part_gamma",
+    "tweedie_raw",
+    "lgb_l2",
+    "zero"
+  ],
+  "seconds": 8.802906799999619,
+  "limitations": "Локальные ranks на фиксированных кандидатах; terminal diagnostic исключён из summary; не истинный leaderboard, не доказательство независимых репликаций"
+}

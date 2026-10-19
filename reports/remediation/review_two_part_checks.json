@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "tiny_fits": 4,
+  "trees_per_model": 2,
+  "training_rows": 128,
+  "positive_training_rows": 38,
+  "labels_known_by_cutoff": true,
+  "altered_future_identical_weights": true,
+  "altered_future_identical_prediction": true,
+  "product_identity_exact": true,
+  "gamma_positive_only_code_review": true,
+  "rejected_constant_training_targets": [
+    0.0,
+    1.0
+  ],
+  "note": "Проверка корректности; не доказательство качества или calibration"
+}

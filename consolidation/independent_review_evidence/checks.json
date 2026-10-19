@@ -1,0 +1,35 @@
+{
+  "protected_files": {
+    "verified": 403,
+    "npz": 387
+  },
+  "cleanup": {
+    "archived_originals_verified": 10,
+    "physically_removed": 6
+  },
+  "snapshot": {
+    "members": 1003,
+    "source_members_verified": 7
+  },
+  "rollback_evidence": {
+    "extracted_members_present": 1003,
+    "recorded_replay": {
+      "status": "passed",
+      "rows": 562496,
+      "max_abs_difference": 3.552713678800501e-15
+    }
+  },
+  ".venv_runtime_pip_check": "No broken requirements found.",
+  ".venv_consolidated_pip_check": "No broken requirements found.",
+  "ruff": "passed canonical src/app scope; see pyproject.toml",
+  "deptry": "passed canonical src/app scope; see pyproject.toml",
+  "real_cli": {
+    "rows": 562496,
+    "reference_byte_identical": false,
+    "reference_normalized_lf_byte_identical": true,
+    "sha256": "ec1423820e9d13689f38b5d9dd2d82b2eb067f7e06fe123fecab9898991d98c3",
+    "reference_sha256": "354ae527536640ce4e56012e233f3ead679e616ea51f1d2a6f423014b681377a",
+    "environment": ".venv_runtime",
+    "serialization_change": "CRLF to explicit LF only"
+  }
+}

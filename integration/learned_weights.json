@@ -1,0 +1,24 @@
+{
+  "selected": "DA50:P1",
+  "fit_origins": [
+    "2025-09-14",
+    "2025-11-17"
+  ],
+  "evaluation_origins": [
+    "2026-01-20",
+    "2026-03-25"
+  ],
+  "objective": "mean minmax(last) executable SMAPE P1",
+  "early_scores": {
+    "DA25:P1": 0.838323085938133,
+    "DA50:P1": 0.8373641685881896,
+    "DA75:P1": 0.837634335030369
+  },
+  "weights": {
+    "daily": 0.5,
+    "weekly": 0.0,
+    "shape": 0.0,
+    "article": 0.5
+  },
+  "caveat": "Chronological selection on reused windows; not new untouched test"
+}

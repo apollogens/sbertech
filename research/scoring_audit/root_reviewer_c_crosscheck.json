@@ -1,0 +1,11 @@
+{
+  "compared": 119,
+  "max_errors": {
+    "smape": 0.0,
+    "wape": 0.0,
+    "rmse": 0.0,
+    "bias": 0.0,
+    "rmsle": 0.0,
+    "smape_written": 0.0
+  }
+}

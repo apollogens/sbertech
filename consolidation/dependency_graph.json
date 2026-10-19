@@ -1,0 +1,1343 @@
+{
+  "status": "read_only_pre_merge_audit",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "installed": {
+    "annotated-doc": "0.0.5",
+    "annotated-types": "0.8.0",
+    "anyio": "4.15.1",
+    "certifi": "2026.7.22",
+    "click": "8.5.0",
+    "colorama": "0.4.6",
+    "contourpy": "1.4.0",
+    "coverage": "7.16.2",
+    "cycler": "0.12.1",
+    "fastapi": "0.146.0",
+    "fonttools": "4.67.0",
+    "h11": "0.16.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "idna": "3.20",
+    "iniconfig": "2.3.1",
+    "kiwisolver": "1.5.1",
+    "lightgbm": "4.7.0",
+    "matplotlib": "3.11.2",
+    "narwhals": "2.27.1",
+    "numpy": "2.5.4",
+    "opentelemetry-api": "1.45.1",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "pillow": "13.0.0",
+    "pip": "25.0.1",
+    "pluggy": "1.7.0",
+    "psutil": "7.2.2",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "pygments": "2.21.0",
+    "pyparsing": "3.3.3",
+    "pytest": "9.1.1",
+    "python-dateutil": "2.9.0.post0",
+    "python-multipart": "0.0.32",
+    "scipy": "1.18.1",
+    "six": "1.17.0",
+    "starlette": "1.8.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "tzdata": "2026.5",
+    "uvicorn": "0.54.0"
+  },
+  "original_lock": {
+    "annotated-doc": "0.0.5",
+    "annotated-types": "0.8.0",
+    "anyio": "4.15.1",
+    "certifi": "2026.7.22",
+    "click": "8.5.0",
+    "colorama": "0.4.6",
+    "fastapi": "0.146.0",
+    "h11": "0.16.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "idna": "3.20",
+    "iniconfig": "2.3.1",
+    "lightgbm": "4.7.0",
+    "narwhals": "2.27.1",
+    "numpy": "2.5.4",
+    "opentelemetry-api": "1.45.1",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "pluggy": "1.7.0",
+    "psutil": "7.2.2",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "pygments": "2.21.0",
+    "pytest": "9.1.1",
+    "python-dateutil": "2.9.0.post0",
+    "python-multipart": "0.0.32",
+    "scipy": "1.18.1",
+    "six": "1.17.0",
+    "starlette": "1.8.0",
+    "typing-inspection": "0.4.4",
+    "typing-extensions": "4.16.0",
+    "tzdata": "2026.5",
+    "uvicorn": "0.54.0"
+  },
+  "proposed_runtime_direct": [
+    "numpy",
+    "pandas",
+    "lightgbm",
+    "fastapi",
+    "uvicorn",
+    "python-multipart",
+    "starlette"
+  ],
+  "runtime_windows": {
+    "packages": {
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "click": "8.5.0",
+      "fastapi": "0.146.0",
+      "h11": "0.16.0",
+      "idna": "3.20",
+      "lightgbm": "4.7.0",
+      "narwhals": "2.27.1",
+      "numpy": "2.5.4",
+      "opentelemetry-api": "1.45.1",
+      "pandas": "3.0.6",
+      "pydantic": "2.14.1",
+      "pydantic-core": "2.50.1",
+      "python-dateutil": "2.9.0.post0",
+      "python-multipart": "0.0.32",
+      "scipy": "1.18.1",
+      "six": "1.17.0",
+      "starlette": "1.8.0",
+      "typing-extensions": "4.16.0",
+      "typing-inspection": "0.4.4",
+      "tzdata": "2026.5",
+      "uvicorn": "0.54.0"
+    },
+    "edges": {
+      "starlette": [
+        "anyio",
+        "typing-extensions"
+      ],
+      "typing-extensions": [],
+      "anyio": [
+        "idna",
+        "typing-extensions"
+      ],
+      "idna": [],
+      "python-multipart": [],
+      "uvicorn": [
+        "click",
+        "h11"
+      ],
+      "h11": [],
+      "click": [],
+      "fastapi": [
+        "annotated-doc",
+        "opentelemetry-api",
+        "pydantic",
+        "starlette",
+        "typing-extensions",
+        "typing-inspection"
+      ],
+      "opentelemetry-api": [
+        "typing-extensions"
+      ],
+      "annotated-doc": [],
+      "typing-inspection": [
+        "typing-extensions"
+      ],
+      "pydantic": [
+        "annotated-types",
+        "pydantic-core",
+        "typing-extensions",
+        "typing-inspection"
+      ],
+      "pydantic-core": [
+        "typing-extensions"
+      ],
+      "annotated-types": [],
+      "lightgbm": [
+        "narwhals",
+        "numpy",
+        "scipy"
+      ],
+      "scipy": [
+        "numpy"
+      ],
+      "numpy": [],
+      "narwhals": [],
+      "pandas": [
+        "numpy",
+        "python-dateutil",
+        "tzdata"
+      ],
+      "tzdata": [],
+      "python-dateutil": [
+        "six"
+      ],
+      "six": []
+    }
+  },
+  "runtime_linux": {
+    "packages": {
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "click": "8.5.0",
+      "fastapi": "0.146.0",
+      "h11": "0.16.0",
+      "idna": "3.20",
+      "lightgbm": "4.7.0",
+      "narwhals": "2.27.1",
+      "numpy": "2.5.4",
+      "opentelemetry-api": "1.45.1",
+      "pandas": "3.0.6",
+      "pydantic": "2.14.1",
+      "pydantic-core": "2.50.1",
+      "python-dateutil": "2.9.0.post0",
+      "python-multipart": "0.0.32",
+      "scipy": "1.18.1",
+      "six": "1.17.0",
+      "starlette": "1.8.0",
+      "typing-extensions": "4.16.0",
+      "typing-inspection": "0.4.4",
+      "uvicorn": "0.54.0"
+    },
+    "edges": {
+      "starlette": [
+        "anyio",
+        "typing-extensions"
+      ],
+      "typing-extensions": [],
+      "anyio": [
+        "idna",
+        "typing-extensions"
+      ],
+      "idna": [],
+      "python-multipart": [],
+      "uvicorn": [
+        "click",
+        "h11"
+      ],
+      "h11": [],
+      "click": [],
+      "fastapi": [
+        "annotated-doc",
+        "opentelemetry-api",
+        "pydantic",
+        "starlette",
+        "typing-extensions",
+        "typing-inspection"
+      ],
+      "opentelemetry-api": [
+        "typing-extensions"
+      ],
+      "annotated-doc": [],
+      "typing-inspection": [
+        "typing-extensions"
+      ],
+      "pydantic": [
+        "annotated-types",
+        "pydantic-core",
+        "typing-extensions",
+        "typing-inspection"
+      ],
+      "pydantic-core": [
+        "typing-extensions"
+      ],
+      "annotated-types": [],
+      "lightgbm": [
+        "narwhals",
+        "numpy",
+        "scipy"
+      ],
+      "scipy": [
+        "numpy"
+      ],
+      "numpy": [],
+      "narwhals": [],
+      "pandas": [
+        "numpy",
+        "python-dateutil"
+      ],
+      "python-dateutil": [
+        "six"
+      ],
+      "six": []
+    }
+  },
+  "lock_nonruntime_windows": [
+    "certifi",
+    "colorama",
+    "httpcore",
+    "httpx",
+    "iniconfig",
+    "packaging",
+    "pluggy",
+    "psutil",
+    "pygments",
+    "pytest"
+  ],
+  "first_party_imports": {
+    "src/artifacts.py": {
+      "imports": [
+        "hashlib",
+        "importlib",
+        "json",
+        "pathlib",
+        "platform"
+      ],
+      "dynamic_calls": []
+    },
+    "src/baselines.py": {
+      "imports": [
+        "numpy"
+      ],
+      "dynamic_calls": []
+    },
+    "src/data.py": {
+      "imports": [
+        "dataclasses",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ],
+      "dynamic_calls": []
+    },
+    "src/features.py": {
+      "imports": [
+        "numpy",
+        "pandas"
+      ],
+      "dynamic_calls": []
+    },
+    "src/metrics.py": {
+      "imports": [
+        "collections",
+        "numpy"
+      ],
+      "dynamic_calls": []
+    },
+    "src/predict.py": {
+      "imports": [
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ],
+      "dynamic_calls": []
+    },
+    "src/remediation_models.py": {
+      "imports": [
+        "lightgbm",
+        "numpy",
+        "pandas"
+      ],
+      "dynamic_calls": []
+    },
+    "src/submission.py": {
+      "imports": [
+        "numpy",
+        "pandas",
+        "pathlib"
+      ],
+      "dynamic_calls": []
+    },
+    "src/train.py": {
+      "imports": [
+        "lightgbm"
+      ],
+      "dynamic_calls": []
+    },
+    "src/__init__.py": {
+      "imports": [],
+      "dynamic_calls": []
+    },
+    "app/main.py": {
+      "imports": [
+        "contextlib",
+        "fastapi",
+        "hashlib",
+        "logging",
+        "multiprocessing",
+        "os",
+        "pathlib",
+        "starlette",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "app/predictor.py": {
+      "imports": [
+        "copy",
+        "datetime",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "threading"
+      ],
+      "dynamic_calls": []
+    },
+    "app/validators.py": {
+      "imports": [
+        "csv",
+        "io",
+        "numpy",
+        "pandas",
+        "warnings"
+      ],
+      "dynamic_calls": []
+    },
+    "app/__init__.py": {
+      "imports": [],
+      "dynamic_calls": []
+    },
+    "scripts/architecture_experiments.py": {
+      "imports": [
+        "argparse",
+        "gc",
+        "hashlib",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "scripts",
+        "src",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/audit_inputs.py": {
+      "imports": [
+        "argparse",
+        "collections",
+        "csv",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/backtest_baselines.py": {
+      "imports": [
+        "argparse",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/container_probe.py": {
+      "imports": [
+        "http",
+        "json",
+        "pathlib",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/finalize_remediation_release.py": {
+      "imports": [
+        "json",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys",
+        "xml"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/finalize_reports.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "subprocess",
+        "sys",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/official_score.py": {
+      "imports": [
+        "argparse",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sys",
+        "typing"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/package_model.py": {
+      "imports": [
+        "argparse",
+        "lightgbm",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/package_remediation.py": {
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "src",
+        "sys",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/predict.py": {
+      "imports": [
+        "argparse",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/prepare_api_inputs.py": {
+      "imports": [
+        "argparse",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/qa_analysis.py": {
+      "imports": [
+        "argparse",
+        "collections",
+        "hashlib",
+        "json",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/qa_retrain.py": {
+      "imports": [
+        "gc",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "src",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/qa_stock_integrity.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/qa_verify_submission.py": {
+      "imports": [
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/remediation_backend_probe.py": {
+      "imports": [
+        "argparse",
+        "concurrent",
+        "hashlib",
+        "http",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "src",
+        "subprocess",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/remediation_compare.py": {
+      "imports": [
+        "json",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/remediation_diagnose.py": {
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/remediation_experiments.py": {
+      "imports": [
+        "argparse",
+        "gc",
+        "hashlib",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "scripts",
+        "src",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/remediation_l2.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/remediation_report.py": {
+      "imports": [
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/remediation_statistical.py": {
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "statsforecast",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/run_pipeline.py": {
+      "imports": [
+        "argparse",
+        "datetime",
+        "gc",
+        "hashlib",
+        "json",
+        "lightgbm",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "scripts",
+        "src",
+        "sys",
+        "threading",
+        "time",
+        "uuid"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/train_final.py": {
+      "imports": [
+        "argparse",
+        "datetime",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pathlib",
+        "src",
+        "sys",
+        "time",
+        "uuid"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/validate_submission.py": {
+      "imports": [
+        "argparse",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "scripts/verify_parity.py": {
+      "imports": [
+        "app",
+        "fastapi",
+        "gc",
+        "io",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "src",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "tests/test_api.py": {
+      "imports": [
+        "app",
+        "fastapi",
+        "io",
+        "numpy",
+        "pandas",
+        "pytest"
+      ],
+      "dynamic_calls": []
+    },
+    "tests/test_metrics.py": {
+      "imports": [
+        "numpy",
+        "pandas",
+        "pytest",
+        "scripts",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "tests/test_pipeline.py": {
+      "imports": [
+        "json",
+        "numpy",
+        "pandas",
+        "pytest",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "tests/test_qa_regressions.py": {
+      "imports": [
+        "app",
+        "json",
+        "numpy",
+        "pandas",
+        "pytest",
+        "scripts",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "tests/test_remediation_backend.py": {
+      "imports": [
+        "app",
+        "concurrent",
+        "fastapi",
+        "hashlib",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "pytest",
+        "shutil",
+        "src",
+        "sys",
+        "threading",
+        "types",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "tests/test_remediation_cli.py": {
+      "imports": [
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "pytest",
+        "shutil",
+        "socket",
+        "src",
+        "subprocess",
+        "sys",
+        "time",
+        "urllib"
+      ],
+      "dynamic_calls": []
+    },
+    "tests/test_remediation_models.py": {
+      "imports": [
+        "numpy",
+        "pandas",
+        "pytest",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/analyze_results.py": {
+      "imports": [
+        "hashlib",
+        "integration",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/catalog_policy.py": {
+      "imports": [
+        "functools",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/corrected_models.py": {
+      "imports": [
+        "hashlib",
+        "integration",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/ensemble_engine.py": {
+      "imports": [
+        "hashlib",
+        "numpy",
+        "pandas"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/experimental_predict.py": {
+      "imports": [
+        "argparse",
+        "hashlib",
+        "importlib",
+        "integration",
+        "json",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/finalize_reports.py": {
+      "imports": [
+        "hashlib",
+        "integration",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sys",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/independent_verify.py": {
+      "imports": [
+        "hashlib",
+        "integration",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/package_experimental.py": {
+      "imports": [
+        "hashlib",
+        "importlib",
+        "integration",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/preserve_release.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/release_probe.py": {
+      "imports": [
+        "app",
+        "fastapi",
+        "gc",
+        "hashlib",
+        "io",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "src",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/run_experiments.py": {
+      "imports": [
+        "gc",
+        "hashlib",
+        "integration",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "scripts",
+        "src",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/test_catalog_policy.py": {
+      "imports": [
+        "integration",
+        "numpy",
+        "pandas",
+        "pytest",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/test_ensemble_engine.py": {
+      "imports": [
+        "integration",
+        "numpy",
+        "pandas",
+        "pytest",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/train_experimental_final.py": {
+      "imports": [
+        "integration",
+        "json",
+        "pathlib",
+        "src",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/validate_delivery.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "pandas",
+        "pathlib",
+        "re"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/verify_archive.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "uuid",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/catalog_audit/verify_provenance.py": {
+      "imports": [
+        "hashlib",
+        "integration",
+        "json",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/release/container_probe.py": {
+      "imports": [
+        "hashlib",
+        "http",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/release/verify_artifacts.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/source_audit/verify_source_fixtures.py": {
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "io",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "subprocess",
+        "types",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/source_audit/verify_transfer.py": {
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "integration",
+        "json",
+        "numpy",
+        "pathlib",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/release/experimental180/verify_model_tamper.py": {
+      "imports": [
+        "hashlib",
+        "integration",
+        "json",
+        "pathlib",
+        "shutil",
+        "sys",
+        "tempfile"
+      ],
+      "dynamic_calls": []
+    },
+    "integration/release/experimental180/verify_standalone.py": {
+      "imports": [
+        "hashlib",
+        "integration",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "psutil",
+        "shutil",
+        "src",
+        "sys",
+        "tempfile",
+        "threading",
+        "time",
+        "unittest"
+      ],
+      "dynamic_calls": []
+    },
+    "research/audit_sparse_artifacts.py": {
+      "imports": [
+        "hashlib",
+        "importlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "subprocess",
+        "sys"
+      ],
+      "dynamic_calls": [
+        "importlib.util.find_spec(n)"
+      ]
+    },
+    "research/build_evidence_register.py": {
+      "imports": [
+        "csv",
+        "hashlib",
+        "pathlib"
+      ],
+      "dynamic_calls": []
+    },
+    "research/capture_environment.py": {
+      "imports": [
+        "hashlib",
+        "importlib",
+        "json",
+        "pathlib",
+        "platform",
+        "subprocess",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "research/independent_architecture_review.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "lightgbm",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "research/summarize_architectures.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/catalog_selection_audit.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/catalog_survivor_sensitivity.py": {
+      "imports": [
+        "catalog_selection_audit",
+        "numpy",
+        "pandas",
+        "src"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/catalog_training_features.py": {
+      "imports": [
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/finalize_audit_report.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/reviewer_a_rank_crosscheck.py": {
+      "imports": [
+        "hashlib",
+        "importlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ],
+      "dynamic_calls": [
+        "importlib.util.spec_from_file_location('original_score', ROOT / 'scripts/official_score.py')",
+        "importlib.util.module_from_spec(module)"
+      ]
+    },
+    "research/scoring_audit/reviewer_a_scoring.py": {
+      "imports": [
+        "ast",
+        "hashlib",
+        "importlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "platform",
+        "re",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "dynamic_calls": [
+        "importlib.util.spec_from_file_location('reviewer_a_original', SCORER)",
+        "importlib.util.module_from_spec(spec)",
+        "__import__('os')"
+      ]
+    },
+    "research/scoring_audit/reviewer_c_verify.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "sys",
+        "time",
+        "zipfile"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/run_scoring_analysis.py": {
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "src",
+        "sys",
+        "time"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/summarize_scoring_audit.py": {
+      "imports": [
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src",
+        "sys"
+      ],
+      "dynamic_calls": []
+    },
+    "research/scoring_audit/validate_audit_delivery.py": {
+      "imports": [
+        "csv",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ],
+      "dynamic_calls": []
+    }
+  },
+  "missing_optional_imports": [
+    "statsforecast"
+  ],
+  "notes": [
+    "?????? ?? ?????????; ?? ?????????????? ?????? clean install.",
+    "External research/sources ? extracted bundle copies ?????????.",
+    "Runtime closure ???????? ?? Requires-Dist ????????????? distributions ??? extras ??? Python 3.12; marker ????? ?????????? Windows/Linux.",
+    "pip ?? ??????? ? runtime closure; libgomp1 ????????? Linux runtime dependency."
+  ]
+}

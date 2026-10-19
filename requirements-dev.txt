@@ -1,0 +1,6 @@
+-r requirements-training.txt
+pytest==9.1.1
+httpx==0.28.1
+coverage==7.16.2
+ruff==0.17.1
+deptry==0.25.1

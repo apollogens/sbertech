@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_version": "nonton-v1"
+  },
+  "empty_cache_after_restart": true
+}

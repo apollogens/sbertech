@@ -1,0 +1,80 @@
+{
+  "observed_sales_pairs": 8777,
+  "required_pairs": 8789,
+  "unobserved_pairs": 12,
+  "unknown_observed_keys": 0,
+  "forecast_for_unobserved_pairs": [
+    {
+      "anonymized_id": "f8495302889d",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "71c48e9496c7",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "05a3b326095a",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "f98a9603ad50",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "f32d8a7787a4",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "6177b1b4192c",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "8f1e40297ced",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "f833aa38b3a9",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "922af322b93f",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "5d96d68a63d3",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "ee99dd32e5ce",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    },
+    {
+      "anonymized_id": "ad90de7df650",
+      "forecast_rows": 64,
+      "predicted_total": 0.0,
+      "nonzero_days": 0
+    }
+  ]
+}

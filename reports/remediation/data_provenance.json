@@ -1,0 +1,27 @@
+[
+  {
+    "path": "C:\\Users\\apollo\\Desktop\\выборка\\sales_dataset_hakaton_train.csv",
+    "bytes": 257634668,
+    "sha256": "34fe562dc1e0742aac1387d71ae20711e2f533fb56bbf34ce6363318e59a8e6b"
+  },
+  {
+    "path": "C:\\Users\\apollo\\Desktop\\выборка\\stock_dataset_hakaton_train.csv",
+    "bytes": 295578780,
+    "sha256": "d744cac7f82fb14ec42e12818f6257c07392ea315f050355d357d3865ec8b166"
+  },
+  {
+    "path": "C:\\Users\\apollo\\Desktop\\выборка\\markdown hakaton.md",
+    "bytes": 53187,
+    "sha256": "2739c3b674bcce805aab6e51f94b0f0806b1816d1e03ea172cc5a2eceff73e07"
+  },
+  {
+    "path": "D:\\SberTech\\cache\\panel.npz",
+    "bytes": 4748732,
+    "sha256": "39e0563d6f79791ac08d8a81f26dafcc66ab392715023eb665d04acfa4a9aa8e"
+  },
+  {
+    "path": "D:\\SberTech\\cache\\catalogs.json",
+    "bytes": 16121,
+    "sha256": "d6bab28ee1a112aa7f8104294ae2d64e68f0be56833b0867f6129001a0724e45"
+  }
+]

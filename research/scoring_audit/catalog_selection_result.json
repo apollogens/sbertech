@@ -1,0 +1,505 @@
+{
+  "audit_date": "2026-10-19",
+  "inputs": [
+    {
+      "source": "sales",
+      "path": "C:\\Users\\apollo\\Desktop\\выборка\\sales_dataset_hakaton_train.csv",
+      "rows": 1492370,
+      "sha256": "34fe562dc1e0742aac1387d71ae20711e2f533fb56bbf34ce6363318e59a8e6b"
+    },
+    {
+      "source": "stock",
+      "path": "C:\\Users\\apollo\\Desktop\\выборка\\stock_dataset_hakaton_train.csv",
+      "rows": 6153988,
+      "sha256": "d744cac7f82fb14ec42e12818f6257c07392ea315f050355d357d3865ec8b166"
+    }
+  ],
+  "panel_sha256": "39e0563d6f79791ac08d8a81f26dafcc66ab392715023eb665d04acfa4a9aa8e",
+  "catalogs_equal_full_sales": true,
+  "model_catalog_equals_cache": true,
+  "forecast_count": 120,
+  "forecast_fingerprints": [
+    {
+      "path": "research\\predictions\\article_topdown_2025-09-14.npz",
+      "sha256": "66ab1594a0a766995b004a04824e85ac0c41724a4aab26b26a075eee333581c7"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_2025-11-17.npz",
+      "sha256": "8a7e3b483a0b870b40e769eac74cc4bca61c9cfc15c8c42876e601d8f87b8898"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_2026-01-20.npz",
+      "sha256": "159f5c3ddcda1a6f2fbc6c80d920520a4547c11b7b580c81ec436112ad95d601"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_2026-03-25.npz",
+      "sha256": "78aba71308b30402c43909ce9ac883a6f96f18b211078070a44c7e92968b568d"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_2026-05-28.npz",
+      "sha256": "585518d750e4541124f15a74b36cd0eecf6de7aa11a1bf2272d21b3d86cf9123"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_z0.25_2025-09-14.npz",
+      "sha256": "376b32fba65ccdbcac1904c3b5d6c48411d0210c4121478be4c456224ca08f16"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_z0.25_2025-11-17.npz",
+      "sha256": "c11f4c8ca0c7bdb6182601ed50864c7d4489417966aea626d92e10817e865701"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_z0.25_2026-01-20.npz",
+      "sha256": "c0833483181569b56732b39531ccf6a0e0059a2a63e89df8fd16667d3b79946b"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_z0.25_2026-03-25.npz",
+      "sha256": "9853f2f6605d253a0435479854d8828df015fb0acce9585bad453df1c598ba1e"
+    },
+    {
+      "path": "research\\predictions\\article_topdown_z0.25_2026-05-28.npz",
+      "sha256": "36844deeb62a2b63d3bebe82bd60e59221094123dc4b3a377e741523ea144501"
+    },
+    {
+      "path": "research\\predictions\\incumbent_2025-09-14.npz",
+      "sha256": "373d0f2ccdbc7cbdc387b03b882e8ecccb3ca41ccf27f00d5722b53f3838ef08"
+    },
+    {
+      "path": "research\\predictions\\incumbent_2025-11-17.npz",
+      "sha256": "df731a955668219325151a6c202eca5c62639e01e94c9f038f7c5189646c05bd"
+    },
+    {
+      "path": "research\\predictions\\incumbent_2026-01-20.npz",
+      "sha256": "ac3a590891679ea5a229288fe7a6b727b904eb8121963a702ebd154014a032fd"
+    },
+    {
+      "path": "research\\predictions\\incumbent_2026-03-25.npz",
+      "sha256": "6f319444bf368bedd0d35eee669725cc6e0a04e6d9ae19cb0adb34eaac2e78de"
+    },
+    {
+      "path": "research\\predictions\\incumbent_2026-05-28.npz",
+      "sha256": "9e672637fecc631bd82d2b552d9b4513f91bb5e9d7d4457352d69fba46830185"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_2025-09-14.npz",
+      "sha256": "ac7c42ad11d08edd1644bc9a58aa6a3a941f6cabdba88ad0c2f82023b3932905"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_2025-11-17.npz",
+      "sha256": "93c44e784c034fe2f91e4931e099e5d548e825eba8c79486ae0dec43c2ae3d07"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_2026-01-20.npz",
+      "sha256": "74bc42d7d4d639f85b8682ce1c229de9cbf731bf384c5a78cb9e8418188ce24a"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_2026-03-25.npz",
+      "sha256": "52c18f04341d6bd2f767e17c4fb2c2e9b519f5a23a64d2b7798adedb72fde7c4"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_2026-05-28.npz",
+      "sha256": "367e0cf0b22444cb3536434b1663241c48f3ffa24c06901f1b0144d3c8350b97"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_z0.25_2025-09-14.npz",
+      "sha256": "7d9454c9481cfd7e12e6869d6164a49733c23772cf1bfbf76587383a230caa7c"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_z0.25_2025-11-17.npz",
+      "sha256": "cae04361ec2c6fc656f0ce5fc55527f1e65c2aa1c5cb569aefc8191d661a0f57"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_z0.25_2026-01-20.npz",
+      "sha256": "c3fdd4d2e7d763fcb7fbb3e8c713b5d808618056b72b203121287e649fdbf69e"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_z0.25_2026-03-25.npz",
+      "sha256": "c48e9e96bdfa75494877500753ad4b95dcf331a81ad57829d2bcabb464d08894"
+    },
+    {
+      "path": "research\\predictions\\weekly_allocation_z0.25_2026-05-28.npz",
+      "sha256": "ca154f5cbff38a6b0740f21b08ae72844b037b6c9eb68a7350843ce68b699a25"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_2025-09-14.npz",
+      "sha256": "793859d577977c5b00da5804e4a26a5af9bc9da8ed5f1ac6c2b08435a0be397f"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_2025-11-17.npz",
+      "sha256": "b6682e67c17a2dab693b953837ed027f10835703b853d82b77d8cf47c8f8fd16"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_2026-01-20.npz",
+      "sha256": "8660dfd8831f5593f49f1b29fe8d878c88ccea58d4c5bddb51da98756f7feb49"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_2026-03-25.npz",
+      "sha256": "b21659c5799958aa08f403fb5b9aff8ddcc5d69f29b17bb2a43cad30def927d2"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_2026-05-28.npz",
+      "sha256": "ec014aea4c2a13e22bc70116297624b1ba6c1caa5ec76dac66adaefb510a8554"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_z0.25_2025-09-14.npz",
+      "sha256": "577f59afbf8dbfcc48d3b88dc3e15c5060da13542e049185c8c627f084e1b8c1"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_z0.25_2025-11-17.npz",
+      "sha256": "1a26092ba3f67482f3eeb97aa214c53ac30af8b9c8068e68f715a222f9a6dd13"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_z0.25_2026-01-20.npz",
+      "sha256": "060a82ba269555e7388690459af81bd0fa6936a8957d3f922c509ef44c6c754a"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_z0.25_2026-03-25.npz",
+      "sha256": "5c6a8f5dbcaf205ac87ef216149870902d958f8e52d1b3ba595a3955275ff042"
+    },
+    {
+      "path": "research\\predictions\\weekly_direct_shape_z0.25_2026-05-28.npz",
+      "sha256": "6795547487908501b2cb7e276e4714cc521a14ef381ebe85ca3df4ba9894efbb"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\adida_official_2025-09-14.npz",
+      "sha256": "703289235ae805f60ba04a5f603bdaacb368903ceca7a6c0d81bb62f4f9323f2"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\adida_official_2025-11-17.npz",
+      "sha256": "459844055fbede5633c4a685debc30becaa79331149695322f3555b2d6e2bb57"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\adida_official_2026-01-20.npz",
+      "sha256": "0d76ef12fcbf7dd6593a82fe85ee65f349888d444b7f39f1a2af59e149d10d42"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\adida_official_2026-03-25.npz",
+      "sha256": "eae3cb005bd89f5a0fc0fa7fbc810ee6bbbed90e8521b5637037f746b6275ecf"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\adida_official_2026-05-28.npz",
+      "sha256": "d106a97dfc7872beff65033eb826fae1ca1e82680e042a8f2779ef2844ddec6b"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\current_tweedie_z0.25_2025-09-14.npz",
+      "sha256": "373d0f2ccdbc7cbdc387b03b882e8ecccb3ca41ccf27f00d5722b53f3838ef08"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\current_tweedie_z0.25_2025-11-17.npz",
+      "sha256": "df731a955668219325151a6c202eca5c62639e01e94c9f038f7c5189646c05bd"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\current_tweedie_z0.25_2026-01-20.npz",
+      "sha256": "ac3a590891679ea5a229288fe7a6b727b904eb8121963a702ebd154014a032fd"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\current_tweedie_z0.25_2026-03-25.npz",
+      "sha256": "6f319444bf368bedd0d35eee669725cc6e0a04e6d9ae19cb0adb34eaac2e78de"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\current_tweedie_z0.25_2026-05-28.npz",
+      "sha256": "9e672637fecc631bd82d2b552d9b4513f91bb5e9d7d4457352d69fba46830185"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\last_2025-09-14.npz",
+      "sha256": "b2817fb9ae2800938456611e2736a598e2988a5ad27ceaf36de64f352c77052c"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\last_2025-11-17.npz",
+      "sha256": "568ee74823c8cfc8c258720436345e2eff206eb0c90b7c97aaadc623b8ba1ce4"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\last_2026-01-20.npz",
+      "sha256": "53b648d7da81163999f85ae7510d8cf5f545bc34b88e4cb935ad701a45eec5e4"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\last_2026-03-25.npz",
+      "sha256": "58d0cb19e3ac10c3b8c7ea0e7e65d6c8939f1d4d843e88bbf3c32d175f0f7aef"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\last_2026-05-28.npz",
+      "sha256": "cb9eec67bdc8c9240337961b10bbd13c783d70e6872b4d5f2819741a06de6f04"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_2025-09-14.npz",
+      "sha256": "ddedef571ec0de03826d24ce561518cc1200d75395793bdd0f6975eafd7b9f8a"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_2025-11-17.npz",
+      "sha256": "6687a2db607cd947065fdb2549002240787da59ca248d64f9f68d4b77e7b0e9c"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_2026-01-20.npz",
+      "sha256": "54a45c0f8ea9a9cc2b1d8b5f092d6f14e557c6d20fe302280c23de904d3e8275"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_2026-03-25.npz",
+      "sha256": "ac9e8317670850a58f315be2ec5d71e239391f5d9252330b1c268fa391bbad4c"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_2026-05-28.npz",
+      "sha256": "d1f892a006387ee7fa46721ca5a1d840682e65ce6ab1233275e68ad62e3ee808"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_z0.25_2025-09-14.npz",
+      "sha256": "5e9799c7ffc5fc0930310f108b79f2baf42a2b721d7a1e43f4af75018c00d704"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_z0.25_2025-11-17.npz",
+      "sha256": "272c407a9ee0281238afe3dfbd71f99eab0be18b578f9dfbb91c26965da0d2bd"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_z0.25_2026-01-20.npz",
+      "sha256": "d4ada362d13397f71963fa73dfa48aa97f5e9780298b7d5b448537fcd47e8309"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_z0.25_2026-03-25.npz",
+      "sha256": "57b7f08133ece7f38177d47198cd94ccbc64f50273395d96476e52e0fe2f8e5f"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l1_z0.25_2026-05-28.npz",
+      "sha256": "b67b74025c38de89b8f5580311fae8c63fdae89dc5766c277f9aecef8c1f3b62"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_2025-09-14.npz",
+      "sha256": "31c3c50f1a9b67184c270729a06dd8e4096b51456b86fa211d2336d6b83d10cf"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_2025-11-17.npz",
+      "sha256": "79dad19bc6af5fa6ad77badf7afd8ee7985072c29d743f38a6b88f5944144d2a"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_2026-01-20.npz",
+      "sha256": "1f665f3f58fa16805ca99e5c0a3c3291ecf80047b19a0c7dea44fecc9d33a987"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_2026-03-25.npz",
+      "sha256": "b171d28d389fa7606af415c83e0b9b816b27e3dddaa0abe0eea9db4042ddb110"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_2026-05-28.npz",
+      "sha256": "c32b828b79f5b83fc2df5c1a9c2fee930eaeacd134e0e6b04c177693c77d7ee8"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_z0.25_2025-09-14.npz",
+      "sha256": "81ce980737a013eda16add2a5e62d191e2bd40aca09c065a0c69bfb31bf7f1dc"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_z0.25_2025-11-17.npz",
+      "sha256": "731ccd31861ece20011bf52dd45bdb5faecedaac5dfb105cf05448cdd97a9e7e"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_z0.25_2026-01-20.npz",
+      "sha256": "e5148675a59c044cf6d44f877ac25c9a6ff9d360e8e31370216bee435cd259a4"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_z0.25_2026-03-25.npz",
+      "sha256": "ad520da0394a2b0f211f912e671757af59f451522fa1c159208a413154dc7e9d"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\lgb_l2_z0.25_2026-05-28.npz",
+      "sha256": "d7af05bbdb3adeee744079f60cf28e5a1eb49324c539bf4d0c42d2b8fe5d9855"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean28_2025-09-14.npz",
+      "sha256": "7d2dd1d84924eefe0af24bdaeba616136dae7af7946af1325f9c4468d2ac9f23"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean28_2025-11-17.npz",
+      "sha256": "65c21efb2664bd12c2573ba1ac752d365138405cb4fb2ed10b80b55a44bd2cdb"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean28_2026-01-20.npz",
+      "sha256": "2ac8c57363c3ec6cbe2e631915b2d3f48a4d445b9a114f5183dd9327ae01416c"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean28_2026-03-25.npz",
+      "sha256": "b31101f0e0976b09e0ecb33e14f63eb69e50700ee8335ed924ae719909f8ed2d"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean28_2026-05-28.npz",
+      "sha256": "69da67e1c9211f472ffa617d27b4124f31fa68330269eef9dc7cdc1bb792cb48"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean90_2025-09-14.npz",
+      "sha256": "0558000e732ce765a69f9fe7ae04e2e52f2d8b5f042a9517666b8fdb2e834182"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean90_2025-11-17.npz",
+      "sha256": "9564488386786b86c596f6589a37fc1c05e86da61da4cf6a3e3c8d2b2d7abdec"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean90_2026-01-20.npz",
+      "sha256": "5925120db1a3c5bd419094ff2395e66ca1567dc6e624cbf3cc81f575ec46dbbb"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean90_2026-03-25.npz",
+      "sha256": "88b54236fb3a9ccce9df80a657da29494d5621a45dbc5ca8059d6701c1cfa5db"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\mean90_2026-05-28.npz",
+      "sha256": "0ec1939b024a273246265c18e06f4275234fdb3b9321226aaf2f9ac73defbfb2"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\sba_official_2025-09-14.npz",
+      "sha256": "3af223b2bc5a4b9fc0596cbf4633b88ca96efcb3e2cbf7ad24934957a941a520"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\sba_official_2025-11-17.npz",
+      "sha256": "342a2601107df441d8f05ea756333c405d59335cdd4f4c4efeed9eb45e14aef0"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\sba_official_2026-01-20.npz",
+      "sha256": "c9b31f9b72eac9bfa8ced1e8be11663c7e312f42c418ab30379e7aa0e4e4bc90"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\sba_official_2026-03-25.npz",
+      "sha256": "ff5dcd3f06ab60a8517a7adb57cef6f3ab0e0fdeb51950a8836d12fe2d010ae7"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\sba_official_2026-05-28.npz",
+      "sha256": "55b2696db96977ce50de6e6cf996b2686620f3f8da96ba0a44f6de1b8cb292ac"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\seasonal56_2025-09-14.npz",
+      "sha256": "278e25dd4a2c56278263da21055d6aa0d8aa1d641765efb4f1d900802354ea82"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\seasonal56_2025-11-17.npz",
+      "sha256": "5147a670ee44faf09be55b2959989f50c0634e2c95a93845196cda1b0ab8f169"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\seasonal56_2026-01-20.npz",
+      "sha256": "3932066ad5c1e6582e76fb4a143d9380c28cf7124bf8010b203efd679b10e2ad"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\seasonal56_2026-03-25.npz",
+      "sha256": "f8fde7506d710d738bbcc300d6b36ad12ba68866c83f77b02bf05240e570bf9b"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\seasonal56_2026-05-28.npz",
+      "sha256": "45fa0fc590d5f7a1afbc11a596ee1233ed51166780c5ed528993a59443a1776a"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_2025-09-14.npz",
+      "sha256": "9fa8e997c2e16384d3ef059539e7923d5dfdba44f70135312542a44319ecc07b"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_2025-11-17.npz",
+      "sha256": "6ee107f1e52b8eef3a5267e9f5a23c3bf22b92eb27f6e93b510ab42b1042277c"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_2026-01-20.npz",
+      "sha256": "696881706e907565f205125ef63de2dc05f830e9150efd5e7c919764e518b2a4"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_2026-03-25.npz",
+      "sha256": "22e0fbbadf14d1ecc0249805b3112a7cc97b3c93139ac57f2ed2b72ffab49e88"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_2026-05-28.npz",
+      "sha256": "c363f9f6e56430a9086b8d6235c36957a741be5599359520de6f4087b9ae32f1"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_official_2025-09-14.npz",
+      "sha256": "4680313ec4dd70d7731ff4ca4609010d564f3f175bb41ffa7851bc289bf8dca8"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_official_2025-11-17.npz",
+      "sha256": "075e4a856cd4a9d4c0a0cfa7bfefef79f85750acb9eaa7e24ed5037cad30ef9f"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_official_2026-01-20.npz",
+      "sha256": "e451908532989aea71704240bb13bd1d80ff1b2e49d3a712a940f6dc8f3a522b"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_official_2026-03-25.npz",
+      "sha256": "d02dbbd210d0d4658f61af57d14c9eac6fa6218b5065f421f7bb9f5bf11b8b3d"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tsb_official_2026-05-28.npz",
+      "sha256": "80c3a716c90164208f1fed65ab0cc5c42e40a29597cca78e374ca94cfc4b7cd4"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tweedie_raw_2025-09-14.npz",
+      "sha256": "8cd461d88f6b9d4580dc54c38e7e685cd1c9dc3432f2853ff71d40efdc42c966"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tweedie_raw_2025-11-17.npz",
+      "sha256": "16975c0febae52a141c3e62198cf3ba279dba1762e4c21daaf21b95c7ec36aae"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tweedie_raw_2026-01-20.npz",
+      "sha256": "17eac119063535601079b9d2a685a5c0e0288555d3decf7e0cbcf830a8eed9d4"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tweedie_raw_2026-03-25.npz",
+      "sha256": "d9d62cb6da72f85a9cfef169d8d5f35f23a66d36d9249d10e11bdf2776fa6fbe"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\tweedie_raw_2026-05-28.npz",
+      "sha256": "ea5bc978e932d6808ae664c2ce91d99983cc7c0b7813397eb9a6ed96f1141379"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_2025-09-14.npz",
+      "sha256": "8d3472d571902d3fdcf89792f5ee7faa21ff670683727c796012cf6b53f63113"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_2025-11-17.npz",
+      "sha256": "ab00e251df5d9675fbd84806c221d11168ce1fcfac581a81b443f31932821b00"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_2026-01-20.npz",
+      "sha256": "46903067d6c3826df87b13fe8dc23881566c44c47e2d9e79e5453564716fab0e"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_2026-03-25.npz",
+      "sha256": "a5a11cd7e951e06039f4f11e1d295f10450006c14166ca39012ce9c1fd960dc0"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_2026-05-28.npz",
+      "sha256": "db26b2b0fb04fad11053466e01e319c512df40d74e8b97dee0ed32df3ad30c87"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_z0.25_2025-09-14.npz",
+      "sha256": "26bc7fc694898a70f4e0c6bfcb242672ef32bd3d52f31212424315d95e0b230d"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_z0.25_2025-11-17.npz",
+      "sha256": "3bc0e6c2b613db73cee8ee2081200690df541f678a19c4bb37e5b2ddaff12c87"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_z0.25_2026-01-20.npz",
+      "sha256": "67f725ed9b93d460522368bd12564f06faa864200d1e20067222e6aca67faaee"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_z0.25_2026-03-25.npz",
+      "sha256": "3de80ac1b6f4059dec54ecdf8ef739ef2c61ceaeb42289911e6535217dbbee8b"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\two_part_gamma_z0.25_2026-05-28.npz",
+      "sha256": "ac04af947f8aff431e8d909c73a935f7cdb3a5d8f51af111cc06657abd27d826"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\zero_2025-09-14.npz",
+      "sha256": "6ba9abf532ea1bd942c1fa1d00796b2020ff1d7dcf47696d48077dc34a8b9ebb"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\zero_2025-11-17.npz",
+      "sha256": "6400b39d9536cf4584b2d58df277ec1f73589d7468e19ba3d5dfdd1585d123e8"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\zero_2026-01-20.npz",
+      "sha256": "e01ff2be72c222eae05ee5b63cba6b34499ef64eaefe88a94dee33bd7521a8b7"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\zero_2026-03-25.npz",
+      "sha256": "8526d2942a6300e82227b74bd5d614a5bd33c89ae17a5cd5ed67103b9f46b248"
+    },
+    {
+      "path": "reports\\remediation\\predictions\\zero_2026-05-28.npz",
+      "sha256": "c45da0d94d81f341ab66feee645f31ede27b6c58c346e0800634d3b34af2350b"
+    }
+  ],
+  "fits_performed": 0,
+  "max_catalog_metric_difference": 2.4121021301645555
+}

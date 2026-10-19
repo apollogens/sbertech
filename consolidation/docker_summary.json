@@ -1,0 +1,52 @@
+{
+  "nonton-v1": {
+    "image": "nonton:consolidated-v1",
+    "image_id": "sha256:eec978ddc812e8599afd82c04d6da2325b247a0bd0ac51a969ba7738b31d75bb",
+    "inspect_size_bytes": 143563315,
+    "image_ls_size": "619MB",
+    "status": "passed",
+    "rows": 562496,
+    "health": {
+      "status": "ok",
+      "model_loaded": true,
+      "model_version": "nonton-v1"
+    },
+    "post_seconds": 11.305631946000176,
+    "repeat_post_seconds": 11.505580304999967,
+    "get_csv_seconds": 0.954498209999656,
+    "get_filtered_seconds": 0.032104612000239285,
+    "get_json_seconds": 0.46728782899981525,
+    "offline_api_max_abs_difference": 3.552713678800501e-15,
+    "repeat_byte_identical": true,
+    "failure_preserves_cache": true,
+    "forecast_sha256": "f0bbd578929b8983e4fe1c510c7092e793b4ea2d5610ccdd47c3f2ce776168a2",
+    "cgroup_peak_rss_bytes": "1325481984",
+    "memory_limit": "6442450944",
+    "cpu_limit": "400000 100000"
+  },
+  "equal4": {
+    "image": "nonton:consolidated-equal4",
+    "image_id": "sha256:6ce94440b4f5a040d0a7129787af28340afa222e81bd2fe793ed81a3e181e8fc",
+    "inspect_size_bytes": 147131116,
+    "image_ls_size": "1.43GB",
+    "status": "passed",
+    "rows": 562496,
+    "health": {
+      "status": "ok",
+      "model_loaded": true,
+      "model_version": "nonton-equal4-rc1"
+    },
+    "post_seconds": 21.86842471400041,
+    "repeat_post_seconds": 20.933965763000288,
+    "get_csv_seconds": 0.8837321469995914,
+    "get_filtered_seconds": 0.03223451299982116,
+    "get_json_seconds": 0.46566891900010887,
+    "offline_api_max_abs_difference": 1.0658141036401503e-14,
+    "repeat_byte_identical": true,
+    "failure_preserves_cache": true,
+    "forecast_sha256": "8e80d2a7d57d2d063e63d5b4af30ea1c19af20e58dfe2c758163d776c4ba4b20",
+    "cgroup_peak_rss_bytes": "4691660800",
+    "memory_limit": "6442450944",
+    "cpu_limit": "400000 100000"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "no_training": true,
+  "forecasts_verified": 35,
+  "saved_weight_replays": 15,
+  "final_delivery_files_matched": 409,
+  "release_archive_sha256": "b56525b5144d77aa7411922db790fe519452e7d5ba33d6dd2fedb7006398325a",
+  "max_fit_seconds": 23.57591179999872,
+  "max_sampled_process_rss_bytes": 1299886080,
+  "max_metric_error": 5.684341886080802e-14,
+  "max_prediction_replay_error": 0.0,
+  "max_coherence_error": 5.684341886080802e-14,
+  "future_mutation_checks": [
+    {
+      "origin": "2025-09-14",
+      "future_mutation_invariant": true,
+      "latest_training_target": "2025-09-14",
+      "latest_origin": "2025-07-12"
+    },
+    {
+      "origin": "2025-11-17",
+      "future_mutation_invariant": true,
+      "latest_training_target": "2025-11-17",
+      "latest_origin": "2025-09-14"
+    },
+    {
+      "origin": "2026-01-20",
+      "future_mutation_invariant": true,
+      "latest_training_target": "2026-01-20",
+      "latest_origin": "2025-11-17"
+    },
+    {
+      "origin": "2026-03-25",
+      "future_mutation_invariant": true,
+      "latest_training_target": "2026-03-25",
+      "latest_origin": "2026-01-20"
+    },
+    {
+      "origin": "2026-05-28",
+      "future_mutation_invariant": true,
+      "latest_training_target": "2026-05-28",
+      "latest_origin": "2026-03-25"
+    }
+  ],
+  "official_merge_fixture": {
+    "smape": 139.3939393939394,
+    "wape": 70.0,
+    "rmse": 6.0,
+    "bias": 60.0,
+    "rmsle": 1.5258612614218898
+  },
+  "protocol_sha256": "7831e7128abf35a637b1c7d4a987b7ec0a6abfe6b8d443935fad82a573a61b0c",
+  "old_reference_hash_mismatches": [
+    {
+      "reference": "review_baseline_hashes.json",
+      "path": "app/main.py",
+      "matches": false
+    },
+    {
+      "reference": "review_baseline_hashes.json",
+      "path": "app/predictor.py",
+      "matches": false
+    },
+    {
+      "reference": "review_baseline_hashes.json",
+      "path": "tests/test_pipeline.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "src/predict.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "app/main.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "app/predictor.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "scripts/audit_inputs.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "scripts/backtest_baselines.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "scripts/predict.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "scripts/run_pipeline.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "scripts/train_final.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "scripts/validate_submission.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "tests/test_pipeline.py",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": ".gitignore",
+      "matches": false
+    },
+    {
+      "reference": "initial_manifest.json",
+      "path": "README.md",
+      "matches": false
+    }
+  ],
+  "limitations": [
+    "saved raw-shape model provenance inherited from old audit",
+    "old-reference mismatches are reported, not evidence of new-run mutation",
+    "budget is not automatically enforced by experiment script",
+    "weekly_direct_shape excludes upstream raw model fit/predict cost",
+    "incumbent reuse timing zero is not measured inference",
+    "source/metadata training cutoff inspection plus future-mutation check, no duplicate fit"
+  ]
+}

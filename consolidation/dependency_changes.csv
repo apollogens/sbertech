@@ -1,0 +1,46 @@
+﻿package,old_mixed_lock_version,new_runtime_version,groups,action,reason
+annotated-doc,0.0.5,0.0.5,runtime;training;dev;research,retained_runtime,exact existing pin
+annotated-types,0.8.0,0.8.0,runtime;training;dev;research,retained_runtime,exact existing pin
+anyio,4.15.1,4.15.1,runtime;training;dev;research,retained_runtime,exact existing pin
+certifi,2026.7.22,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+click,8.5.0,8.5.0,runtime;training;dev;research,retained_runtime,exact existing pin
+colorama,0.4.6,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+contourpy,,,research,retained_nonruntime_group,not in serving import/metadata closure; retained in research
+coverage,,,dev,retained_nonruntime_group,not in serving import/metadata closure; retained in dev
+cycler,,,research,retained_nonruntime_group,not in serving import/metadata closure; retained in research
+deptry,,,dev,added_nonruntime_tooling,explicit pinned lint/dependency audit tooling or its transitive dependency
+fastapi,0.146.0,0.146.0,runtime;training;dev;research,retained_runtime,exact existing pin
+fonttools,,,research,retained_nonruntime_group,not in serving import/metadata closure; retained in research
+h11,0.16.0,0.16.0,runtime;training;dev;research,retained_runtime,exact existing pin
+httpcore,1.0.9,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+httpx,0.28.1,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+idna,3.20,3.20,runtime;training;dev;research,retained_runtime,exact existing pin
+iniconfig,2.3.1,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+kiwisolver,,,research,retained_nonruntime_group,not in serving import/metadata closure; retained in research
+lightgbm,4.7.0,4.7.0,runtime;training;dev;research,retained_runtime,exact existing pin
+matplotlib,,,research,retained_nonruntime_group,not in serving import/metadata closure; retained in research
+narwhals,2.27.1,2.27.1,runtime;training;dev;research,retained_runtime,exact existing pin
+numpy,2.5.4,2.5.4,runtime;training;dev;research,retained_runtime,exact existing pin
+opentelemetry-api,1.45.1,1.45.1,runtime;training;dev;research,retained_runtime,exact existing pin
+packaging,26.3,,dev;research,removed_from_runtime_only,not in serving import/metadata closure; retained in dev;research
+pandas,3.0.6,3.0.6,runtime;training;dev;research,retained_runtime,exact existing pin
+pillow,,,research,retained_nonruntime_group,not in serving import/metadata closure; retained in research
+pluggy,1.7.0,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+psutil,7.2.2,,training;dev;research,removed_from_runtime_only,not in serving import/metadata closure; retained in training;dev;research
+pydantic,2.14.1,2.14.1,runtime;training;dev;research,retained_runtime,exact existing pin
+pydantic-core,2.50.1,2.50.1,runtime;training;dev;research,retained_runtime,exact existing pin
+pygments,2.21.0,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+pyparsing,,,research,retained_nonruntime_group,not in serving import/metadata closure; retained in research
+pytest,9.1.1,,dev,removed_from_runtime_only,not in serving import/metadata closure; retained in dev
+python-dateutil,2.9.0.post0,2.9.0.post0,runtime;training;dev;research,retained_runtime,exact existing pin
+python-multipart,0.0.32,0.0.32,runtime;training;dev;research,retained_runtime,exact existing pin
+requirements-parser,,,dev,added_nonruntime_tooling,explicit pinned lint/dependency audit tooling or its transitive dependency
+ruff,,,dev,added_nonruntime_tooling,explicit pinned lint/dependency audit tooling or its transitive dependency
+scipy,1.18.1,1.18.1,runtime;training;dev;research,retained_runtime,exact existing pin
+six,1.17.0,1.17.0,runtime;training;dev;research,retained_runtime,exact existing pin
+starlette,1.8.0,1.8.0,runtime;training;dev;research,retained_runtime,exact existing pin
+tomli,,,dev,added_nonruntime_tooling,explicit pinned lint/dependency audit tooling or its transitive dependency
+typing-extensions,4.16.0,4.16.0,runtime;training;dev;research,retained_runtime,exact existing pin
+typing-inspection,0.4.4,0.4.4,runtime;training;dev;research,retained_runtime,exact existing pin
+tzdata,2026.5,2026.5,runtime;training;dev;research,retained_runtime,exact existing pin
+uvicorn,0.54.0,0.54.0,runtime;training;dev;research,retained_runtime,exact existing pin

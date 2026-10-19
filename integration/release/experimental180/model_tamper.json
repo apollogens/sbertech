@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "tampered_model_rejected": "Experimental artifact integrity mismatch",
+  "mutation": "One final byte of copied daily.txt changed; originals untouched"
+}

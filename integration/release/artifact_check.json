@@ -1,0 +1,13 @@
+{
+  "preserved_files": 724,
+  "changed_files": [],
+  "npz_files": 152,
+  "changed_npz": [],
+  "changed_old_zip": [],
+  "snapshot_sha256_valid": true,
+  "submission_independent_validation": "passed",
+  "submission_rows": 562496,
+  "submission_first_date": "2026-08-01",
+  "submission_last_date": "2026-10-03",
+  "submission_sha256": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1"
+}

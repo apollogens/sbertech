@@ -1,0 +1,26 @@
+.venv/
+.venv_stats/
+.venv_consolidated/
+.venv_runtime/
+.ruff_cache/
+__pycache__/
+.pytest_cache/
+cache/
+data/
+*.pyc
+
+# Local extraction copies and downloaded reference repositories.
+consolidation/rollback_*/
+consolidation/package_extracted*/
+integration/release/extracted*/
+research/sources/
+
+# Input datasets and local credentials; forecasts/metric CSV remain versioned.
+**/sales.csv
+**/stock.csv
+**/sales_dataset_hakaton_train.csv
+**/stock_dataset_hakaton_train.csv
+.env
+.env.*
+**/.env
+**/.env.*

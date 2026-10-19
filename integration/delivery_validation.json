@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "evaluation_date_moscow": "2026-10-19",
+  "mandatory_outputs": 15,
+  "production": "nonton-v1",
+  "experimental_candidate": "equal4:P1",
+  "promoted": false,
+  "forecasts": 215,
+  "independent_replays": 235,
+  "pytest_cases": 193,
+  "source_user_confirmed": "filipp880/forecast-64-v1",
+  "missing_second_source": true,
+  "archive_sha256": "b1dcfbbe07b9bca9f4f5adf2b27612d730532b20af842a1a1afb0fb39bf8c5ca",
+  "standalone180_verified": true,
+  "archive_extracted_cli_verified": true,
+  "scoring_limitations": [
+    "reused historical windows",
+    "unknown real leaderboard normalization",
+    "180-day prediction quality not backtested"
+  ]
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "path": "src/baselines.py",
+    "sha256": "9625e20b128b3e0e97a4d6b82939021221272cc269aef739f3d6631f3105d90d",
+    "matches_initial": true
+  },
+  {
+    "path": "src/data.py",
+    "sha256": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde",
+    "matches_initial": true
+  },
+  {
+    "path": "src/features.py",
+    "sha256": "7d841adb144542293d11d02b101a94d988c4215731c92d8d54831384fe050034",
+    "matches_initial": true
+  },
+  {
+    "path": "src/metrics.py",
+    "sha256": "6c045f4b385a415aaf62534a4232ac26b827d2861e6cb7491d36f7ae32884d96",
+    "matches_initial": true
+  },
+  {
+    "path": "src/predict.py",
+    "sha256": "01ec4f36b9150cdb714cd0d392530e949f065239003ea0ecaf324f69d80387ae",
+    "matches_initial": false
+  },
+  {
+    "path": "src/submission.py",
+    "sha256": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff",
+    "matches_initial": true
+  },
+  {
+    "path": "src/train.py",
+    "sha256": "38f87aa7732622b13dc82abbb7c71bc3f2121d439ae445cd284ef6634f852faf",
+    "matches_initial": true
+  },
+  {
+    "path": "src/__init__.py",
+    "sha256": "41bb5c6de0f565ea756a631e0ac483c306cfeaacb9dfc778df1823571c720657",
+    "matches_initial": true
+  },
+  {
+    "path": "app/main.py",
+    "sha256": "b68ae5e075c6c4cc2dd652c9cd101b4a5fd3a16569afcc71f75ad189fa775c3a",
+    "matches_initial": true
+  },
+  {
+    "path": "app/predictor.py",
+    "sha256": "ac139efdada3f3e4d5c8267a36912df052435d38b13b55a2d30942ed682aaf77",
+    "matches_initial": true
+  },
+  {
+    "path": "app/validators.py",
+    "sha256": "9937c2f5ee667c141d5e562b0e68f706e34d5640f40184113d2c51c4269a6eb6",
+    "matches_initial": true
+  },
+  {
+    "path": "app/__init__.py",
+    "sha256": "4421e5593cb7a26efb6b367635bdc8d3c74f0a022e66417c3f0af7f90e6bfe94",
+    "matches_initial": true
+  },
+  {
+    "path": "scripts/official_score.py",
+    "sha256": "5c83fb1dd256a9636bd27cb7aa9eb978dbe6c76a60f74486ca773523139e1ee2",
+    "matches_initial": true
+  },
+  {
+    "path": "tests/test_api.py",
+    "sha256": "a40a9e34d94687d6fb8e52a2aede5c40f109bcf8bde07a12f55e140b503fb596",
+    "matches_initial": true
+  },
+  {
+    "path": "tests/test_metrics.py",
+    "sha256": "ae43a3bac9eeadc3dedf586ae10824ca97277a0a3f44bbf5bde1f7ecae4177bb",
+    "matches_initial": true
+  },
+  {
+    "path": "tests/test_pipeline.py",
+    "sha256": "845d314662fb19ffa3d6d037aba672068739f01e2857cd82880d3f6f6a2d7c15",
+    "matches_initial": true
+  },
+  {
+    "path": "tests/test_qa_regressions.py",
+    "sha256": "25710991e5dc74948904070431ca12188e4ae98c9fbf945d223c14eca8d9cc94",
+    "matches_initial": true
+  },
+  {
+    "path": "model/catalogs.json",
+    "sha256": "76b2e036d2b61ce984a9b81ea3e4d73e07645c6bd59d0cf6af27be0dad8d119c",
+    "matches_initial": true
+  },
+  {
+    "path": "model/config.json",
+    "sha256": "494f2370133f4a13c0b0c752fadc146affc0a264b33d0bb9922973a530d84473",
+    "matches_initial": true
+  },
+  {
+    "path": "model/lightgbm.txt",
+    "sha256": "ebc9bafee00b294793f0ef2b01e9b8d1b42825bc461dc7fa4cdb603496fb3b52",
+    "matches_initial": true
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "evaluation_date_moscow": "2026-10-19",
+  "no_training": true,
+  "required_deliverables": 9,
+  "canonical_forecasts": 119,
+  "source_npz": 151,
+  "release_files_checked": 409,
+  "release_archive_sha256": "b56525b5144d77aa7411922db790fe519452e7d5ba33d6dd2fedb7006398325a",
+  "root_metric_crosscheck": {
+    "compared": 119,
+    "max_errors": {
+      "smape": 0.0,
+      "wape": 0.0,
+      "rmse": 0.0,
+      "bias": 0.0,
+      "rmsle": 0.0,
+      "smape_written": 0.0
+    }
+  }
+}

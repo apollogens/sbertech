@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "archive_sha256": "d2306a62b61e7817ccaaa7c2036e4d6019995df72e7a737dc16b73f3a7466803",
+  "extraction": "D:\\SberTech\\consolidation\\package_extracted_verified",
+  "files_verified": 236,
+  "operations": [
+    {
+      "label": "import_isolation",
+      "returncode": 0,
+      "elapsed_seconds": 2.0426539000036428,
+      "output_tail": "D:\\SberTech\\consolidation\\package_extracted_verified\n"
+    },
+    {
+      "label": "tests",
+      "returncode": 0,
+      "elapsed_seconds": 53.726397400008864,
+      "output_tail": "ttpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n222 passed, 1 warning in 52.83s\n"
+    },
+    {
+      "label": "nonton-v1",
+      "returncode": 0,
+      "elapsed_seconds": 15.534390700006043,
+      "output_tail": "\\\\consolidation\\\\package_extracted_verified\\\\consolidation\\\\package_checks\\\\nonton-v1.csv\", \"sha256\": \"ec1423820e9d13689f38b5d9dd2d82b2eb067f7e06fe123fecab9898991d98c3\", \"model_id\": \"9267e65f0ca9e62b636d185fe7731a71b4e24a8b5110fa830701d5beb0d0f50a\"}\n"
+    },
+    {
+      "label": "equal4",
+      "returncode": 0,
+      "elapsed_seconds": 28.932334799988894,
+      "output_tail": "ech\\\\consolidation\\\\package_extracted_verified\\\\consolidation\\\\package_checks\\\\equal4.csv\", \"sha256\": \"2d03b46160c62d33f540259b5f4aba94a932e752c10a48ad8efeb77b9bf159a9\", \"model_id\": \"ed3f58bc05c50a05080734bf81b332091c3bffc3bb87b589fb561b4676c437de\"}\n"
+    }
+  ],
+  "forecast_csv_lf_normalized_byte_identical": true
+}

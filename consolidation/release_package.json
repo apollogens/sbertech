@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "archive": "D:\\SberTech\\consolidation\\nonton_consolidated_verified.zip",
+  "archive_sha256": "d2306a62b61e7817ccaaa7c2036e4d6019995df72e7a737dc16b73f3a7466803",
+  "archive_bytes": 136818696,
+  "members": 237,
+  "manifest_sha256": "09627005a60e49f5ca960c9ab6003c55c2bee276c9d89044caee7de57aa7c1f2",
+  "all_members_verified": true
+}

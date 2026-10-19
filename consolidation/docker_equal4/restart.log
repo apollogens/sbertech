@@ -1,0 +1,10 @@
+﻿nonton-consolidated-equal4-20261019203144
+{
+  "status": "passed",
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_version": "nonton-equal4-rc1"
+  },
+  "empty_cache_after_restart": true
+}

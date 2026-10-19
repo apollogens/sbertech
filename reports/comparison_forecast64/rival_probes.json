@@ -1,0 +1,15 @@
+{
+  "sales_text_validation": [],
+  "sales_nan_validation": [],
+  "sales_infinity_validation": [],
+  "stock_text_validation": [],
+  "missing_article_validation": [],
+  "grid": {
+    "actual_rows": 128,
+    "cartesian_rows": 256
+  },
+  "cache_mutable": true,
+  "http_invalid_quantity_status": 200,
+  "http_invalid_quantity_rows": 128,
+  "event_loop_50ms_timer_actual_seconds_with_1s_inference": 1.0556450000003679
+}

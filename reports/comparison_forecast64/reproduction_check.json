@@ -1,0 +1,11 @@
+{
+  "metric_absolute_differences": {
+    "smape": 0.0,
+    "wape": 0.0,
+    "rmse": 0.0,
+    "bias": 0.0,
+    "rmsle": 5.551115123125783e-17
+  },
+  "iterations_identical": true,
+  "passed": true
+}

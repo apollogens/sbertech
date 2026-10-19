@@ -1,0 +1,16 @@
+{
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_version": "nonton-v1"
+  },
+  "post_seconds": 34.2087213169998,
+  "network_mode": "none",
+  "cgroup_memory_peak_bytes": 3939459072,
+  "status": "passed"
+}
+INFO:     127.0.0.1:42114 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42118 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41700 - "GET /predict?article=char_article_0&warehouse=warehouse_name_0 HTTP/1.1" 200 OK
+c6efa18ea55c21436560c746a09623c61354f04b35a0c51aaa617f7257c30706
+{'health': {'status': 'ok', 'model_loaded': True, 'model_version': 'nonton-v1'}, 'post_seconds': 34.2087213169998, 'network_mode': 'none', 'cgroup_memory_peak_bytes': 3939459072, 'status': 'passed', 'build_seconds': 1.7365937999999999, 'image_bytes': 148796116, 'max_abs_difference': 3.552713678800501e-15, 'rows': 562496}

@@ -1,0 +1,98 @@
+{
+  "origins": [
+    "2025-09-14",
+    "2025-11-17",
+    "2026-01-20",
+    "2026-03-25",
+    "2026-05-28"
+  ],
+  "weights": {
+    "D": {
+      "daily": 1.0,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 0.0
+    },
+    "W": {
+      "daily": 0.0,
+      "weekly": 1.0,
+      "shape": 0.0,
+      "article": 0.0
+    },
+    "S": {
+      "daily": 0.0,
+      "weekly": 0.0,
+      "shape": 1.0,
+      "article": 0.0
+    },
+    "A": {
+      "daily": 0.0,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 1.0
+    },
+    "equal4": {
+      "daily": 0.25,
+      "weekly": 0.25,
+      "shape": 0.25,
+      "article": 0.25
+    },
+    "DA75": {
+      "daily": 0.75,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 0.25
+    },
+    "DA50": {
+      "daily": 0.5,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 0.5
+    },
+    "DA25": {
+      "daily": 0.25,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 0.75
+    },
+    "DS50": {
+      "daily": 0.5,
+      "weekly": 0.0,
+      "shape": 0.5,
+      "article": 0.0
+    },
+    "source_DA70": {
+      "daily": 0.7,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 0.3
+    }
+  },
+  "policies": {
+    "P0": "continuous",
+    "P1": "threshold025",
+    "P2": "nearest_even",
+    "P3": "threshold_then_nearest_even"
+  },
+  "rank_universe": [
+    "D:P1",
+    "W:P1",
+    "S:P1",
+    "A:P1",
+    "equal4:P1",
+    "DA75:P1",
+    "DA50:P1",
+    "DA25:P1",
+    "DS50:P1",
+    "source_DA70:P1",
+    "D:P0",
+    "D:P2",
+    "W:P0",
+    "W:P2",
+    "S:P0",
+    "S:P2",
+    "A:P0",
+    "A:P2"
+  ],
+  "protocol_sha256": "f6ee8c58385f224739e1a044a3faae003415188fcad6fe6b011dde16051c55e3"
+}

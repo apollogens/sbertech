@@ -1,0 +1,18 @@
+{
+  "raw_rows": 6153988,
+  "negative_rows": 57,
+  "zero_rows": 3862474,
+  "sum": 38035376.0,
+  "raw_unique_keys": 4884198,
+  "duplicate_key_rows": 1269790,
+  "raw_conflicting_keys": 804588,
+  "clean_unique_keys": 4079621,
+  "conflicts_after_negative_removal": 804560,
+  "observed_pairs": 8458,
+  "calendar_days": 962,
+  "date_min": "2023-12-13",
+  "date_max": "2026-07-31",
+  "panel_stock_bitwise_equal": true,
+  "raw_source_sha256": "d744cac7f82fb14ec42e12818f6257c07392ea315f050355d357d3865ec8b166",
+  "seconds": 8.531767599997693
+}

@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "production": false,
+  "training_called": false,
+  "history_days": 180,
+  "historical_first_observed_forbidden": true,
+  "input_provenance": {
+    "days": 180,
+    "cutoff": "2026-07-31",
+    "start": "2026-02-02",
+    "inputs": {
+      "sales": {
+        "rows": 448589,
+        "first": "2026-02-02",
+        "last": "2026-07-31",
+        "sha256": "925fa8b15ca668b0213e038a5250e289c2d6e76b4f821fe33cf875e3abd23b2a"
+      },
+      "stock": {
+        "rows": 1142816,
+        "first": "2026-02-02",
+        "last": "2026-07-31",
+        "sha256": "2570c8121ecfadeaa72d98000c4c94ed6745ab4b04e3ae337053efe1f5fddf49"
+      }
+    }
+  },
+  "incumbent_same_input": {
+    "model": "retained_nonton-v1",
+    "total_seconds": 7.650514299995848,
+    "load_bundle_seconds": 0.01971189999312628,
+    "rows": 562496,
+    "forecast_sha256": "354ae527536640ce4e56012e233f3ead679e616ea51f1d2a6f423014b681377a"
+  },
+  "forecasts": [
+    {
+      "candidate": "equal4:P1",
+      "seconds": 22.112055799996597,
+      "repeat_seconds": 22.713056799999322,
+      "rows": 562496,
+      "forecast_sha256": "310d000f954f48e389661954c9a3d2ac38815d603bae7c9cfc40409015fbd164",
+      "deterministic_exact": true,
+      "complete_official_grid": true,
+      "volume": 219430.72773497266
+    },
+    {
+      "candidate": "D:P1",
+      "seconds": 22.3906827000028,
+      "repeat_seconds": 22.21031640000001,
+      "rows": 562496,
+      "forecast_sha256": "02e1c75df31b100ec060ef8defdd0d5066b4a0c0d46f91b9c78f64fa5a769fee",
+      "deterministic_exact": true,
+      "complete_official_grid": true,
+      "volume": 225220.28000545662
+    }
+  ],
+  "peak_sampled_process_rss_bytes": 2239696896,
+  "tampered_config_weights_rejected": "Experimental artifact integrity mismatch",
+  "bundle_files": {
+    "article.txt": "30f67b1648b2e18fdce4edd72f137e001d2391f8013adad05420718ec2f8cea7",
+    "config.json": "e65858fd77c3923a5347ff29711b2ec5e49782bb16c21e44f6fdae3aca5d17b9",
+    "daily.txt": "422dbe10ca758afa8cd3173e114b68a36b0123231864489b782b93995b506c1a",
+    "manifest.json": "61d3a833a9087cf638fb18980b66da9ed6ea2c28a718cb20689eb020f7262107",
+    "weekly.txt": "54a935b1cf1d24235da9895f5899d0aeee4d3ab570a6f7050b39d30d3a0a459e"
+  },
+  "scope": "Standalone input-derived features and complete all-three-booster inference with key alignment; no experimental API or Docker parity claim"
+}

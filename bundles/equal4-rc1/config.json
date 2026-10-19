@@ -1,0 +1,4578 @@
+{
+  "schema_version": 2,
+  "model_version": "nonton-equal4-rc1",
+  "kind": "components",
+  "horizon": 64,
+  "strategy": "equal4:P1",
+  "strategies": {
+    "D:P1": {
+      "daily": 1.0,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 0.0
+    },
+    "W:P1": {
+      "daily": 0.0,
+      "weekly": 1.0,
+      "shape": 0.0,
+      "article": 0.0
+    },
+    "S:P1": {
+      "daily": 0.0,
+      "weekly": 0.0,
+      "shape": 1.0,
+      "article": 0.0
+    },
+    "A:P1": {
+      "daily": 0.0,
+      "weekly": 0.0,
+      "shape": 0.0,
+      "article": 1.0
+    },
+    "equal4:P1": {
+      "daily": 0.25,
+      "weekly": 0.25,
+      "shape": 0.25,
+      "article": 0.25
+    }
+  },
+  "postprocessing": "threshold025",
+  "catalogs": {
+    "warehouses": [
+      "warehouse_name_0",
+      "warehouse_name_1",
+      "warehouse_name_10",
+      "warehouse_name_2",
+      "warehouse_name_3",
+      "warehouse_name_4",
+      "warehouse_name_5",
+      "warehouse_name_6",
+      "warehouse_name_7",
+      "warehouse_name_8",
+      "warehouse_name_9"
+    ],
+    "articles": [
+      "char_article_0",
+      "char_article_1",
+      "char_article_10",
+      "char_article_100",
+      "char_article_101",
+      "char_article_102",
+      "char_article_103",
+      "char_article_104",
+      "char_article_105",
+      "char_article_106",
+      "char_article_107",
+      "char_article_108",
+      "char_article_109",
+      "char_article_11",
+      "char_article_110",
+      "char_article_111",
+      "char_article_112",
+      "char_article_113",
+      "char_article_114",
+      "char_article_115",
+      "char_article_116",
+      "char_article_117",
+      "char_article_118",
+      "char_article_119",
+      "char_article_12",
+      "char_article_120",
+      "char_article_121",
+      "char_article_122",
+      "char_article_123",
+      "char_article_124",
+      "char_article_125",
+      "char_article_126",
+      "char_article_127",
+      "char_article_128",
+      "char_article_129",
+      "char_article_13",
+      "char_article_130",
+      "char_article_131",
+      "char_article_132",
+      "char_article_133",
+      "char_article_134",
+      "char_article_135",
+      "char_article_136",
+      "char_article_137",
+      "char_article_138",
+      "char_article_139",
+      "char_article_14",
+      "char_article_140",
+      "char_article_141",
+      "char_article_142",
+      "char_article_143",
+      "char_article_144",
+      "char_article_145",
+      "char_article_146",
+      "char_article_147",
+      "char_article_148",
+      "char_article_149",
+      "char_article_15",
+      "char_article_150",
+      "char_article_151",
+      "char_article_152",
+      "char_article_153",
+      "char_article_154",
+      "char_article_155",
+      "char_article_156",
+      "char_article_157",
+      "char_article_158",
+      "char_article_159",
+      "char_article_16",
+      "char_article_160",
+      "char_article_161",
+      "char_article_162",
+      "char_article_163",
+      "char_article_164",
+      "char_article_165",
+      "char_article_166",
+      "char_article_167",
+      "char_article_168",
+      "char_article_169",
+      "char_article_17",
+      "char_article_170",
+      "char_article_171",
+      "char_article_172",
+      "char_article_173",
+      "char_article_174",
+      "char_article_175",
+      "char_article_176",
+      "char_article_177",
+      "char_article_178",
+      "char_article_179",
+      "char_article_18",
+      "char_article_180",
+      "char_article_181",
+      "char_article_182",
+      "char_article_183",
+      "char_article_184",
+      "char_article_185",
+      "char_article_186",
+      "char_article_187",
+      "char_article_188",
+      "char_article_189",
+      "char_article_19",
+      "char_article_190",
+      "char_article_191",
+      "char_article_192",
+      "char_article_193",
+      "char_article_194",
+      "char_article_195",
+      "char_article_196",
+      "char_article_197",
+      "char_article_198",
+      "char_article_199",
+      "char_article_2",
+      "char_article_20",
+      "char_article_200",
+      "char_article_201",
+      "char_article_202",
+      "char_article_203",
+      "char_article_204",
+      "char_article_205",
+      "char_article_206",
+      "char_article_207",
+      "char_article_208",
+      "char_article_209",
+      "char_article_21",
+      "char_article_210",
+      "char_article_211",
+      "char_article_212",
+      "char_article_213",
+      "char_article_214",
+      "char_article_215",
+      "char_article_216",
+      "char_article_217",
+      "char_article_218",
+      "char_article_219",
+      "char_article_22",
+      "char_article_220",
+      "char_article_221",
+      "char_article_222",
+      "char_article_223",
+      "char_article_224",
+      "char_article_225",
+      "char_article_226",
+      "char_article_227",
+      "char_article_228",
+      "char_article_229",
+      "char_article_23",
+      "char_article_230",
+      "char_article_231",
+      "char_article_232",
+      "char_article_233",
+      "char_article_234",
+      "char_article_235",
+      "char_article_236",
+      "char_article_237",
+      "char_article_238",
+      "char_article_239",
+      "char_article_24",
+      "char_article_240",
+      "char_article_241",
+      "char_article_242",
+      "char_article_243",
+      "char_article_244",
+      "char_article_245",
+      "char_article_246",
+      "char_article_247",
+      "char_article_248",
+      "char_article_249",
+      "char_article_25",
+      "char_article_250",
+      "char_article_251",
+      "char_article_252",
+      "char_article_253",
+      "char_article_254",
+      "char_article_255",
+      "char_article_256",
+      "char_article_257",
+      "char_article_258",
+      "char_article_259",
+      "char_article_26",
+      "char_article_260",
+      "char_article_261",
+      "char_article_262",
+      "char_article_263",
+      "char_article_264",
+      "char_article_265",
+      "char_article_266",
+      "char_article_267",
+      "char_article_268",
+      "char_article_269",
+      "char_article_27",
+      "char_article_270",
+      "char_article_271",
+      "char_article_272",
+      "char_article_273",
+      "char_article_274",
+      "char_article_275",
+      "char_article_276",
+      "char_article_277",
+      "char_article_278",
+      "char_article_279",
+      "char_article_28",
+      "char_article_280",
+      "char_article_281",
+      "char_article_282",
+      "char_article_283",
+      "char_article_284",
+      "char_article_285",
+      "char_article_286",
+      "char_article_287",
+      "char_article_288",
+      "char_article_289",
+      "char_article_29",
+      "char_article_290",
+      "char_article_291",
+      "char_article_292",
+      "char_article_293",
+      "char_article_294",
+      "char_article_295",
+      "char_article_296",
+      "char_article_297",
+      "char_article_298",
+      "char_article_299",
+      "char_article_3",
+      "char_article_30",
+      "char_article_300",
+      "char_article_301",
+      "char_article_302",
+      "char_article_303",
+      "char_article_304",
+      "char_article_305",
+      "char_article_306",
+      "char_article_307",
+      "char_article_308",
+      "char_article_309",
+      "char_article_31",
+      "char_article_310",
+      "char_article_311",
+      "char_article_312",
+      "char_article_313",
+      "char_article_314",
+      "char_article_315",
+      "char_article_316",
+      "char_article_317",
+      "char_article_318",
+      "char_article_319",
+      "char_article_32",
+      "char_article_320",
+      "char_article_321",
+      "char_article_322",
+      "char_article_323",
+      "char_article_324",
+      "char_article_325",
+      "char_article_326",
+      "char_article_327",
+      "char_article_328",
+      "char_article_329",
+      "char_article_33",
+      "char_article_330",
+      "char_article_331",
+      "char_article_332",
+      "char_article_333",
+      "char_article_334",
+      "char_article_335",
+      "char_article_336",
+      "char_article_337",
+      "char_article_338",
+      "char_article_339",
+      "char_article_34",
+      "char_article_340",
+      "char_article_341",
+      "char_article_342",
+      "char_article_343",
+      "char_article_344",
+      "char_article_345",
+      "char_article_346",
+      "char_article_347",
+      "char_article_348",
+      "char_article_349",
+      "char_article_35",
+      "char_article_350",
+      "char_article_351",
+      "char_article_352",
+      "char_article_353",
+      "char_article_354",
+      "char_article_355",
+      "char_article_356",
+      "char_article_357",
+      "char_article_358",
+      "char_article_359",
+      "char_article_36",
+      "char_article_360",
+      "char_article_361",
+      "char_article_362",
+      "char_article_363",
+      "char_article_364",
+      "char_article_365",
+      "char_article_366",
+      "char_article_367",
+      "char_article_368",
+      "char_article_369",
+      "char_article_37",
+      "char_article_370",
+      "char_article_371",
+      "char_article_372",
+      "char_article_373",
+      "char_article_374",
+      "char_article_375",
+      "char_article_376",
+      "char_article_377",
+      "char_article_378",
+      "char_article_379",
+      "char_article_38",
+      "char_article_380",
+      "char_article_381",
+      "char_article_382",
+      "char_article_383",
+      "char_article_384",
+      "char_article_385",
+      "char_article_386",
+      "char_article_387",
+      "char_article_388",
+      "char_article_389",
+      "char_article_39",
+      "char_article_390",
+      "char_article_391",
+      "char_article_392",
+      "char_article_393",
+      "char_article_394",
+      "char_article_395",
+      "char_article_396",
+      "char_article_397",
+      "char_article_398",
+      "char_article_399",
+      "char_article_4",
+      "char_article_40",
+      "char_article_400",
+      "char_article_401",
+      "char_article_402",
+      "char_article_403",
+      "char_article_404",
+      "char_article_405",
+      "char_article_406",
+      "char_article_407",
+      "char_article_408",
+      "char_article_409",
+      "char_article_41",
+      "char_article_410",
+      "char_article_411",
+      "char_article_412",
+      "char_article_413",
+      "char_article_414",
+      "char_article_415",
+      "char_article_416",
+      "char_article_417",
+      "char_article_418",
+      "char_article_419",
+      "char_article_42",
+      "char_article_420",
+      "char_article_421",
+      "char_article_422",
+      "char_article_423",
+      "char_article_424",
+      "char_article_425",
+      "char_article_426",
+      "char_article_427",
+      "char_article_428",
+      "char_article_429",
+      "char_article_43",
+      "char_article_430",
+      "char_article_431",
+      "char_article_432",
+      "char_article_433",
+      "char_article_434",
+      "char_article_435",
+      "char_article_436",
+      "char_article_437",
+      "char_article_438",
+      "char_article_439",
+      "char_article_44",
+      "char_article_440",
+      "char_article_441",
+      "char_article_442",
+      "char_article_443",
+      "char_article_444",
+      "char_article_445",
+      "char_article_446",
+      "char_article_447",
+      "char_article_448",
+      "char_article_449",
+      "char_article_45",
+      "char_article_450",
+      "char_article_451",
+      "char_article_452",
+      "char_article_453",
+      "char_article_454",
+      "char_article_455",
+      "char_article_456",
+      "char_article_457",
+      "char_article_458",
+      "char_article_459",
+      "char_article_46",
+      "char_article_460",
+      "char_article_461",
+      "char_article_462",
+      "char_article_463",
+      "char_article_464",
+      "char_article_465",
+      "char_article_466",
+      "char_article_467",
+      "char_article_468",
+      "char_article_469",
+      "char_article_47",
+      "char_article_470",
+      "char_article_471",
+      "char_article_472",
+      "char_article_473",
+      "char_article_474",
+      "char_article_475",
+      "char_article_476",
+      "char_article_477",
+      "char_article_478",
+      "char_article_479",
+      "char_article_48",
+      "char_article_480",
+      "char_article_481",
+      "char_article_482",
+      "char_article_483",
+      "char_article_484",
+      "char_article_485",
+      "char_article_486",
+      "char_article_487",
+      "char_article_488",
+      "char_article_489",
+      "char_article_49",
+      "char_article_490",
+      "char_article_491",
+      "char_article_492",
+      "char_article_493",
+      "char_article_494",
+      "char_article_495",
+      "char_article_496",
+      "char_article_497",
+      "char_article_498",
+      "char_article_499",
+      "char_article_5",
+      "char_article_50",
+      "char_article_500",
+      "char_article_501",
+      "char_article_502",
+      "char_article_503",
+      "char_article_504",
+      "char_article_505",
+      "char_article_506",
+      "char_article_507",
+      "char_article_508",
+      "char_article_509",
+      "char_article_51",
+      "char_article_510",
+      "char_article_511",
+      "char_article_512",
+      "char_article_513",
+      "char_article_514",
+      "char_article_515",
+      "char_article_516",
+      "char_article_517",
+      "char_article_518",
+      "char_article_519",
+      "char_article_52",
+      "char_article_520",
+      "char_article_521",
+      "char_article_522",
+      "char_article_523",
+      "char_article_524",
+      "char_article_525",
+      "char_article_526",
+      "char_article_527",
+      "char_article_528",
+      "char_article_529",
+      "char_article_53",
+      "char_article_530",
+      "char_article_531",
+      "char_article_532",
+      "char_article_533",
+      "char_article_534",
+      "char_article_535",
+      "char_article_536",
+      "char_article_537",
+      "char_article_538",
+      "char_article_539",
+      "char_article_54",
+      "char_article_540",
+      "char_article_541",
+      "char_article_542",
+      "char_article_543",
+      "char_article_544",
+      "char_article_545",
+      "char_article_546",
+      "char_article_547",
+      "char_article_548",
+      "char_article_549",
+      "char_article_55",
+      "char_article_550",
+      "char_article_551",
+      "char_article_552",
+      "char_article_553",
+      "char_article_554",
+      "char_article_555",
+      "char_article_556",
+      "char_article_557",
+      "char_article_558",
+      "char_article_559",
+      "char_article_56",
+      "char_article_560",
+      "char_article_561",
+      "char_article_562",
+      "char_article_563",
+      "char_article_564",
+      "char_article_565",
+      "char_article_566",
+      "char_article_567",
+      "char_article_568",
+      "char_article_569",
+      "char_article_57",
+      "char_article_570",
+      "char_article_571",
+      "char_article_572",
+      "char_article_573",
+      "char_article_574",
+      "char_article_575",
+      "char_article_576",
+      "char_article_577",
+      "char_article_578",
+      "char_article_579",
+      "char_article_58",
+      "char_article_580",
+      "char_article_581",
+      "char_article_582",
+      "char_article_583",
+      "char_article_584",
+      "char_article_585",
+      "char_article_586",
+      "char_article_587",
+      "char_article_588",
+      "char_article_589",
+      "char_article_59",
+      "char_article_590",
+      "char_article_591",
+      "char_article_592",
+      "char_article_593",
+      "char_article_594",
+      "char_article_595",
+      "char_article_596",
+      "char_article_597",
+      "char_article_598",
+      "char_article_599",
+      "char_article_6",
+      "char_article_60",
+      "char_article_600",
+      "char_article_601",
+      "char_article_602",
+      "char_article_603",
+      "char_article_604",
+      "char_article_605",
+      "char_article_606",
+      "char_article_607",
+      "char_article_608",
+      "char_article_609",
+      "char_article_61",
+      "char_article_610",
+      "char_article_611",
+      "char_article_612",
+      "char_article_613",
+      "char_article_614",
+      "char_article_615",
+      "char_article_616",
+      "char_article_617",
+      "char_article_618",
+      "char_article_619",
+      "char_article_62",
+      "char_article_620",
+      "char_article_621",
+      "char_article_622",
+      "char_article_623",
+      "char_article_624",
+      "char_article_625",
+      "char_article_626",
+      "char_article_627",
+      "char_article_628",
+      "char_article_629",
+      "char_article_63",
+      "char_article_630",
+      "char_article_631",
+      "char_article_632",
+      "char_article_633",
+      "char_article_634",
+      "char_article_635",
+      "char_article_636",
+      "char_article_637",
+      "char_article_638",
+      "char_article_639",
+      "char_article_64",
+      "char_article_640",
+      "char_article_641",
+      "char_article_642",
+      "char_article_643",
+      "char_article_644",
+      "char_article_645",
+      "char_article_646",
+      "char_article_647",
+      "char_article_648",
+      "char_article_649",
+      "char_article_65",
+      "char_article_650",
+      "char_article_651",
+      "char_article_652",
+      "char_article_653",
+      "char_article_654",
+      "char_article_655",
+      "char_article_656",
+      "char_article_657",
+      "char_article_658",
+      "char_article_659",
+      "char_article_66",
+      "char_article_660",
+      "char_article_661",
+      "char_article_662",
+      "char_article_663",
+      "char_article_664",
+      "char_article_665",
+      "char_article_666",
+      "char_article_667",
+      "char_article_668",
+      "char_article_669",
+      "char_article_67",
+      "char_article_670",
+      "char_article_671",
+      "char_article_672",
+      "char_article_673",
+      "char_article_674",
+      "char_article_675",
+      "char_article_676",
+      "char_article_677",
+      "char_article_678",
+      "char_article_679",
+      "char_article_68",
+      "char_article_680",
+      "char_article_681",
+      "char_article_682",
+      "char_article_683",
+      "char_article_684",
+      "char_article_685",
+      "char_article_686",
+      "char_article_687",
+      "char_article_688",
+      "char_article_689",
+      "char_article_69",
+      "char_article_690",
+      "char_article_691",
+      "char_article_692",
+      "char_article_693",
+      "char_article_694",
+      "char_article_695",
+      "char_article_696",
+      "char_article_697",
+      "char_article_698",
+      "char_article_699",
+      "char_article_7",
+      "char_article_70",
+      "char_article_700",
+      "char_article_701",
+      "char_article_702",
+      "char_article_703",
+      "char_article_704",
+      "char_article_705",
+      "char_article_706",
+      "char_article_707",
+      "char_article_708",
+      "char_article_709",
+      "char_article_71",
+      "char_article_710",
+      "char_article_711",
+      "char_article_712",
+      "char_article_713",
+      "char_article_714",
+      "char_article_715",
+      "char_article_716",
+      "char_article_717",
+      "char_article_718",
+      "char_article_719",
+      "char_article_72",
+      "char_article_720",
+      "char_article_721",
+      "char_article_722",
+      "char_article_723",
+      "char_article_724",
+      "char_article_725",
+      "char_article_726",
+      "char_article_727",
+      "char_article_728",
+      "char_article_729",
+      "char_article_73",
+      "char_article_730",
+      "char_article_731",
+      "char_article_732",
+      "char_article_733",
+      "char_article_734",
+      "char_article_735",
+      "char_article_736",
+      "char_article_737",
+      "char_article_738",
+      "char_article_739",
+      "char_article_74",
+      "char_article_740",
+      "char_article_741",
+      "char_article_742",
+      "char_article_743",
+      "char_article_744",
+      "char_article_745",
+      "char_article_746",
+      "char_article_747",
+      "char_article_748",
+      "char_article_749",
+      "char_article_75",
+      "char_article_750",
+      "char_article_751",
+      "char_article_752",
+      "char_article_753",
+      "char_article_754",
+      "char_article_755",
+      "char_article_756",
+      "char_article_757",
+      "char_article_758",
+      "char_article_759",
+      "char_article_76",
+      "char_article_760",
+      "char_article_761",
+      "char_article_762",
+      "char_article_763",
+      "char_article_764",
+      "char_article_765",
+      "char_article_766",
+      "char_article_767",
+      "char_article_768",
+      "char_article_769",
+      "char_article_77",
+      "char_article_770",
+      "char_article_771",
+      "char_article_772",
+      "char_article_773",
+      "char_article_774",
+      "char_article_775",
+      "char_article_776",
+      "char_article_777",
+      "char_article_778",
+      "char_article_779",
+      "char_article_78",
+      "char_article_780",
+      "char_article_781",
+      "char_article_782",
+      "char_article_783",
+      "char_article_784",
+      "char_article_785",
+      "char_article_786",
+      "char_article_787",
+      "char_article_788",
+      "char_article_789",
+      "char_article_79",
+      "char_article_790",
+      "char_article_791",
+      "char_article_792",
+      "char_article_793",
+      "char_article_794",
+      "char_article_795",
+      "char_article_796",
+      "char_article_797",
+      "char_article_798",
+      "char_article_8",
+      "char_article_80",
+      "char_article_81",
+      "char_article_82",
+      "char_article_83",
+      "char_article_84",
+      "char_article_85",
+      "char_article_86",
+      "char_article_87",
+      "char_article_88",
+      "char_article_89",
+      "char_article_9",
+      "char_article_90",
+      "char_article_91",
+      "char_article_92",
+      "char_article_93",
+      "char_article_94",
+      "char_article_95",
+      "char_article_96",
+      "char_article_97",
+      "char_article_98",
+      "char_article_99"
+    ]
+  },
+  "features": {
+    "daily": [
+      "warehouse_id",
+      "article_id",
+      "last_y",
+      "mean_7",
+      "freq_7",
+      "mean_14",
+      "freq_14",
+      "mean_28",
+      "freq_28",
+      "std_28",
+      "max_28",
+      "mean_56",
+      "freq_56",
+      "mean_90",
+      "freq_90",
+      "mean_180",
+      "freq_180",
+      "std_180",
+      "max_180",
+      "long_mean",
+      "trend",
+      "days_since_sale",
+      "positive_mean",
+      "stock_age",
+      "last_stock",
+      "stock_coverage",
+      "stock_zero_rate",
+      "stock_mean",
+      "article_mean_28",
+      "warehouse_mean_28",
+      "article_mean_180",
+      "warehouse_mean_180",
+      "weekday_mean_0",
+      "weekday_mean_1",
+      "weekday_mean_2",
+      "weekday_mean_3",
+      "weekday_mean_4",
+      "weekday_mean_5",
+      "weekday_mean_6",
+      "horizon",
+      "day_of_week",
+      "month",
+      "year_sin",
+      "year_cos",
+      "weekday_mean"
+    ],
+    "weekly": [
+      "warehouse_id",
+      "article_id",
+      "last_y",
+      "mean_7",
+      "freq_7",
+      "mean_14",
+      "freq_14",
+      "mean_28",
+      "freq_28",
+      "std_28",
+      "max_28",
+      "mean_56",
+      "freq_56",
+      "mean_90",
+      "freq_90",
+      "mean_180",
+      "freq_180",
+      "std_180",
+      "max_180",
+      "long_mean",
+      "trend",
+      "days_since_sale",
+      "positive_mean",
+      "stock_age",
+      "last_stock",
+      "stock_coverage",
+      "stock_zero_rate",
+      "stock_mean",
+      "article_mean_28",
+      "warehouse_mean_28",
+      "article_mean_180",
+      "warehouse_mean_180",
+      "weekday_mean_0",
+      "weekday_mean_1",
+      "weekday_mean_2",
+      "weekday_mean_3",
+      "weekday_mean_4",
+      "weekday_mean_5",
+      "weekday_mean_6",
+      "horizon",
+      "day_of_week",
+      "month",
+      "year_sin",
+      "year_cos",
+      "weekday_mean",
+      "bucket_days",
+      "bucket_end"
+    ],
+    "article": [
+      "warehouse_id",
+      "article_id",
+      "last_y",
+      "mean_7",
+      "freq_7",
+      "mean_14",
+      "freq_14",
+      "mean_28",
+      "freq_28",
+      "std_28",
+      "max_28",
+      "mean_56",
+      "freq_56",
+      "mean_90",
+      "freq_90",
+      "mean_180",
+      "freq_180",
+      "std_180",
+      "max_180",
+      "long_mean",
+      "trend",
+      "days_since_sale",
+      "positive_mean",
+      "stock_age",
+      "last_stock",
+      "stock_coverage",
+      "stock_zero_rate",
+      "stock_mean",
+      "article_mean_28",
+      "warehouse_mean_28",
+      "article_mean_180",
+      "warehouse_mean_180",
+      "weekday_mean_0",
+      "weekday_mean_1",
+      "weekday_mean_2",
+      "weekday_mean_3",
+      "weekday_mean_4",
+      "weekday_mean_5",
+      "weekday_mean_6",
+      "horizon",
+      "day_of_week",
+      "month",
+      "year_sin",
+      "year_cos",
+      "weekday_mean"
+    ]
+  },
+  "history_policy": {
+    "mode": "provided",
+    "minimum_days": 180
+  },
+  "category_encodings": {
+    "warehouses": [
+      {
+        "identifier": "warehouse_name_0",
+        "code": 420770
+      },
+      {
+        "identifier": "warehouse_name_1",
+        "code": 963962
+      },
+      {
+        "identifier": "warehouse_name_10",
+        "code": 169955
+      },
+      {
+        "identifier": "warehouse_name_2",
+        "code": 510523
+      },
+      {
+        "identifier": "warehouse_name_3",
+        "code": 950746
+      },
+      {
+        "identifier": "warehouse_name_4",
+        "code": 805019
+      },
+      {
+        "identifier": "warehouse_name_5",
+        "code": 247843
+      },
+      {
+        "identifier": "warehouse_name_6",
+        "code": 996562
+      },
+      {
+        "identifier": "warehouse_name_7",
+        "code": 552848
+      },
+      {
+        "identifier": "warehouse_name_8",
+        "code": 48277
+      },
+      {
+        "identifier": "warehouse_name_9",
+        "code": 9183
+      }
+    ],
+    "articles": [
+      {
+        "identifier": "char_article_0",
+        "code": 630247
+      },
+      {
+        "identifier": "char_article_1",
+        "code": 885323
+      },
+      {
+        "identifier": "char_article_10",
+        "code": 795721
+      },
+      {
+        "identifier": "char_article_100",
+        "code": 409556
+      },
+      {
+        "identifier": "char_article_101",
+        "code": 436684
+      },
+      {
+        "identifier": "char_article_102",
+        "code": 551811
+      },
+      {
+        "identifier": "char_article_103",
+        "code": 254314
+      },
+      {
+        "identifier": "char_article_104",
+        "code": 885300
+      },
+      {
+        "identifier": "char_article_105",
+        "code": 616095
+      },
+      {
+        "identifier": "char_article_106",
+        "code": 131444
+      },
+      {
+        "identifier": "char_article_107",
+        "code": 669452
+      },
+      {
+        "identifier": "char_article_108",
+        "code": 117418
+      },
+      {
+        "identifier": "char_article_109",
+        "code": 901958
+      },
+      {
+        "identifier": "char_article_11",
+        "code": 162935
+      },
+      {
+        "identifier": "char_article_110",
+        "code": 970468
+      },
+      {
+        "identifier": "char_article_111",
+        "code": 865736
+      },
+      {
+        "identifier": "char_article_112",
+        "code": 911164
+      },
+      {
+        "identifier": "char_article_113",
+        "code": 1030864
+      },
+      {
+        "identifier": "char_article_114",
+        "code": 1045210
+      },
+      {
+        "identifier": "char_article_115",
+        "code": 519300
+      },
+      {
+        "identifier": "char_article_116",
+        "code": 769281
+      },
+      {
+        "identifier": "char_article_117",
+        "code": 195786
+      },
+      {
+        "identifier": "char_article_118",
+        "code": 817022
+      },
+      {
+        "identifier": "char_article_119",
+        "code": 309347
+      },
+      {
+        "identifier": "char_article_12",
+        "code": 798536
+      },
+      {
+        "identifier": "char_article_120",
+        "code": 266283
+      },
+      {
+        "identifier": "char_article_121",
+        "code": 556226
+      },
+      {
+        "identifier": "char_article_122",
+        "code": 549272
+      },
+      {
+        "identifier": "char_article_123",
+        "code": 294792
+      },
+      {
+        "identifier": "char_article_124",
+        "code": 337616
+      },
+      {
+        "identifier": "char_article_125",
+        "code": 846384
+      },
+      {
+        "identifier": "char_article_126",
+        "code": 131368
+      },
+      {
+        "identifier": "char_article_127",
+        "code": 100003
+      },
+      {
+        "identifier": "char_article_128",
+        "code": 891165
+      },
+      {
+        "identifier": "char_article_129",
+        "code": 735506
+      },
+      {
+        "identifier": "char_article_13",
+        "code": 934745
+      },
+      {
+        "identifier": "char_article_130",
+        "code": 884864
+      },
+      {
+        "identifier": "char_article_131",
+        "code": 250629
+      },
+      {
+        "identifier": "char_article_132",
+        "code": 924119
+      },
+      {
+        "identifier": "char_article_133",
+        "code": 99457
+      },
+      {
+        "identifier": "char_article_134",
+        "code": 353251
+      },
+      {
+        "identifier": "char_article_135",
+        "code": 420624
+      },
+      {
+        "identifier": "char_article_136",
+        "code": 175827
+      },
+      {
+        "identifier": "char_article_137",
+        "code": 532827
+      },
+      {
+        "identifier": "char_article_138",
+        "code": 336123
+      },
+      {
+        "identifier": "char_article_139",
+        "code": 259562
+      },
+      {
+        "identifier": "char_article_14",
+        "code": 306234
+      },
+      {
+        "identifier": "char_article_140",
+        "code": 585082
+      },
+      {
+        "identifier": "char_article_141",
+        "code": 344185
+      },
+      {
+        "identifier": "char_article_142",
+        "code": 804799
+      },
+      {
+        "identifier": "char_article_143",
+        "code": 142012
+      },
+      {
+        "identifier": "char_article_144",
+        "code": 829258
+      },
+      {
+        "identifier": "char_article_145",
+        "code": 594803
+      },
+      {
+        "identifier": "char_article_146",
+        "code": 570557
+      },
+      {
+        "identifier": "char_article_147",
+        "code": 825964
+      },
+      {
+        "identifier": "char_article_148",
+        "code": 767179
+      },
+      {
+        "identifier": "char_article_149",
+        "code": 21009
+      },
+      {
+        "identifier": "char_article_15",
+        "code": 334969
+      },
+      {
+        "identifier": "char_article_150",
+        "code": 214021
+      },
+      {
+        "identifier": "char_article_151",
+        "code": 169541
+      },
+      {
+        "identifier": "char_article_152",
+        "code": 233908
+      },
+      {
+        "identifier": "char_article_153",
+        "code": 190846
+      },
+      {
+        "identifier": "char_article_154",
+        "code": 878698
+      },
+      {
+        "identifier": "char_article_155",
+        "code": 580553
+      },
+      {
+        "identifier": "char_article_156",
+        "code": 12999
+      },
+      {
+        "identifier": "char_article_157",
+        "code": 963221
+      },
+      {
+        "identifier": "char_article_158",
+        "code": 790607
+      },
+      {
+        "identifier": "char_article_159",
+        "code": 541475
+      },
+      {
+        "identifier": "char_article_16",
+        "code": 964252
+      },
+      {
+        "identifier": "char_article_160",
+        "code": 328949
+      },
+      {
+        "identifier": "char_article_161",
+        "code": 656426
+      },
+      {
+        "identifier": "char_article_162",
+        "code": 221985
+      },
+      {
+        "identifier": "char_article_163",
+        "code": 845827
+      },
+      {
+        "identifier": "char_article_164",
+        "code": 925811
+      },
+      {
+        "identifier": "char_article_165",
+        "code": 614148
+      },
+      {
+        "identifier": "char_article_166",
+        "code": 225131
+      },
+      {
+        "identifier": "char_article_167",
+        "code": 658503
+      },
+      {
+        "identifier": "char_article_168",
+        "code": 648088
+      },
+      {
+        "identifier": "char_article_169",
+        "code": 357456
+      },
+      {
+        "identifier": "char_article_17",
+        "code": 940659
+      },
+      {
+        "identifier": "char_article_170",
+        "code": 203377
+      },
+      {
+        "identifier": "char_article_171",
+        "code": 935932
+      },
+      {
+        "identifier": "char_article_172",
+        "code": 280134
+      },
+      {
+        "identifier": "char_article_173",
+        "code": 560246
+      },
+      {
+        "identifier": "char_article_174",
+        "code": 771531
+      },
+      {
+        "identifier": "char_article_175",
+        "code": 668385
+      },
+      {
+        "identifier": "char_article_176",
+        "code": 276829
+      },
+      {
+        "identifier": "char_article_177",
+        "code": 806302
+      },
+      {
+        "identifier": "char_article_178",
+        "code": 215132
+      },
+      {
+        "identifier": "char_article_179",
+        "code": 300064
+      },
+      {
+        "identifier": "char_article_18",
+        "code": 88740
+      },
+      {
+        "identifier": "char_article_180",
+        "code": 25308
+      },
+      {
+        "identifier": "char_article_181",
+        "code": 347512
+      },
+      {
+        "identifier": "char_article_182",
+        "code": 472881
+      },
+      {
+        "identifier": "char_article_183",
+        "code": 997577
+      },
+      {
+        "identifier": "char_article_184",
+        "code": 846703
+      },
+      {
+        "identifier": "char_article_185",
+        "code": 365711
+      },
+      {
+        "identifier": "char_article_186",
+        "code": 882018
+      },
+      {
+        "identifier": "char_article_187",
+        "code": 731614
+      },
+      {
+        "identifier": "char_article_188",
+        "code": 38823
+      },
+      {
+        "identifier": "char_article_189",
+        "code": 599439
+      },
+      {
+        "identifier": "char_article_19",
+        "code": 195068
+      },
+      {
+        "identifier": "char_article_190",
+        "code": 504455
+      },
+      {
+        "identifier": "char_article_191",
+        "code": 733830
+      },
+      {
+        "identifier": "char_article_192",
+        "code": 34377
+      },
+      {
+        "identifier": "char_article_193",
+        "code": 149635
+      },
+      {
+        "identifier": "char_article_194",
+        "code": 346981
+      },
+      {
+        "identifier": "char_article_195",
+        "code": 512309
+      },
+      {
+        "identifier": "char_article_196",
+        "code": 331582
+      },
+      {
+        "identifier": "char_article_197",
+        "code": 252157
+      },
+      {
+        "identifier": "char_article_198",
+        "code": 442861
+      },
+      {
+        "identifier": "char_article_199",
+        "code": 135684
+      },
+      {
+        "identifier": "char_article_2",
+        "code": 512647
+      },
+      {
+        "identifier": "char_article_20",
+        "code": 988408
+      },
+      {
+        "identifier": "char_article_200",
+        "code": 602219
+      },
+      {
+        "identifier": "char_article_201",
+        "code": 377151
+      },
+      {
+        "identifier": "char_article_202",
+        "code": 900410
+      },
+      {
+        "identifier": "char_article_203",
+        "code": 759207
+      },
+      {
+        "identifier": "char_article_204",
+        "code": 347477
+      },
+      {
+        "identifier": "char_article_205",
+        "code": 498910
+      },
+      {
+        "identifier": "char_article_206",
+        "code": 93173
+      },
+      {
+        "identifier": "char_article_207",
+        "code": 522309
+      },
+      {
+        "identifier": "char_article_208",
+        "code": 3467
+      },
+      {
+        "identifier": "char_article_209",
+        "code": 277841
+      },
+      {
+        "identifier": "char_article_21",
+        "code": 237676
+      },
+      {
+        "identifier": "char_article_210",
+        "code": 440199
+      },
+      {
+        "identifier": "char_article_211",
+        "code": 553828
+      },
+      {
+        "identifier": "char_article_212",
+        "code": 1006352
+      },
+      {
+        "identifier": "char_article_213",
+        "code": 495421
+      },
+      {
+        "identifier": "char_article_214",
+        "code": 615422
+      },
+      {
+        "identifier": "char_article_215",
+        "code": 540476
+      },
+      {
+        "identifier": "char_article_216",
+        "code": 693672
+      },
+      {
+        "identifier": "char_article_217",
+        "code": 592908
+      },
+      {
+        "identifier": "char_article_218",
+        "code": 1001601
+      },
+      {
+        "identifier": "char_article_219",
+        "code": 128415
+      },
+      {
+        "identifier": "char_article_22",
+        "code": 471767
+      },
+      {
+        "identifier": "char_article_220",
+        "code": 814767
+      },
+      {
+        "identifier": "char_article_221",
+        "code": 780621
+      },
+      {
+        "identifier": "char_article_222",
+        "code": 978779
+      },
+      {
+        "identifier": "char_article_223",
+        "code": 462093
+      },
+      {
+        "identifier": "char_article_224",
+        "code": 444960
+      },
+      {
+        "identifier": "char_article_225",
+        "code": 570200
+      },
+      {
+        "identifier": "char_article_226",
+        "code": 87472
+      },
+      {
+        "identifier": "char_article_227",
+        "code": 229769
+      },
+      {
+        "identifier": "char_article_228",
+        "code": 317284
+      },
+      {
+        "identifier": "char_article_229",
+        "code": 445327
+      },
+      {
+        "identifier": "char_article_23",
+        "code": 567633
+      },
+      {
+        "identifier": "char_article_230",
+        "code": 35962
+      },
+      {
+        "identifier": "char_article_231",
+        "code": 170164
+      },
+      {
+        "identifier": "char_article_232",
+        "code": 289248
+      },
+      {
+        "identifier": "char_article_233",
+        "code": 672022
+      },
+      {
+        "identifier": "char_article_234",
+        "code": 1042765
+      },
+      {
+        "identifier": "char_article_235",
+        "code": 897109
+      },
+      {
+        "identifier": "char_article_236",
+        "code": 516943
+      },
+      {
+        "identifier": "char_article_237",
+        "code": 210831
+      },
+      {
+        "identifier": "char_article_238",
+        "code": 994381
+      },
+      {
+        "identifier": "char_article_239",
+        "code": 681061
+      },
+      {
+        "identifier": "char_article_24",
+        "code": 300737
+      },
+      {
+        "identifier": "char_article_240",
+        "code": 359801
+      },
+      {
+        "identifier": "char_article_241",
+        "code": 110229
+      },
+      {
+        "identifier": "char_article_242",
+        "code": 707706
+      },
+      {
+        "identifier": "char_article_243",
+        "code": 212285
+      },
+      {
+        "identifier": "char_article_244",
+        "code": 811820
+      },
+      {
+        "identifier": "char_article_245",
+        "code": 833072
+      },
+      {
+        "identifier": "char_article_246",
+        "code": 818836
+      },
+      {
+        "identifier": "char_article_247",
+        "code": 920065
+      },
+      {
+        "identifier": "char_article_248",
+        "code": 748535
+      },
+      {
+        "identifier": "char_article_249",
+        "code": 981311
+      },
+      {
+        "identifier": "char_article_25",
+        "code": 996319
+      },
+      {
+        "identifier": "char_article_250",
+        "code": 688622
+      },
+      {
+        "identifier": "char_article_251",
+        "code": 366101
+      },
+      {
+        "identifier": "char_article_252",
+        "code": 552886
+      },
+      {
+        "identifier": "char_article_253",
+        "code": 952728
+      },
+      {
+        "identifier": "char_article_254",
+        "code": 74237
+      },
+      {
+        "identifier": "char_article_255",
+        "code": 924159
+      },
+      {
+        "identifier": "char_article_256",
+        "code": 385333
+      },
+      {
+        "identifier": "char_article_257",
+        "code": 917023
+      },
+      {
+        "identifier": "char_article_258",
+        "code": 599856
+      },
+      {
+        "identifier": "char_article_259",
+        "code": 1005058
+      },
+      {
+        "identifier": "char_article_26",
+        "code": 333479
+      },
+      {
+        "identifier": "char_article_260",
+        "code": 876152
+      },
+      {
+        "identifier": "char_article_261",
+        "code": 483283
+      },
+      {
+        "identifier": "char_article_262",
+        "code": 222154
+      },
+      {
+        "identifier": "char_article_263",
+        "code": 48574
+      },
+      {
+        "identifier": "char_article_264",
+        "code": 446519
+      },
+      {
+        "identifier": "char_article_265",
+        "code": 703064
+      },
+      {
+        "identifier": "char_article_266",
+        "code": 416036
+      },
+      {
+        "identifier": "char_article_267",
+        "code": 661662
+      },
+      {
+        "identifier": "char_article_268",
+        "code": 584957
+      },
+      {
+        "identifier": "char_article_269",
+        "code": 127128
+      },
+      {
+        "identifier": "char_article_27",
+        "code": 272515
+      },
+      {
+        "identifier": "char_article_270",
+        "code": 984541
+      },
+      {
+        "identifier": "char_article_271",
+        "code": 752309
+      },
+      {
+        "identifier": "char_article_272",
+        "code": 2916
+      },
+      {
+        "identifier": "char_article_273",
+        "code": 547184
+      },
+      {
+        "identifier": "char_article_274",
+        "code": 124115
+      },
+      {
+        "identifier": "char_article_275",
+        "code": 967660
+      },
+      {
+        "identifier": "char_article_276",
+        "code": 186302
+      },
+      {
+        "identifier": "char_article_277",
+        "code": 864800
+      },
+      {
+        "identifier": "char_article_278",
+        "code": 909659
+      },
+      {
+        "identifier": "char_article_279",
+        "code": 691013
+      },
+      {
+        "identifier": "char_article_28",
+        "code": 935706
+      },
+      {
+        "identifier": "char_article_280",
+        "code": 656274
+      },
+      {
+        "identifier": "char_article_281",
+        "code": 251312
+      },
+      {
+        "identifier": "char_article_282",
+        "code": 74514
+      },
+      {
+        "identifier": "char_article_283",
+        "code": 777865
+      },
+      {
+        "identifier": "char_article_284",
+        "code": 1027201
+      },
+      {
+        "identifier": "char_article_285",
+        "code": 953867
+      },
+      {
+        "identifier": "char_article_286",
+        "code": 253833
+      },
+      {
+        "identifier": "char_article_287",
+        "code": 579560
+      },
+      {
+        "identifier": "char_article_288",
+        "code": 781535
+      },
+      {
+        "identifier": "char_article_289",
+        "code": 716921
+      },
+      {
+        "identifier": "char_article_29",
+        "code": 478218
+      },
+      {
+        "identifier": "char_article_290",
+        "code": 809160
+      },
+      {
+        "identifier": "char_article_291",
+        "code": 81437
+      },
+      {
+        "identifier": "char_article_292",
+        "code": 848380
+      },
+      {
+        "identifier": "char_article_293",
+        "code": 734845
+      },
+      {
+        "identifier": "char_article_294",
+        "code": 175513
+      },
+      {
+        "identifier": "char_article_295",
+        "code": 835149
+      },
+      {
+        "identifier": "char_article_296",
+        "code": 327438
+      },
+      {
+        "identifier": "char_article_297",
+        "code": 815432
+      },
+      {
+        "identifier": "char_article_298",
+        "code": 887424
+      },
+      {
+        "identifier": "char_article_299",
+        "code": 486090
+      },
+      {
+        "identifier": "char_article_3",
+        "code": 706046
+      },
+      {
+        "identifier": "char_article_30",
+        "code": 549160
+      },
+      {
+        "identifier": "char_article_300",
+        "code": 106538
+      },
+      {
+        "identifier": "char_article_301",
+        "code": 989481
+      },
+      {
+        "identifier": "char_article_302",
+        "code": 431580
+      },
+      {
+        "identifier": "char_article_303",
+        "code": 67806
+      },
+      {
+        "identifier": "char_article_304",
+        "code": 809406
+      },
+      {
+        "identifier": "char_article_305",
+        "code": 765742
+      },
+      {
+        "identifier": "char_article_306",
+        "code": 76606
+      },
+      {
+        "identifier": "char_article_307",
+        "code": 643676
+      },
+      {
+        "identifier": "char_article_308",
+        "code": 193040
+      },
+      {
+        "identifier": "char_article_309",
+        "code": 753293
+      },
+      {
+        "identifier": "char_article_31",
+        "code": 209917
+      },
+      {
+        "identifier": "char_article_310",
+        "code": 802744
+      },
+      {
+        "identifier": "char_article_311",
+        "code": 442456
+      },
+      {
+        "identifier": "char_article_312",
+        "code": 466054
+      },
+      {
+        "identifier": "char_article_313",
+        "code": 21123
+      },
+      {
+        "identifier": "char_article_314",
+        "code": 34488
+      },
+      {
+        "identifier": "char_article_315",
+        "code": 173728
+      },
+      {
+        "identifier": "char_article_316",
+        "code": 268699
+      },
+      {
+        "identifier": "char_article_317",
+        "code": 953274
+      },
+      {
+        "identifier": "char_article_318",
+        "code": 423191
+      },
+      {
+        "identifier": "char_article_319",
+        "code": 383910
+      },
+      {
+        "identifier": "char_article_32",
+        "code": 635155
+      },
+      {
+        "identifier": "char_article_320",
+        "code": 578140
+      },
+      {
+        "identifier": "char_article_321",
+        "code": 993470
+      },
+      {
+        "identifier": "char_article_322",
+        "code": 141269
+      },
+      {
+        "identifier": "char_article_323",
+        "code": 817685
+      },
+      {
+        "identifier": "char_article_324",
+        "code": 277307
+      },
+      {
+        "identifier": "char_article_325",
+        "code": 5484
+      },
+      {
+        "identifier": "char_article_326",
+        "code": 620187
+      },
+      {
+        "identifier": "char_article_327",
+        "code": 256115
+      },
+      {
+        "identifier": "char_article_328",
+        "code": 327439
+      },
+      {
+        "identifier": "char_article_329",
+        "code": 801193
+      },
+      {
+        "identifier": "char_article_33",
+        "code": 284627
+      },
+      {
+        "identifier": "char_article_330",
+        "code": 774706
+      },
+      {
+        "identifier": "char_article_331",
+        "code": 221802
+      },
+      {
+        "identifier": "char_article_332",
+        "code": 376026
+      },
+      {
+        "identifier": "char_article_333",
+        "code": 646889
+      },
+      {
+        "identifier": "char_article_334",
+        "code": 627456
+      },
+      {
+        "identifier": "char_article_335",
+        "code": 337549
+      },
+      {
+        "identifier": "char_article_336",
+        "code": 238390
+      },
+      {
+        "identifier": "char_article_337",
+        "code": 315326
+      },
+      {
+        "identifier": "char_article_338",
+        "code": 667943
+      },
+      {
+        "identifier": "char_article_339",
+        "code": 320726
+      },
+      {
+        "identifier": "char_article_34",
+        "code": 383296
+      },
+      {
+        "identifier": "char_article_340",
+        "code": 240127
+      },
+      {
+        "identifier": "char_article_341",
+        "code": 663735
+      },
+      {
+        "identifier": "char_article_342",
+        "code": 857461
+      },
+      {
+        "identifier": "char_article_343",
+        "code": 1033050
+      },
+      {
+        "identifier": "char_article_344",
+        "code": 53723
+      },
+      {
+        "identifier": "char_article_345",
+        "code": 403101
+      },
+      {
+        "identifier": "char_article_346",
+        "code": 187950
+      },
+      {
+        "identifier": "char_article_347",
+        "code": 601926
+      },
+      {
+        "identifier": "char_article_348",
+        "code": 754685
+      },
+      {
+        "identifier": "char_article_349",
+        "code": 305866
+      },
+      {
+        "identifier": "char_article_35",
+        "code": 1034637
+      },
+      {
+        "identifier": "char_article_350",
+        "code": 724143
+      },
+      {
+        "identifier": "char_article_351",
+        "code": 249268
+      },
+      {
+        "identifier": "char_article_352",
+        "code": 322141
+      },
+      {
+        "identifier": "char_article_353",
+        "code": 244273
+      },
+      {
+        "identifier": "char_article_354",
+        "code": 700042
+      },
+      {
+        "identifier": "char_article_355",
+        "code": 348489
+      },
+      {
+        "identifier": "char_article_356",
+        "code": 585392
+      },
+      {
+        "identifier": "char_article_357",
+        "code": 1037976
+      },
+      {
+        "identifier": "char_article_358",
+        "code": 540767
+      },
+      {
+        "identifier": "char_article_359",
+        "code": 234375
+      },
+      {
+        "identifier": "char_article_36",
+        "code": 95053
+      },
+      {
+        "identifier": "char_article_360",
+        "code": 69952
+      },
+      {
+        "identifier": "char_article_361",
+        "code": 469140
+      },
+      {
+        "identifier": "char_article_362",
+        "code": 555299
+      },
+      {
+        "identifier": "char_article_363",
+        "code": 1020549
+      },
+      {
+        "identifier": "char_article_364",
+        "code": 632837
+      },
+      {
+        "identifier": "char_article_365",
+        "code": 442260
+      },
+      {
+        "identifier": "char_article_366",
+        "code": 1015038
+      },
+      {
+        "identifier": "char_article_367",
+        "code": 243924
+      },
+      {
+        "identifier": "char_article_368",
+        "code": 530880
+      },
+      {
+        "identifier": "char_article_369",
+        "code": 71691
+      },
+      {
+        "identifier": "char_article_37",
+        "code": 999546
+      },
+      {
+        "identifier": "char_article_370",
+        "code": 305210
+      },
+      {
+        "identifier": "char_article_371",
+        "code": 768885
+      },
+      {
+        "identifier": "char_article_372",
+        "code": 758504
+      },
+      {
+        "identifier": "char_article_373",
+        "code": 504619
+      },
+      {
+        "identifier": "char_article_374",
+        "code": 841445
+      },
+      {
+        "identifier": "char_article_375",
+        "code": 834018
+      },
+      {
+        "identifier": "char_article_376",
+        "code": 441283
+      },
+      {
+        "identifier": "char_article_377",
+        "code": 584467
+      },
+      {
+        "identifier": "char_article_378",
+        "code": 764702
+      },
+      {
+        "identifier": "char_article_379",
+        "code": 946127
+      },
+      {
+        "identifier": "char_article_38",
+        "code": 11184
+      },
+      {
+        "identifier": "char_article_380",
+        "code": 522599
+      },
+      {
+        "identifier": "char_article_381",
+        "code": 716923
+      },
+      {
+        "identifier": "char_article_382",
+        "code": 118811
+      },
+      {
+        "identifier": "char_article_383",
+        "code": 761411
+      },
+      {
+        "identifier": "char_article_384",
+        "code": 748278
+      },
+      {
+        "identifier": "char_article_385",
+        "code": 915971
+      },
+      {
+        "identifier": "char_article_386",
+        "code": 515560
+      },
+      {
+        "identifier": "char_article_387",
+        "code": 414716
+      },
+      {
+        "identifier": "char_article_388",
+        "code": 440796
+      },
+      {
+        "identifier": "char_article_389",
+        "code": 831539
+      },
+      {
+        "identifier": "char_article_39",
+        "code": 112542
+      },
+      {
+        "identifier": "char_article_390",
+        "code": 154890
+      },
+      {
+        "identifier": "char_article_391",
+        "code": 786355
+      },
+      {
+        "identifier": "char_article_392",
+        "code": 780258
+      },
+      {
+        "identifier": "char_article_393",
+        "code": 21417
+      },
+      {
+        "identifier": "char_article_394",
+        "code": 782635
+      },
+      {
+        "identifier": "char_article_395",
+        "code": 908336
+      },
+      {
+        "identifier": "char_article_396",
+        "code": 466919
+      },
+      {
+        "identifier": "char_article_397",
+        "code": 283331
+      },
+      {
+        "identifier": "char_article_398",
+        "code": 967699
+      },
+      {
+        "identifier": "char_article_399",
+        "code": 184691
+      },
+      {
+        "identifier": "char_article_4",
+        "code": 656486
+      },
+      {
+        "identifier": "char_article_40",
+        "code": 576425
+      },
+      {
+        "identifier": "char_article_400",
+        "code": 127545
+      },
+      {
+        "identifier": "char_article_401",
+        "code": 913896
+      },
+      {
+        "identifier": "char_article_402",
+        "code": 907120
+      },
+      {
+        "identifier": "char_article_403",
+        "code": 725334
+      },
+      {
+        "identifier": "char_article_404",
+        "code": 422279
+      },
+      {
+        "identifier": "char_article_405",
+        "code": 355594
+      },
+      {
+        "identifier": "char_article_406",
+        "code": 470515
+      },
+      {
+        "identifier": "char_article_407",
+        "code": 907187
+      },
+      {
+        "identifier": "char_article_408",
+        "code": 123558
+      },
+      {
+        "identifier": "char_article_409",
+        "code": 609435
+      },
+      {
+        "identifier": "char_article_41",
+        "code": 612076
+      },
+      {
+        "identifier": "char_article_410",
+        "code": 368450
+      },
+      {
+        "identifier": "char_article_411",
+        "code": 967790
+      },
+      {
+        "identifier": "char_article_412",
+        "code": 334504
+      },
+      {
+        "identifier": "char_article_413",
+        "code": 247725
+      },
+      {
+        "identifier": "char_article_414",
+        "code": 524993
+      },
+      {
+        "identifier": "char_article_415",
+        "code": 196399
+      },
+      {
+        "identifier": "char_article_416",
+        "code": 157175
+      },
+      {
+        "identifier": "char_article_417",
+        "code": 904616
+      },
+      {
+        "identifier": "char_article_418",
+        "code": 668621
+      },
+      {
+        "identifier": "char_article_419",
+        "code": 537770
+      },
+      {
+        "identifier": "char_article_42",
+        "code": 686259
+      },
+      {
+        "identifier": "char_article_420",
+        "code": 396630
+      },
+      {
+        "identifier": "char_article_421",
+        "code": 99747
+      },
+      {
+        "identifier": "char_article_422",
+        "code": 540229
+      },
+      {
+        "identifier": "char_article_423",
+        "code": 488530
+      },
+      {
+        "identifier": "char_article_424",
+        "code": 711433
+      },
+      {
+        "identifier": "char_article_425",
+        "code": 150956
+      },
+      {
+        "identifier": "char_article_426",
+        "code": 966426
+      },
+      {
+        "identifier": "char_article_427",
+        "code": 312279
+      },
+      {
+        "identifier": "char_article_428",
+        "code": 935252
+      },
+      {
+        "identifier": "char_article_429",
+        "code": 405549
+      },
+      {
+        "identifier": "char_article_43",
+        "code": 18696
+      },
+      {
+        "identifier": "char_article_430",
+        "code": 162249
+      },
+      {
+        "identifier": "char_article_431",
+        "code": 752210
+      },
+      {
+        "identifier": "char_article_432",
+        "code": 262335
+      },
+      {
+        "identifier": "char_article_433",
+        "code": 327926
+      },
+      {
+        "identifier": "char_article_434",
+        "code": 73692
+      },
+      {
+        "identifier": "char_article_435",
+        "code": 632807
+      },
+      {
+        "identifier": "char_article_436",
+        "code": 754875
+      },
+      {
+        "identifier": "char_article_437",
+        "code": 928661
+      },
+      {
+        "identifier": "char_article_438",
+        "code": 523497
+      },
+      {
+        "identifier": "char_article_439",
+        "code": 219658
+      },
+      {
+        "identifier": "char_article_44",
+        "code": 754005
+      },
+      {
+        "identifier": "char_article_440",
+        "code": 723993
+      },
+      {
+        "identifier": "char_article_441",
+        "code": 59836
+      },
+      {
+        "identifier": "char_article_442",
+        "code": 584652
+      },
+      {
+        "identifier": "char_article_443",
+        "code": 1039935
+      },
+      {
+        "identifier": "char_article_444",
+        "code": 928001
+      },
+      {
+        "identifier": "char_article_445",
+        "code": 25326
+      },
+      {
+        "identifier": "char_article_446",
+        "code": 167350
+      },
+      {
+        "identifier": "char_article_447",
+        "code": 1022452
+      },
+      {
+        "identifier": "char_article_448",
+        "code": 347320
+      },
+      {
+        "identifier": "char_article_449",
+        "code": 134366
+      },
+      {
+        "identifier": "char_article_45",
+        "code": 990120
+      },
+      {
+        "identifier": "char_article_450",
+        "code": 380315
+      },
+      {
+        "identifier": "char_article_451",
+        "code": 707612
+      },
+      {
+        "identifier": "char_article_452",
+        "code": 119391
+      },
+      {
+        "identifier": "char_article_453",
+        "code": 86957
+      },
+      {
+        "identifier": "char_article_454",
+        "code": 60140
+      },
+      {
+        "identifier": "char_article_455",
+        "code": 552909
+      },
+      {
+        "identifier": "char_article_456",
+        "code": 526930
+      },
+      {
+        "identifier": "char_article_457",
+        "code": 66480
+      },
+      {
+        "identifier": "char_article_458",
+        "code": 548474
+      },
+      {
+        "identifier": "char_article_459",
+        "code": 144864
+      },
+      {
+        "identifier": "char_article_46",
+        "code": 32134
+      },
+      {
+        "identifier": "char_article_460",
+        "code": 658289
+      },
+      {
+        "identifier": "char_article_461",
+        "code": 123904
+      },
+      {
+        "identifier": "char_article_462",
+        "code": 576430
+      },
+      {
+        "identifier": "char_article_463",
+        "code": 446511
+      },
+      {
+        "identifier": "char_article_464",
+        "code": 494100
+      },
+      {
+        "identifier": "char_article_465",
+        "code": 620936
+      },
+      {
+        "identifier": "char_article_466",
+        "code": 407343
+      },
+      {
+        "identifier": "char_article_467",
+        "code": 956899
+      },
+      {
+        "identifier": "char_article_468",
+        "code": 617607
+      },
+      {
+        "identifier": "char_article_469",
+        "code": 677685
+      },
+      {
+        "identifier": "char_article_47",
+        "code": 146985
+      },
+      {
+        "identifier": "char_article_470",
+        "code": 816083
+      },
+      {
+        "identifier": "char_article_471",
+        "code": 454592
+      },
+      {
+        "identifier": "char_article_472",
+        "code": 294128
+      },
+      {
+        "identifier": "char_article_473",
+        "code": 143965
+      },
+      {
+        "identifier": "char_article_474",
+        "code": 256556
+      },
+      {
+        "identifier": "char_article_475",
+        "code": 413620
+      },
+      {
+        "identifier": "char_article_476",
+        "code": 328851
+      },
+      {
+        "identifier": "char_article_477",
+        "code": 105330
+      },
+      {
+        "identifier": "char_article_478",
+        "code": 652653
+      },
+      {
+        "identifier": "char_article_479",
+        "code": 222095
+      },
+      {
+        "identifier": "char_article_48",
+        "code": 631571
+      },
+      {
+        "identifier": "char_article_480",
+        "code": 1043194
+      },
+      {
+        "identifier": "char_article_481",
+        "code": 441683
+      },
+      {
+        "identifier": "char_article_482",
+        "code": 51092
+      },
+      {
+        "identifier": "char_article_483",
+        "code": 394302
+      },
+      {
+        "identifier": "char_article_484",
+        "code": 595699
+      },
+      {
+        "identifier": "char_article_485",
+        "code": 366142
+      },
+      {
+        "identifier": "char_article_486",
+        "code": 468007
+      },
+      {
+        "identifier": "char_article_487",
+        "code": 222915
+      },
+      {
+        "identifier": "char_article_488",
+        "code": 22242
+      },
+      {
+        "identifier": "char_article_489",
+        "code": 1039791
+      },
+      {
+        "identifier": "char_article_49",
+        "code": 921377
+      },
+      {
+        "identifier": "char_article_490",
+        "code": 983907
+      },
+      {
+        "identifier": "char_article_491",
+        "code": 713648
+      },
+      {
+        "identifier": "char_article_492",
+        "code": 474829
+      },
+      {
+        "identifier": "char_article_493",
+        "code": 632596
+      },
+      {
+        "identifier": "char_article_494",
+        "code": 980396
+      },
+      {
+        "identifier": "char_article_495",
+        "code": 157485
+      },
+      {
+        "identifier": "char_article_496",
+        "code": 989506
+      },
+      {
+        "identifier": "char_article_497",
+        "code": 1001539
+      },
+      {
+        "identifier": "char_article_498",
+        "code": 430806
+      },
+      {
+        "identifier": "char_article_499",
+        "code": 307756
+      },
+      {
+        "identifier": "char_article_5",
+        "code": 784221
+      },
+      {
+        "identifier": "char_article_50",
+        "code": 1029694
+      },
+      {
+        "identifier": "char_article_500",
+        "code": 265312
+      },
+      {
+        "identifier": "char_article_501",
+        "code": 675461
+      },
+      {
+        "identifier": "char_article_502",
+        "code": 50287
+      },
+      {
+        "identifier": "char_article_503",
+        "code": 917910
+      },
+      {
+        "identifier": "char_article_504",
+        "code": 346174
+      },
+      {
+        "identifier": "char_article_505",
+        "code": 455037
+      },
+      {
+        "identifier": "char_article_506",
+        "code": 924962
+      },
+      {
+        "identifier": "char_article_507",
+        "code": 55010
+      },
+      {
+        "identifier": "char_article_508",
+        "code": 1004073
+      },
+      {
+        "identifier": "char_article_509",
+        "code": 473918
+      },
+      {
+        "identifier": "char_article_51",
+        "code": 41539
+      },
+      {
+        "identifier": "char_article_510",
+        "code": 124524
+      },
+      {
+        "identifier": "char_article_511",
+        "code": 1038006
+      },
+      {
+        "identifier": "char_article_512",
+        "code": 574049
+      },
+      {
+        "identifier": "char_article_513",
+        "code": 959714
+      },
+      {
+        "identifier": "char_article_514",
+        "code": 536323
+      },
+      {
+        "identifier": "char_article_515",
+        "code": 166379
+      },
+      {
+        "identifier": "char_article_516",
+        "code": 379429
+      },
+      {
+        "identifier": "char_article_517",
+        "code": 237485
+      },
+      {
+        "identifier": "char_article_518",
+        "code": 638322
+      },
+      {
+        "identifier": "char_article_519",
+        "code": 955590
+      },
+      {
+        "identifier": "char_article_52",
+        "code": 169852
+      },
+      {
+        "identifier": "char_article_520",
+        "code": 156215
+      },
+      {
+        "identifier": "char_article_521",
+        "code": 355438
+      },
+      {
+        "identifier": "char_article_522",
+        "code": 85907
+      },
+      {
+        "identifier": "char_article_523",
+        "code": 857866
+      },
+      {
+        "identifier": "char_article_524",
+        "code": 922187
+      },
+      {
+        "identifier": "char_article_525",
+        "code": 65151
+      },
+      {
+        "identifier": "char_article_526",
+        "code": 408793
+      },
+      {
+        "identifier": "char_article_527",
+        "code": 959459
+      },
+      {
+        "identifier": "char_article_528",
+        "code": 988746
+      },
+      {
+        "identifier": "char_article_529",
+        "code": 685592
+      },
+      {
+        "identifier": "char_article_53",
+        "code": 798935
+      },
+      {
+        "identifier": "char_article_530",
+        "code": 712593
+      },
+      {
+        "identifier": "char_article_531",
+        "code": 160296
+      },
+      {
+        "identifier": "char_article_532",
+        "code": 381286
+      },
+      {
+        "identifier": "char_article_533",
+        "code": 825978
+      },
+      {
+        "identifier": "char_article_534",
+        "code": 194334
+      },
+      {
+        "identifier": "char_article_535",
+        "code": 848984
+      },
+      {
+        "identifier": "char_article_536",
+        "code": 667779
+      },
+      {
+        "identifier": "char_article_537",
+        "code": 476203
+      },
+      {
+        "identifier": "char_article_538",
+        "code": 424542
+      },
+      {
+        "identifier": "char_article_539",
+        "code": 212378
+      },
+      {
+        "identifier": "char_article_54",
+        "code": 500238
+      },
+      {
+        "identifier": "char_article_540",
+        "code": 965332
+      },
+      {
+        "identifier": "char_article_541",
+        "code": 895850
+      },
+      {
+        "identifier": "char_article_542",
+        "code": 340363
+      },
+      {
+        "identifier": "char_article_543",
+        "code": 4691
+      },
+      {
+        "identifier": "char_article_544",
+        "code": 643039
+      },
+      {
+        "identifier": "char_article_545",
+        "code": 483427
+      },
+      {
+        "identifier": "char_article_546",
+        "code": 806968
+      },
+      {
+        "identifier": "char_article_547",
+        "code": 821473
+      },
+      {
+        "identifier": "char_article_548",
+        "code": 902072
+      },
+      {
+        "identifier": "char_article_549",
+        "code": 606419
+      },
+      {
+        "identifier": "char_article_55",
+        "code": 858063
+      },
+      {
+        "identifier": "char_article_550",
+        "code": 93962
+      },
+      {
+        "identifier": "char_article_551",
+        "code": 145665
+      },
+      {
+        "identifier": "char_article_552",
+        "code": 171496
+      },
+      {
+        "identifier": "char_article_553",
+        "code": 943599
+      },
+      {
+        "identifier": "char_article_554",
+        "code": 290097
+      },
+      {
+        "identifier": "char_article_555",
+        "code": 350191
+      },
+      {
+        "identifier": "char_article_556",
+        "code": 650860
+      },
+      {
+        "identifier": "char_article_557",
+        "code": 887149
+      },
+      {
+        "identifier": "char_article_558",
+        "code": 369552
+      },
+      {
+        "identifier": "char_article_559",
+        "code": 835975
+      },
+      {
+        "identifier": "char_article_56",
+        "code": 374502
+      },
+      {
+        "identifier": "char_article_560",
+        "code": 529952
+      },
+      {
+        "identifier": "char_article_561",
+        "code": 171012
+      },
+      {
+        "identifier": "char_article_562",
+        "code": 751505
+      },
+      {
+        "identifier": "char_article_563",
+        "code": 542312
+      },
+      {
+        "identifier": "char_article_564",
+        "code": 609256
+      },
+      {
+        "identifier": "char_article_565",
+        "code": 475181
+      },
+      {
+        "identifier": "char_article_566",
+        "code": 303646
+      },
+      {
+        "identifier": "char_article_567",
+        "code": 634710
+      },
+      {
+        "identifier": "char_article_568",
+        "code": 519
+      },
+      {
+        "identifier": "char_article_569",
+        "code": 465728
+      },
+      {
+        "identifier": "char_article_57",
+        "code": 934871
+      },
+      {
+        "identifier": "char_article_570",
+        "code": 710080
+      },
+      {
+        "identifier": "char_article_571",
+        "code": 504977
+      },
+      {
+        "identifier": "char_article_572",
+        "code": 303366
+      },
+      {
+        "identifier": "char_article_573",
+        "code": 802449
+      },
+      {
+        "identifier": "char_article_574",
+        "code": 1036872
+      },
+      {
+        "identifier": "char_article_575",
+        "code": 30153
+      },
+      {
+        "identifier": "char_article_576",
+        "code": 338059
+      },
+      {
+        "identifier": "char_article_577",
+        "code": 892362
+      },
+      {
+        "identifier": "char_article_578",
+        "code": 511636
+      },
+      {
+        "identifier": "char_article_579",
+        "code": 80875
+      },
+      {
+        "identifier": "char_article_58",
+        "code": 1048530
+      },
+      {
+        "identifier": "char_article_580",
+        "code": 22285
+      },
+      {
+        "identifier": "char_article_581",
+        "code": 831116
+      },
+      {
+        "identifier": "char_article_582",
+        "code": 597798
+      },
+      {
+        "identifier": "char_article_583",
+        "code": 431835
+      },
+      {
+        "identifier": "char_article_584",
+        "code": 289600
+      },
+      {
+        "identifier": "char_article_585",
+        "code": 41570
+      },
+      {
+        "identifier": "char_article_586",
+        "code": 68664
+      },
+      {
+        "identifier": "char_article_587",
+        "code": 832899
+      },
+      {
+        "identifier": "char_article_588",
+        "code": 754289
+      },
+      {
+        "identifier": "char_article_589",
+        "code": 550422
+      },
+      {
+        "identifier": "char_article_59",
+        "code": 615353
+      },
+      {
+        "identifier": "char_article_590",
+        "code": 98689
+      },
+      {
+        "identifier": "char_article_591",
+        "code": 60610
+      },
+      {
+        "identifier": "char_article_592",
+        "code": 517484
+      },
+      {
+        "identifier": "char_article_593",
+        "code": 778352
+      },
+      {
+        "identifier": "char_article_594",
+        "code": 636148
+      },
+      {
+        "identifier": "char_article_595",
+        "code": 835274
+      },
+      {
+        "identifier": "char_article_596",
+        "code": 348936
+      },
+      {
+        "identifier": "char_article_597",
+        "code": 491308
+      },
+      {
+        "identifier": "char_article_598",
+        "code": 408451
+      },
+      {
+        "identifier": "char_article_599",
+        "code": 738263
+      },
+      {
+        "identifier": "char_article_6",
+        "code": 1016014
+      },
+      {
+        "identifier": "char_article_60",
+        "code": 627205
+      },
+      {
+        "identifier": "char_article_600",
+        "code": 140000
+      },
+      {
+        "identifier": "char_article_601",
+        "code": 134329
+      },
+      {
+        "identifier": "char_article_602",
+        "code": 284785
+      },
+      {
+        "identifier": "char_article_603",
+        "code": 1012751
+      },
+      {
+        "identifier": "char_article_604",
+        "code": 92131
+      },
+      {
+        "identifier": "char_article_605",
+        "code": 97087
+      },
+      {
+        "identifier": "char_article_606",
+        "code": 802036
+      },
+      {
+        "identifier": "char_article_607",
+        "code": 359685
+      },
+      {
+        "identifier": "char_article_608",
+        "code": 777565
+      },
+      {
+        "identifier": "char_article_609",
+        "code": 831947
+      },
+      {
+        "identifier": "char_article_61",
+        "code": 183062
+      },
+      {
+        "identifier": "char_article_610",
+        "code": 451395
+      },
+      {
+        "identifier": "char_article_611",
+        "code": 82747
+      },
+      {
+        "identifier": "char_article_612",
+        "code": 716604
+      },
+      {
+        "identifier": "char_article_613",
+        "code": 237561
+      },
+      {
+        "identifier": "char_article_614",
+        "code": 851833
+      },
+      {
+        "identifier": "char_article_615",
+        "code": 1672
+      },
+      {
+        "identifier": "char_article_616",
+        "code": 833190
+      },
+      {
+        "identifier": "char_article_617",
+        "code": 307562
+      },
+      {
+        "identifier": "char_article_618",
+        "code": 82939
+      },
+      {
+        "identifier": "char_article_619",
+        "code": 801835
+      },
+      {
+        "identifier": "char_article_62",
+        "code": 24432
+      },
+      {
+        "identifier": "char_article_620",
+        "code": 557065
+      },
+      {
+        "identifier": "char_article_621",
+        "code": 436154
+      },
+      {
+        "identifier": "char_article_622",
+        "code": 350502
+      },
+      {
+        "identifier": "char_article_623",
+        "code": 686774
+      },
+      {
+        "identifier": "char_article_624",
+        "code": 628333
+      },
+      {
+        "identifier": "char_article_625",
+        "code": 956827
+      },
+      {
+        "identifier": "char_article_626",
+        "code": 560404
+      },
+      {
+        "identifier": "char_article_627",
+        "code": 156125
+      },
+      {
+        "identifier": "char_article_628",
+        "code": 413827
+      },
+      {
+        "identifier": "char_article_629",
+        "code": 412457
+      },
+      {
+        "identifier": "char_article_63",
+        "code": 83080
+      },
+      {
+        "identifier": "char_article_630",
+        "code": 104350
+      },
+      {
+        "identifier": "char_article_631",
+        "code": 823259
+      },
+      {
+        "identifier": "char_article_632",
+        "code": 641966
+      },
+      {
+        "identifier": "char_article_633",
+        "code": 710358
+      },
+      {
+        "identifier": "char_article_634",
+        "code": 1036584
+      },
+      {
+        "identifier": "char_article_635",
+        "code": 700796
+      },
+      {
+        "identifier": "char_article_636",
+        "code": 776793
+      },
+      {
+        "identifier": "char_article_637",
+        "code": 698682
+      },
+      {
+        "identifier": "char_article_638",
+        "code": 345303
+      },
+      {
+        "identifier": "char_article_639",
+        "code": 1011344
+      },
+      {
+        "identifier": "char_article_64",
+        "code": 134407
+      },
+      {
+        "identifier": "char_article_640",
+        "code": 995383
+      },
+      {
+        "identifier": "char_article_641",
+        "code": 603586
+      },
+      {
+        "identifier": "char_article_642",
+        "code": 573551
+      },
+      {
+        "identifier": "char_article_643",
+        "code": 809088
+      },
+      {
+        "identifier": "char_article_644",
+        "code": 955280
+      },
+      {
+        "identifier": "char_article_645",
+        "code": 12580
+      },
+      {
+        "identifier": "char_article_646",
+        "code": 416674
+      },
+      {
+        "identifier": "char_article_647",
+        "code": 173534
+      },
+      {
+        "identifier": "char_article_648",
+        "code": 216665
+      },
+      {
+        "identifier": "char_article_649",
+        "code": 105230
+      },
+      {
+        "identifier": "char_article_65",
+        "code": 563343
+      },
+      {
+        "identifier": "char_article_650",
+        "code": 751566
+      },
+      {
+        "identifier": "char_article_651",
+        "code": 1011852
+      },
+      {
+        "identifier": "char_article_652",
+        "code": 974278
+      },
+      {
+        "identifier": "char_article_653",
+        "code": 67339
+      },
+      {
+        "identifier": "char_article_654",
+        "code": 274561
+      },
+      {
+        "identifier": "char_article_655",
+        "code": 743281
+      },
+      {
+        "identifier": "char_article_656",
+        "code": 1002942
+      },
+      {
+        "identifier": "char_article_657",
+        "code": 730031
+      },
+      {
+        "identifier": "char_article_658",
+        "code": 469515
+      },
+      {
+        "identifier": "char_article_659",
+        "code": 58945
+      },
+      {
+        "identifier": "char_article_66",
+        "code": 527017
+      },
+      {
+        "identifier": "char_article_660",
+        "code": 341638
+      },
+      {
+        "identifier": "char_article_661",
+        "code": 75522
+      },
+      {
+        "identifier": "char_article_662",
+        "code": 879417
+      },
+      {
+        "identifier": "char_article_663",
+        "code": 1027617
+      },
+      {
+        "identifier": "char_article_664",
+        "code": 123043
+      },
+      {
+        "identifier": "char_article_665",
+        "code": 811898
+      },
+      {
+        "identifier": "char_article_666",
+        "code": 387766
+      },
+      {
+        "identifier": "char_article_667",
+        "code": 762487
+      },
+      {
+        "identifier": "char_article_668",
+        "code": 196294
+      },
+      {
+        "identifier": "char_article_669",
+        "code": 232328
+      },
+      {
+        "identifier": "char_article_67",
+        "code": 124620
+      },
+      {
+        "identifier": "char_article_670",
+        "code": 596248
+      },
+      {
+        "identifier": "char_article_671",
+        "code": 248298
+      },
+      {
+        "identifier": "char_article_672",
+        "code": 669979
+      },
+      {
+        "identifier": "char_article_673",
+        "code": 736900
+      },
+      {
+        "identifier": "char_article_674",
+        "code": 155488
+      },
+      {
+        "identifier": "char_article_675",
+        "code": 287329
+      },
+      {
+        "identifier": "char_article_676",
+        "code": 542620
+      },
+      {
+        "identifier": "char_article_677",
+        "code": 625315
+      },
+      {
+        "identifier": "char_article_678",
+        "code": 886545
+      },
+      {
+        "identifier": "char_article_679",
+        "code": 377692
+      },
+      {
+        "identifier": "char_article_68",
+        "code": 710993
+      },
+      {
+        "identifier": "char_article_680",
+        "code": 651793
+      },
+      {
+        "identifier": "char_article_681",
+        "code": 128018
+      },
+      {
+        "identifier": "char_article_682",
+        "code": 396166
+      },
+      {
+        "identifier": "char_article_683",
+        "code": 681423
+      },
+      {
+        "identifier": "char_article_684",
+        "code": 397549
+      },
+      {
+        "identifier": "char_article_685",
+        "code": 172828
+      },
+      {
+        "identifier": "char_article_686",
+        "code": 555567
+      },
+      {
+        "identifier": "char_article_687",
+        "code": 298388
+      },
+      {
+        "identifier": "char_article_688",
+        "code": 743487
+      },
+      {
+        "identifier": "char_article_689",
+        "code": 248309
+      },
+      {
+        "identifier": "char_article_69",
+        "code": 447854
+      },
+      {
+        "identifier": "char_article_690",
+        "code": 465387
+      },
+      {
+        "identifier": "char_article_691",
+        "code": 117638
+      },
+      {
+        "identifier": "char_article_692",
+        "code": 280887
+      },
+      {
+        "identifier": "char_article_693",
+        "code": 653397
+      },
+      {
+        "identifier": "char_article_694",
+        "code": 139880
+      },
+      {
+        "identifier": "char_article_695",
+        "code": 168831
+      },
+      {
+        "identifier": "char_article_696",
+        "code": 24713
+      },
+      {
+        "identifier": "char_article_697",
+        "code": 474316
+      },
+      {
+        "identifier": "char_article_698",
+        "code": 68422
+      },
+      {
+        "identifier": "char_article_699",
+        "code": 576488
+      },
+      {
+        "identifier": "char_article_7",
+        "code": 610274
+      },
+      {
+        "identifier": "char_article_70",
+        "code": 791184
+      },
+      {
+        "identifier": "char_article_700",
+        "code": 556856
+      },
+      {
+        "identifier": "char_article_701",
+        "code": 733244
+      },
+      {
+        "identifier": "char_article_702",
+        "code": 554156
+      },
+      {
+        "identifier": "char_article_703",
+        "code": 980540
+      },
+      {
+        "identifier": "char_article_704",
+        "code": 88053
+      },
+      {
+        "identifier": "char_article_705",
+        "code": 489129
+      },
+      {
+        "identifier": "char_article_706",
+        "code": 108243
+      },
+      {
+        "identifier": "char_article_707",
+        "code": 36006
+      },
+      {
+        "identifier": "char_article_708",
+        "code": 244559
+      },
+      {
+        "identifier": "char_article_709",
+        "code": 278387
+      },
+      {
+        "identifier": "char_article_71",
+        "code": 241181
+      },
+      {
+        "identifier": "char_article_710",
+        "code": 102698
+      },
+      {
+        "identifier": "char_article_711",
+        "code": 35956
+      },
+      {
+        "identifier": "char_article_712",
+        "code": 76478
+      },
+      {
+        "identifier": "char_article_713",
+        "code": 1025942
+      },
+      {
+        "identifier": "char_article_714",
+        "code": 523122
+      },
+      {
+        "identifier": "char_article_715",
+        "code": 320139
+      },
+      {
+        "identifier": "char_article_716",
+        "code": 388845
+      },
+      {
+        "identifier": "char_article_717",
+        "code": 849322
+      },
+      {
+        "identifier": "char_article_718",
+        "code": 108083
+      },
+      {
+        "identifier": "char_article_719",
+        "code": 171338
+      },
+      {
+        "identifier": "char_article_72",
+        "code": 947226
+      },
+      {
+        "identifier": "char_article_720",
+        "code": 321860
+      },
+      {
+        "identifier": "char_article_721",
+        "code": 786339
+      },
+      {
+        "identifier": "char_article_722",
+        "code": 323017
+      },
+      {
+        "identifier": "char_article_723",
+        "code": 674359
+      },
+      {
+        "identifier": "char_article_724",
+        "code": 979169
+      },
+      {
+        "identifier": "char_article_725",
+        "code": 620207
+      },
+      {
+        "identifier": "char_article_726",
+        "code": 67267
+      },
+      {
+        "identifier": "char_article_727",
+        "code": 879543
+      },
+      {
+        "identifier": "char_article_728",
+        "code": 458515
+      },
+      {
+        "identifier": "char_article_729",
+        "code": 597746
+      },
+      {
+        "identifier": "char_article_73",
+        "code": 478449
+      },
+      {
+        "identifier": "char_article_730",
+        "code": 454565
+      },
+      {
+        "identifier": "char_article_731",
+        "code": 513762
+      },
+      {
+        "identifier": "char_article_732",
+        "code": 1045653
+      },
+      {
+        "identifier": "char_article_733",
+        "code": 898323
+      },
+      {
+        "identifier": "char_article_734",
+        "code": 178649
+      },
+      {
+        "identifier": "char_article_735",
+        "code": 514684
+      },
+      {
+        "identifier": "char_article_736",
+        "code": 436960
+      },
+      {
+        "identifier": "char_article_737",
+        "code": 574217
+      },
+      {
+        "identifier": "char_article_738",
+        "code": 292121
+      },
+      {
+        "identifier": "char_article_739",
+        "code": 61500
+      },
+      {
+        "identifier": "char_article_74",
+        "code": 600395
+      },
+      {
+        "identifier": "char_article_740",
+        "code": 282363
+      },
+      {
+        "identifier": "char_article_741",
+        "code": 161624
+      },
+      {
+        "identifier": "char_article_742",
+        "code": 990463
+      },
+      {
+        "identifier": "char_article_743",
+        "code": 893339
+      },
+      {
+        "identifier": "char_article_744",
+        "code": 68289
+      },
+      {
+        "identifier": "char_article_745",
+        "code": 596331
+      },
+      {
+        "identifier": "char_article_746",
+        "code": 669407
+      },
+      {
+        "identifier": "char_article_747",
+        "code": 253576
+      },
+      {
+        "identifier": "char_article_748",
+        "code": 114262
+      },
+      {
+        "identifier": "char_article_749",
+        "code": 106959
+      },
+      {
+        "identifier": "char_article_75",
+        "code": 529603
+      },
+      {
+        "identifier": "char_article_750",
+        "code": 442611
+      },
+      {
+        "identifier": "char_article_751",
+        "code": 807568
+      },
+      {
+        "identifier": "char_article_752",
+        "code": 326623
+      },
+      {
+        "identifier": "char_article_753",
+        "code": 1023246
+      },
+      {
+        "identifier": "char_article_754",
+        "code": 73586
+      },
+      {
+        "identifier": "char_article_755",
+        "code": 624223
+      },
+      {
+        "identifier": "char_article_756",
+        "code": 728907
+      },
+      {
+        "identifier": "char_article_757",
+        "code": 909867
+      },
+      {
+        "identifier": "char_article_758",
+        "code": 57607
+      },
+      {
+        "identifier": "char_article_759",
+        "code": 537714
+      },
+      {
+        "identifier": "char_article_76",
+        "code": 672216
+      },
+      {
+        "identifier": "char_article_760",
+        "code": 304114
+      },
+      {
+        "identifier": "char_article_761",
+        "code": 412915
+      },
+      {
+        "identifier": "char_article_762",
+        "code": 222834
+      },
+      {
+        "identifier": "char_article_763",
+        "code": 878392
+      },
+      {
+        "identifier": "char_article_764",
+        "code": 66037
+      },
+      {
+        "identifier": "char_article_765",
+        "code": 640312
+      },
+      {
+        "identifier": "char_article_766",
+        "code": 1000158
+      },
+      {
+        "identifier": "char_article_767",
+        "code": 567834
+      },
+      {
+        "identifier": "char_article_768",
+        "code": 54988
+      },
+      {
+        "identifier": "char_article_769",
+        "code": 282010
+      },
+      {
+        "identifier": "char_article_77",
+        "code": 481693
+      },
+      {
+        "identifier": "char_article_770",
+        "code": 670057
+      },
+      {
+        "identifier": "char_article_771",
+        "code": 749547
+      },
+      {
+        "identifier": "char_article_772",
+        "code": 92968
+      },
+      {
+        "identifier": "char_article_773",
+        "code": 373437
+      },
+      {
+        "identifier": "char_article_774",
+        "code": 342549
+      },
+      {
+        "identifier": "char_article_775",
+        "code": 323648
+      },
+      {
+        "identifier": "char_article_776",
+        "code": 122310
+      },
+      {
+        "identifier": "char_article_777",
+        "code": 231540
+      },
+      {
+        "identifier": "char_article_778",
+        "code": 197756
+      },
+      {
+        "identifier": "char_article_779",
+        "code": 824494
+      },
+      {
+        "identifier": "char_article_78",
+        "code": 894721
+      },
+      {
+        "identifier": "char_article_780",
+        "code": 581641
+      },
+      {
+        "identifier": "char_article_781",
+        "code": 1013060
+      },
+      {
+        "identifier": "char_article_782",
+        "code": 45000
+      },
+      {
+        "identifier": "char_article_783",
+        "code": 239372
+      },
+      {
+        "identifier": "char_article_784",
+        "code": 1026561
+      },
+      {
+        "identifier": "char_article_785",
+        "code": 247020
+      },
+      {
+        "identifier": "char_article_786",
+        "code": 802052
+      },
+      {
+        "identifier": "char_article_787",
+        "code": 223300
+      },
+      {
+        "identifier": "char_article_788",
+        "code": 54540
+      },
+      {
+        "identifier": "char_article_789",
+        "code": 222305
+      },
+      {
+        "identifier": "char_article_79",
+        "code": 531017
+      },
+      {
+        "identifier": "char_article_790",
+        "code": 126914
+      },
+      {
+        "identifier": "char_article_791",
+        "code": 63950
+      },
+      {
+        "identifier": "char_article_792",
+        "code": 1040021
+      },
+      {
+        "identifier": "char_article_793",
+        "code": 565426
+      },
+      {
+        "identifier": "char_article_794",
+        "code": 975146
+      },
+      {
+        "identifier": "char_article_795",
+        "code": 537923
+      },
+      {
+        "identifier": "char_article_796",
+        "code": 1019033
+      },
+      {
+        "identifier": "char_article_797",
+        "code": 185233
+      },
+      {
+        "identifier": "char_article_798",
+        "code": 131679
+      },
+      {
+        "identifier": "char_article_8",
+        "code": 676080
+      },
+      {
+        "identifier": "char_article_80",
+        "code": 91114
+      },
+      {
+        "identifier": "char_article_81",
+        "code": 519801
+      },
+      {
+        "identifier": "char_article_82",
+        "code": 888023
+      },
+      {
+        "identifier": "char_article_83",
+        "code": 73527
+      },
+      {
+        "identifier": "char_article_84",
+        "code": 5788
+      },
+      {
+        "identifier": "char_article_85",
+        "code": 463246
+      },
+      {
+        "identifier": "char_article_86",
+        "code": 771558
+      },
+      {
+        "identifier": "char_article_87",
+        "code": 856507
+      },
+      {
+        "identifier": "char_article_88",
+        "code": 638198
+      },
+      {
+        "identifier": "char_article_89",
+        "code": 430856
+      },
+      {
+        "identifier": "char_article_9",
+        "code": 295719
+      },
+      {
+        "identifier": "char_article_90",
+        "code": 205168
+      },
+      {
+        "identifier": "char_article_91",
+        "code": 28191
+      },
+      {
+        "identifier": "char_article_92",
+        "code": 895046
+      },
+      {
+        "identifier": "char_article_93",
+        "code": 87520
+      },
+      {
+        "identifier": "char_article_94",
+        "code": 1024230
+      },
+      {
+        "identifier": "char_article_95",
+        "code": 98911
+      },
+      {
+        "identifier": "char_article_96",
+        "code": 250712
+      },
+      {
+        "identifier": "char_article_97",
+        "code": 787
+      },
+      {
+        "identifier": "char_article_98",
+        "code": 794046
+      },
+      {
+        "identifier": "char_article_99",
+        "code": 952947
+      }
+    ]
+  },
+  "training_metadata": {
+    "cutoff": "2026-07-31",
+    "rounds": 220,
+    "seed": 20261018,
+    "origin_catalogs": [
+      {
+        "origin": "2024-06-28",
+        "known_warehouses": 10,
+        "known_articles": 560,
+        "known_pairs": 5600,
+        "max_target_date": "2024-08-31",
+        "active_catalog_sha256": "74bf3165ce76fece652c37be585aba43a138aba04fb5dcdbed15c2f61e0fa394"
+      },
+      {
+        "origin": "2024-08-02",
+        "known_warehouses": 11,
+        "known_articles": 613,
+        "known_pairs": 6743,
+        "max_target_date": "2024-10-05",
+        "active_catalog_sha256": "a8f82d5df1920080a3a0b6971e3249b7976bbbf849c94a89650e90aca525b1da"
+      },
+      {
+        "origin": "2024-09-06",
+        "known_warehouses": 11,
+        "known_articles": 625,
+        "known_pairs": 6875,
+        "max_target_date": "2024-11-09",
+        "active_catalog_sha256": "77e2934266196653046501bb690a532c53081a040a4c255ef420c9bc772f1542"
+      },
+      {
+        "origin": "2024-10-11",
+        "known_warehouses": 11,
+        "known_articles": 638,
+        "known_pairs": 7018,
+        "max_target_date": "2024-12-14",
+        "active_catalog_sha256": "b7a81b0fac126549344a5a9d6b5f2b4912774fc1edb316324fd6e0dc6bb74d7a"
+      },
+      {
+        "origin": "2024-11-15",
+        "known_warehouses": 11,
+        "known_articles": 645,
+        "known_pairs": 7095,
+        "max_target_date": "2025-01-18",
+        "active_catalog_sha256": "7639ee7ccbefe8ae42531f1c2f37d90d0a9cecb1c8d5cab4ea921f092190a29e"
+      },
+      {
+        "origin": "2024-12-20",
+        "known_warehouses": 11,
+        "known_articles": 667,
+        "known_pairs": 7337,
+        "max_target_date": "2025-02-22",
+        "active_catalog_sha256": "528104305801e14d31bd576020ac7a7ac3133fa124626c372d8aac2f8f98debd"
+      },
+      {
+        "origin": "2025-01-24",
+        "known_warehouses": 11,
+        "known_articles": 674,
+        "known_pairs": 7414,
+        "max_target_date": "2025-03-29",
+        "active_catalog_sha256": "ed103793e6b14d093bd095ed964da25733a146155d8bfab9e18ead83a75a3ba9"
+      },
+      {
+        "origin": "2025-02-28",
+        "known_warehouses": 11,
+        "known_articles": 681,
+        "known_pairs": 7491,
+        "max_target_date": "2025-05-03",
+        "active_catalog_sha256": "6bc6e639bfcb6552e3524c9dc711800da9d658da522feeba0e6a147f680474c6"
+      },
+      {
+        "origin": "2025-04-04",
+        "known_warehouses": 11,
+        "known_articles": 693,
+        "known_pairs": 7623,
+        "max_target_date": "2025-06-07",
+        "active_catalog_sha256": "612d3f5bb51cc63bfb3b14c0144dbca778313e76ac60332bf97005ecfb9e8eb6"
+      },
+      {
+        "origin": "2025-05-09",
+        "known_warehouses": 11,
+        "known_articles": 721,
+        "known_pairs": 7931,
+        "max_target_date": "2025-07-12",
+        "active_catalog_sha256": "a703ff9e6263171279ddd6b170b5b0eabb01000296a3109214f20c185f436080"
+      },
+      {
+        "origin": "2025-06-13",
+        "known_warehouses": 11,
+        "known_articles": 742,
+        "known_pairs": 8162,
+        "max_target_date": "2025-08-16",
+        "active_catalog_sha256": "299cc4e35290eb64f13b1987b528687d83f8cce9c6b4786687654ffd8d872583"
+      },
+      {
+        "origin": "2025-07-18",
+        "known_warehouses": 11,
+        "known_articles": 777,
+        "known_pairs": 8547,
+        "max_target_date": "2025-09-20",
+        "active_catalog_sha256": "a565440764767b5d3fcd59ad65704bcdaba4f6b1e79faaa82486b0a924fc1cc9"
+      },
+      {
+        "origin": "2025-08-22",
+        "known_warehouses": 11,
+        "known_articles": 784,
+        "known_pairs": 8624,
+        "max_target_date": "2025-10-25",
+        "active_catalog_sha256": "b1a9451c5422189fff1007fba01c13027fe0552ae776603e0d1845db3f7e0b93"
+      },
+      {
+        "origin": "2025-09-26",
+        "known_warehouses": 11,
+        "known_articles": 788,
+        "known_pairs": 8668,
+        "max_target_date": "2025-11-29",
+        "active_catalog_sha256": "835594c9fd643378ed7464b7f4e964c779045181740e3afb2476bd1db745f0fb"
+      },
+      {
+        "origin": "2025-10-31",
+        "known_warehouses": 11,
+        "known_articles": 791,
+        "known_pairs": 8701,
+        "max_target_date": "2026-01-03",
+        "active_catalog_sha256": "e5f5a51db23710fd50ba724e9226cea7ed976359d97b74de74f6a216c20f3090"
+      },
+      {
+        "origin": "2025-12-05",
+        "known_warehouses": 11,
+        "known_articles": 793,
+        "known_pairs": 8723,
+        "max_target_date": "2026-02-07",
+        "active_catalog_sha256": "39443e74bdb0511277c83bc151fe0617df9a4c1625cd6a3ee2119bee5135d924"
+      },
+      {
+        "origin": "2026-01-09",
+        "known_warehouses": 11,
+        "known_articles": 793,
+        "known_pairs": 8723,
+        "max_target_date": "2026-03-14",
+        "active_catalog_sha256": "39443e74bdb0511277c83bc151fe0617df9a4c1625cd6a3ee2119bee5135d924"
+      },
+      {
+        "origin": "2026-02-13",
+        "known_warehouses": 11,
+        "known_articles": 794,
+        "known_pairs": 8734,
+        "max_target_date": "2026-04-18",
+        "active_catalog_sha256": "d941404f85e8ddad38b08064d7715d466b85a60550b4d0f5d34b926306e21b6c"
+      },
+      {
+        "origin": "2026-03-20",
+        "known_warehouses": 11,
+        "known_articles": 799,
+        "known_pairs": 8789,
+        "max_target_date": "2026-05-23",
+        "active_catalog_sha256": "c45027db5ecc73145c8cbb8eb89b04cbaeea8d7d80afe5a1c61b7e0fe656ad80"
+      },
+      {
+        "origin": "2026-04-24",
+        "known_warehouses": 11,
+        "known_articles": 799,
+        "known_pairs": 8789,
+        "max_target_date": "2026-06-27",
+        "active_catalog_sha256": "c45027db5ecc73145c8cbb8eb89b04cbaeea8d7d80afe5a1c61b7e0fe656ad80"
+      },
+      {
+        "origin": "2026-05-28",
+        "known_warehouses": 11,
+        "known_articles": 799,
+        "known_pairs": 8789,
+        "max_target_date": "2026-07-31",
+        "active_catalog_sha256": "c45027db5ecc73145c8cbb8eb89b04cbaeea8d7d80afe5a1c61b7e0fe656ad80"
+      }
+    ],
+    "train_seconds": {
+      "daily": 31.631693499992252,
+      "weekly": 36.74780739999551,
+      "article": 12.231534700011252
+    },
+    "features": {
+      "daily": [
+        "warehouse_id",
+        "article_id",
+        "last_y",
+        "mean_7",
+        "freq_7",
+        "mean_14",
+        "freq_14",
+        "mean_28",
+        "freq_28",
+        "std_28",
+        "max_28",
+        "mean_56",
+        "freq_56",
+        "mean_90",
+        "freq_90",
+        "mean_180",
+        "freq_180",
+        "std_180",
+        "max_180",
+        "long_mean",
+        "trend",
+        "days_since_sale",
+        "positive_mean",
+        "stock_age",
+        "last_stock",
+        "stock_coverage",
+        "stock_zero_rate",
+        "stock_mean",
+        "article_mean_28",
+        "warehouse_mean_28",
+        "article_mean_180",
+        "warehouse_mean_180",
+        "weekday_mean_0",
+        "weekday_mean_1",
+        "weekday_mean_2",
+        "weekday_mean_3",
+        "weekday_mean_4",
+        "weekday_mean_5",
+        "weekday_mean_6",
+        "horizon",
+        "day_of_week",
+        "month",
+        "year_sin",
+        "year_cos",
+        "weekday_mean"
+      ],
+      "weekly": [
+        "warehouse_id",
+        "article_id",
+        "last_y",
+        "mean_7",
+        "freq_7",
+        "mean_14",
+        "freq_14",
+        "mean_28",
+        "freq_28",
+        "std_28",
+        "max_28",
+        "mean_56",
+        "freq_56",
+        "mean_90",
+        "freq_90",
+        "mean_180",
+        "freq_180",
+        "std_180",
+        "max_180",
+        "long_mean",
+        "trend",
+        "days_since_sale",
+        "positive_mean",
+        "stock_age",
+        "last_stock",
+        "stock_coverage",
+        "stock_zero_rate",
+        "stock_mean",
+        "article_mean_28",
+        "warehouse_mean_28",
+        "article_mean_180",
+        "warehouse_mean_180",
+        "weekday_mean_0",
+        "weekday_mean_1",
+        "weekday_mean_2",
+        "weekday_mean_3",
+        "weekday_mean_4",
+        "weekday_mean_5",
+        "weekday_mean_6",
+        "horizon",
+        "day_of_week",
+        "month",
+        "year_sin",
+        "year_cos",
+        "weekday_mean",
+        "bucket_days",
+        "bucket_end"
+      ],
+      "article": [
+        "warehouse_id",
+        "article_id",
+        "last_y",
+        "mean_7",
+        "freq_7",
+        "mean_14",
+        "freq_14",
+        "mean_28",
+        "freq_28",
+        "std_28",
+        "max_28",
+        "mean_56",
+        "freq_56",
+        "mean_90",
+        "freq_90",
+        "mean_180",
+        "freq_180",
+        "std_180",
+        "max_180",
+        "long_mean",
+        "trend",
+        "days_since_sale",
+        "positive_mean",
+        "stock_age",
+        "last_stock",
+        "stock_coverage",
+        "stock_zero_rate",
+        "stock_mean",
+        "article_mean_28",
+        "warehouse_mean_28",
+        "article_mean_180",
+        "warehouse_mean_180",
+        "weekday_mean_0",
+        "weekday_mean_1",
+        "weekday_mean_2",
+        "weekday_mean_3",
+        "weekday_mean_4",
+        "weekday_mean_5",
+        "weekday_mean_6",
+        "horizon",
+        "day_of_week",
+        "month",
+        "year_sin",
+        "year_cos",
+        "weekday_mean"
+      ]
+    },
+    "policy": "sales-only INNER origin catalog; stable int32 SHA256 encodings; unknown output IDs zero"
+  },
+  "numerical_contract": "nonton-integration-v1-asof-sha20"
+}

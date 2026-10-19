@@ -1,0 +1,276 @@
+{
+  "дата_проверки": "2026-10-19",
+  "описание": "Перечень файлов снимка не означает чтение каждого файла; область чтения указана в отчёте.",
+  "файлы": [
+    {
+      "путь": "research/sources/M5-methods/README.md",
+      "байты": 1910,
+      "sha256": "c137f4b28d6fc4bfb027903d6f1e202c7dffa1c6c7d43a81b39febcd2383fec4"
+    },
+    {
+      "путь": "research/sources/M5-methods/Scores and Ranks.xlsx",
+      "байты": 78009,
+      "sha256": "a1284eb1fd42214ae784366564c9780c1cb40c0694340468e389c9fd46432529"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/0. README.md",
+      "байты": 4319,
+      "sha256": "1f0f95fdc8ec541e0ff9746560c5cf3ea74f25fac0c3e00068096250f2756c2a"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/quantiles_kaggle.ipynb",
+      "байты": 141362,
+      "sha256": "a43d6524e3f4d9d929b41e7d92b042d6aca93c674b0000c1c35d3b6370c1fc2b"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/quantiles_sage.ipynb",
+      "байты": 7770413,
+      "sha256": "3c7cf8aa8d1fe490fe065c5836a7c880700b5d4cf770c45c66cc0e33b5d515c9"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/README.txt",
+      "байты": 948,
+      "sha256": "e33756417d255311e458c3abf45d671a0607c7e1b27899ff60118fa5fa61f066"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/1. document/blank.txt",
+      "байты": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/2. data/readme.txt",
+      "байты": 189,
+      "sha256": "1bcbe74cddeac005d3433134a7cd016cee30205885130b842836de2b35d3ee59"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/4. logs/blank.txt",
+      "байты": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/5. models/blank.txt",
+      "байты": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/2. data/processed/blank.txt",
+      "байты": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/1. preprocessing/1. preprocessing.ipynb",
+      "байты": 23548,
+      "sha256": "2b28d21b23dffe232033cea95d957cd94fe45305d31d971fef87f56a0c3f8bd1"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/1. preprocessing/1. preprocessing.py",
+      "байты": 16647,
+      "sha256": "cf43f2f8f7baf9cc34d7365e0946a336c34eef420cb752bb0c961fb9c7330b5a"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/1-1. recursive_store_TRAIN.ipynb",
+      "байты": 11278,
+      "sha256": "3060e3856a972c9bfb25cf35e18e4e63e1bab73be8a782ca6a3dd4064303914e"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/1-1. recursive_store_TRAIN.py",
+      "байты": 7563,
+      "sha256": "4a5d16a0fdcab05ad89d691d469ab703c07916f03653a150d34b6f17488b068d"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/1-2. recursive_store_cat_TRAIN.ipynb",
+      "байты": 11673,
+      "sha256": "572fc0e1e62962c76303945f344d12446b2e646c73b359b09c1fb85e19853b6a"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/1-2. recursive_store_cat_TRAIN.py",
+      "байты": 7828,
+      "sha256": "c49184d51276eae8ce308f19c11a1e7c5efa8fd2addf42224c7fcb55a2a7dd83"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/1-3. recursive_store_dept_TRAIN.ipynb",
+      "байты": 11762,
+      "sha256": "dbde3f0670245c45f75b8b1d7bd307bedfe6d332a90a1c4d900367a510bc9baf"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/1-3. recursive_store_dept_TRAIN.py",
+      "байты": 7935,
+      "sha256": "2c5cbe54d82ab5809773d2a64d31b655fcdb6b4fc19b22df1c77974170bd52cd"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/2-1. nonrecursive_store_TRAIN.ipynb",
+      "байты": 11952,
+      "sha256": "ebfdf92879ed84709c67a667ad1c7cb17bc25d68ad3ba2498a450f2a72f376f8"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/2-1. nonrecursive_store_TRAIN.py",
+      "байты": 8056,
+      "sha256": "d374116cb2a6bdd55cf81e9a529d28b702a4b32230f47ddd35f272d8dbd3f85a"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/2-2. nonrecursive_store_cat_TRAIN.ipynb",
+      "байты": 12258,
+      "sha256": "a6dc34c95e0f0f683af5f3237209f158848c86004c1628ad25e41e12886cfab5"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/2-2. nonrecursive_store_cat_TRAIN.py",
+      "байты": 8275,
+      "sha256": "b6372bd5f4c42963d4b4ad558ea435d72f4a572977b8bd73a9edc68743839cd6"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/2-3. nonrecursive_store_dept_TRAIN.ipynb",
+      "байты": 12359,
+      "sha256": "438d3c3b72ba391ac80101efb8e0ccff4f0dd0c175d56eaab73ff5786d84e43c"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/2. train/2-3. nonrecursive_store_dept_TRAIN.py",
+      "байты": 8284,
+      "sha256": "cdc9033eefbc3cab6c6b0c22e9853c5b4cdc0f901fbb45760b07112e7960710d"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/1-1. recursive_store_PREDICT.ipynb",
+      "байты": 12349,
+      "sha256": "9dd653040959bedaa73cf80ba07303ed9c278356264936cd39cef787868e8f1a"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/1-1. recursive_store_PREDICT.py",
+      "байты": 8204,
+      "sha256": "0aa44af54cfd7ab67fb889785471b8cbdb8e6a033d1762f3f05af8b1f92605e2"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/1-2. recursive_store_cat_PREDICT.ipynb",
+      "байты": 12813,
+      "sha256": "afd0c42604c174108448c29b1d564b4fff93c2a326beef4e989b23f5307d530e"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/1-2. recursive_store_cat_PREDICT.py",
+      "байты": 8529,
+      "sha256": "75624e2c69ad14d240c6314ecdb67fbb2d07d8a19aa20e8de64826a32b61dd87"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/1-3. recursive_store_dept_PREDICT.ipynb",
+      "байты": 12842,
+      "sha256": "ae30f4e43efeee96f58ff6001835495d66fa9128dc4eb7614aa068b66599334a"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/1-3. recursive_store_dept_PREDICT.py",
+      "байты": 8585,
+      "sha256": "d0a3fc82b184f004604a7435a151c2172ff2e13f158a5b9359516385e0e06636"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/2-1. nonrecursive_store_PREDICT.ipynb",
+      "байты": 13497,
+      "sha256": "ec72a1c12932bedbb7317bed3ec60968dc584eba70cc0ee921655cdb4ddde2ab"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/2-1. nonrecursive_store_PREDICT.py",
+      "байты": 9064,
+      "sha256": "c6454c14eda4bf1a53456765cfa04750e7b18c160643779898ae75eed781e8f4"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/2-2. nonrecursive_store_cat_PREDICT.ipynb",
+      "байты": 13793,
+      "sha256": "3925a3ee40bbfcede8692143f311d0abc507a11c37a14bb1b99736e699cf62b1"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/2-2. nonrecursive_store_cat_PREDICT.py",
+      "байты": 9348,
+      "sha256": "2e6a0663cd7c30f8283b5eafcbf3505ac60ad4c5cf27f5450f96738b0d909e71"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/2-3. nonrecursive_store_dept_PREDICT.ipynb",
+      "байты": 13777,
+      "sha256": "4315eb395faad123dd84f92c7c2c834f802d394a3c54372f2a8a382c0a0dd713"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/2-3. nonrecursive_store_dept_PREDICT.py",
+      "байты": 9359,
+      "sha256": "8e04093227d7e0740875c39bd7bc99cdbdc1b3a7204e4d06f17ee0008cb64773"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/3-1. Final ensemble.ipynb",
+      "байты": 3600,
+      "sha256": "1adbfde3197129b331e115f8829e1958a5fffa18741802a20d33acbb72a05d42"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/3. code/3. predict/3-1. Final ensemble.py",
+      "байты": 1776,
+      "sha256": "850ee579268dd9f7614d7193020681ad08ceb70dbc94ef78c08e5d10b32552a0"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/A1/6. submission/before_ensemble/blank.txt",
+      "байты": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/original/original_inference.ipynb",
+      "байты": 8791661,
+      "sha256": "240d0fa7bb3f770ee165800c9efab5cf2c105e6dfbc40e603aba3fb44adf20f7"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/original/original_training.ipynb",
+      "байты": 1877386,
+      "sha256": "4b5c0868569b0d4638212126d23610a05f0c2df26d1f075611c2761a4d98e309"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/replication/join_submission_csvs.ipynb",
+      "байты": 17186,
+      "sha256": "c251160bd091f56d089038356d4538d6ba5f1c8b145fb36dc110b821df5d31cf"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/replication/join_submission_csvs.py",
+      "байты": 642,
+      "sha256": "03f596b2a88900184ba904056e55e7ea40759b329d284b4665d0d84019e7571b"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/replication/quantiles_sage_1to9_eval.ipynb",
+      "байты": 7770413,
+      "sha256": "3c7cf8aa8d1fe490fe065c5836a7c880700b5d4cf770c45c66cc0e33b5d515c9"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/replication/quantiles_sage_1to9_eval.py",
+      "байты": 76954,
+      "sha256": "b85ae7cd6af9fbeb32342328279baa69e435a34257c3ff5554962b873cbbae06"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/replication/quantiles_sage_1to9_val.ipynb",
+      "байты": 7411782,
+      "sha256": "6f067f7aa7ec51565a8cf4925ff93777d2dcee133ebe6d685e74a9f7d996ef6e"
+    },
+    {
+      "путь": "research/sources/M5-methods/Code of Winning Methods/U1/input/Data/readme.txt",
+      "байты": 219,
+      "sha256": "50e07ba8d883bcd15d47d1ae00461c43793399149181cdc7fbcd3ce8b263278e"
+    },
+    {
+      "путь": "research/sources/Favorita-LenzDu/cnn.py",
+      "байты": 6424,
+      "sha256": "ccce13f4ab8e5ed5e38570736d6bf5cd8a7003913763859b4259cdb6e05f4809"
+    },
+    {
+      "путь": "research/sources/Favorita-LenzDu/lgbm.py",
+      "байты": 8982,
+      "sha256": "abb72dbc825d9a1d0d66f0300bf416ffae719c472f23d787405b4fb3c02292a8"
+    },
+    {
+      "путь": "research/sources/Favorita-LenzDu/LICENSE",
+      "байты": 1088,
+      "sha256": "aaf8ecb0546e4baf704a1a1aad7c062b309d87b62edc85c0acb71eed2fbf7e5a"
+    },
+    {
+      "путь": "research/sources/Favorita-LenzDu/README.md",
+      "байты": 2299,
+      "sha256": "55a2267efe79c8a1af459b0ad174446396e5e95f12f13f1ecbd0ee3f70ac5609"
+    },
+    {
+      "путь": "research/sources/Favorita-LenzDu/seq2seq.py",
+      "байты": 8927,
+      "sha256": "b74fc4d62c307514491a8cd3a9e5a083f6724e76034dae9525f709f16d85d65f"
+    },
+    {
+      "путь": "research/sources/Favorita-LenzDu/Utils.py",
+      "байты": 10586,
+      "sha256": "19d678b3e32ebd2abc76ece64e86fea840658138bf380bf70001f22186fc80b2"
+    }
+  ]
+}

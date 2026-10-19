@@ -1,0 +1,19 @@
+{
+  "days": 180,
+  "cutoff": "2026-07-31",
+  "start": "2026-02-02",
+  "inputs": {
+    "sales": {
+      "rows": 448589,
+      "first": "2026-02-02",
+      "last": "2026-07-31",
+      "sha256": "925fa8b15ca668b0213e038a5250e289c2d6e76b4f821fe33cf875e3abd23b2a"
+    },
+    "stock": {
+      "rows": 1142816,
+      "first": "2026-02-02",
+      "last": "2026-07-31",
+      "sha256": "2570c8121ecfadeaa72d98000c4c94ed6745ab4b04e3ae337053efe1f5fddf49"
+    }
+  }
+}

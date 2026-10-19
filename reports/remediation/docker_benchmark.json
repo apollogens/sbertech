@@ -1,0 +1,15 @@
+{
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_version": "nonton-v1"
+  },
+  "post_seconds": 34.2087213169998,
+  "network_mode": "none",
+  "cgroup_memory_peak_bytes": 3939459072,
+  "status": "passed",
+  "build_seconds": 1.7365937999999999,
+  "image_bytes": 148796116,
+  "max_abs_difference": 3.552713678800501e-15,
+  "rows": 562496
+}

@@ -1,0 +1,5 @@
+{
+  "config_corruption_rejected": "Runtime artifact hash mismatch: config.json",
+  "manifest_corruption_rejected": "Runtime manifest identity mismatch",
+  "original_bundle_reverified_after_checks": true
+}

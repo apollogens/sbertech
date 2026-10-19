@@ -1,0 +1,7 @@
+{
+  "forecasts": 25,
+  "metrics_per_forecast": 5,
+  "maximum_absolute_error": 2.842170943040401e-14,
+  "official_primitives_direct": true,
+  "full_compute_all_metrics_merge_performed": false
+}

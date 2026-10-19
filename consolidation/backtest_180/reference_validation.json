@@ -1,0 +1,183 @@
+{
+  "checks": [
+    {
+      "origin": "2025-09-14",
+      "candidate": "D:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2025-09-14",
+      "candidate": "W:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2025-09-14",
+      "candidate": "S:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2025-09-14",
+      "candidate": "A:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2025-09-14",
+      "candidate": "equal4:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2025-11-17",
+      "candidate": "D:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2025-11-17",
+      "candidate": "W:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2025-11-17",
+      "candidate": "S:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2025-11-17",
+      "candidate": "A:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2025-11-17",
+      "candidate": "equal4:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2026-01-20",
+      "candidate": "D:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2026-01-20",
+      "candidate": "W:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2026-01-20",
+      "candidate": "S:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2026-01-20",
+      "candidate": "A:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2026-01-20",
+      "candidate": "equal4:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 1.4210854715202004e-14
+    },
+    {
+      "origin": "2026-03-25",
+      "candidate": "D:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2026-03-25",
+      "candidate": "W:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2026-03-25",
+      "candidate": "S:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2026-03-25",
+      "candidate": "A:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 5.684341886080802e-14
+    },
+    {
+      "origin": "2026-03-25",
+      "candidate": "equal4:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 1.4210854715202004e-14
+    },
+    {
+      "origin": "2026-05-28",
+      "candidate": "D:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2026-05-28",
+      "candidate": "W:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    },
+    {
+      "origin": "2026-05-28",
+      "candidate": "S:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 2.842170943040401e-14
+    },
+    {
+      "origin": "2026-05-28",
+      "candidate": "A:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 1.4210854715202004e-14
+    },
+    {
+      "origin": "2026-05-28",
+      "candidate": "equal4:P1",
+      "reference_identity_verified": true,
+      "official_metric_max_abs_error": 0.0
+    }
+  ],
+  "runner_sha256": "b88b8241d6223f7563852a0d3ae08d6b95d02a7ca134d14cd6f4b74b5553398f",
+  "provided180_forecast_hashes": {
+    "A_P1_2025-09-14.npz": "0efaf7dd95fbe168e4323e93d548fb7493cfbccbcf16e9818aa35d40371c6c4a",
+    "A_P1_2025-11-17.npz": "4221a9fa88fd65912b3da3eefefe1faa9f30f546d2456a545317e2a7d68b91c5",
+    "A_P1_2026-01-20.npz": "b79d6ec5ac35f24ff10671f7548c94785e4e2a8fa2bd59987d8f56884bdb9caa",
+    "A_P1_2026-03-25.npz": "95ccb9c7c240bba325262f71709f5064e446fd4d37486d4b99c051065109034f",
+    "A_P1_2026-05-28.npz": "ad0697db4a73cb51ef53e21f0e72f9c6b6dd43a3f992be042ebcbfb17422960c",
+    "D_P1_2025-09-14.npz": "aee776a21d0d8085b3c84547ddb616da24fbda5c066781fa7f53fb20bcb461e5",
+    "D_P1_2025-11-17.npz": "da39da6aaf895f04b738f06db1db8170994abe0a4f59c14c5922b64c5b577905",
+    "D_P1_2026-01-20.npz": "95c5880c24da43cb6649c83f155ec25b32e85cd7ff77a27fd5e3defde92ac378",
+    "D_P1_2026-03-25.npz": "7a0cbe85f00b200e78b78ab5c920447a3a97780528fb63a756aa63bb8350e566",
+    "D_P1_2026-05-28.npz": "ba53896678c24859cfb04164c8f71dfe010aad2982b7e7768c72d8cc852a7a43",
+    "equal4_P1_2025-09-14.npz": "75dd7c8c9191531d7d45b7fdda1768aa8b8154c48038dbd913e89c1fa2623c94",
+    "equal4_P1_2025-11-17.npz": "2a103d4e4abdb7feda40a062ebb72f89fcbfaf0f7a750ad6af26fcd74eb3b76d",
+    "equal4_P1_2026-01-20.npz": "acf29de5e4d978d6e7db1e1392246d7646c60408c4a24b62e4cefb53b77a1e50",
+    "equal4_P1_2026-03-25.npz": "0f8ec38bfdcaa5772596db1100f1824bbdafba651a6154972117d90c9c49f05b",
+    "equal4_P1_2026-05-28.npz": "b814e95c6fcbdc76f4c91590b1211808481ca870226b95e8f1ca16b073edcd61",
+    "S_P1_2025-09-14.npz": "6a83d0a8c64e45b6bdfb95fcbce18649bf278b964ca71451ddb95149705fcfbe",
+    "S_P1_2025-11-17.npz": "8cea61b8df5cab4acf5f8f6dd451035b70e2112e4c0bfc509b874218881ad0b9",
+    "S_P1_2026-01-20.npz": "de2395ce9f2d34882f0fec0439d1acb22c5e7a23d68f7a6d124f8693707d18ad",
+    "S_P1_2026-03-25.npz": "6208f1ed9546cd60ef2a1f543efa3104f304e5223e435c8f0d7167480e10dc96",
+    "S_P1_2026-05-28.npz": "a8414958e4ce7dbf30298e0c536327651203d7b6da4b070cf085813e931c5c67",
+    "W_P1_2025-09-14.npz": "12218bb8c07c6320b15e1bb0d9df8e79bc7bbed32136ca30295d1921938e01d6",
+    "W_P1_2025-11-17.npz": "296b0a8eff17946af65c0fd363f15c3d7ffca453d12827137aba12699d0c5f8b",
+    "W_P1_2026-01-20.npz": "0e217b763d2770d53f9da2951866bca1b870b95a3ec9aea0cbded67382698eb2",
+    "W_P1_2026-03-25.npz": "9dcd8776d55e9e8f45ac7ab899dd8a1a8fe31a6a444673f364fe75d38be595cb",
+    "W_P1_2026-05-28.npz": "28fda0f47bddd56c313dda2995b4d81596f30941d534830f2c6ca8bccfb6ea91"
+  },
+  "post_execution_changes": "Reporting improvements and explicit reference origin/key hash checks; no inference or metric arithmetic changed."
+}

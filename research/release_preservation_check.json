@@ -1,0 +1,30 @@
+{
+  "all_unchanged": true,
+  "files": {
+    "model\\catalogs.json": true,
+    "model\\config.json": true,
+    "model\\lightgbm.txt": true,
+    "model\\manifest.json": true,
+    "model\\training_record.json": true,
+    "src\\__init__.py": true,
+    "src\\artifacts.py": true,
+    "src\\baselines.py": true,
+    "src\\data.py": true,
+    "src\\features.py": true,
+    "src\\metrics.py": true,
+    "src\\predict.py": true,
+    "src\\remediation_models.py": true,
+    "src\\submission.py": true,
+    "src\\train.py": true,
+    "app\\__init__.py": true,
+    "app\\main.py": true,
+    "app\\predictor.py": true,
+    "app\\validators.py": true,
+    "submission.csv": true,
+    "cache\\panel.npz": true,
+    "cache\\catalogs.json": true,
+    "requirements.lock": true,
+    "requirements-dev.txt": true,
+    "Dockerfile": true
+  }
+}

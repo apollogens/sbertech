@@ -1,0 +1,23 @@
+{
+  "version": "architecture-research-v1",
+  "registered_before_training": true,
+  "origins": ["2025-09-14", "2025-11-17", "2026-01-20", "2026-03-25", "2026-05-28"],
+  "horizon": 64,
+  "rounds": 220,
+  "seed": 20261018,
+  "threads": 4,
+  "candidates": ["weekly_allocation", "weekly_direct_shape", "article_topdown"],
+  "postprocessing": [0.0, 0.25],
+  "postprocessing_rule": "Два заранее фиксированных режима; без поиска порога. После .25 когерентность не заявляется.",
+  "training_origins": "179..cutoff-64 с шагом 35 плюс cutoff-64; все labels <= cutoff",
+  "weekly_target": "Сумма observed quantity в относительных блоках 1..7,...,57..63,64; последний блок 1 день",
+  "daily_allocation": "180 дней исторических weekday means, 4 pseudo-observations по warehouse weekday profile; нормирование внутри каждого блока",
+  "direct_shape": "Нормированная дневная форма ранее сохранённого raw Tweedie, масштабированная до прогнозного недельного объёма; не MinTrace",
+  "article_topdown": "Прямой Tweedie по 799 article totals; исторические warehouse shares за 180 дней с 28 pseudo-days pooled warehouse prior",
+  "budget": "10 последовательных fits по 220 деревьев; остановка при >20 минут одного fit или >10 GB RSS; без перебора гиперпараметров",
+  "selection_policy": "Только четыре development окна. Для promotion требуются улучшения среднего SMAPE и official Bias, не менее 3/4 окон по SMAPE, отсутствие ухудшения средних WAPE/RMSE/RMSLE и независимая проверка, затем serving parity. Иначе сохранить incumbent. Это консервативный инженерный критерий, не официальный leaderboard score.",
+  "terminal_role": "Ранее открытая диагностика; не выбор и не новый test",
+  "combination_policy": "Новый ансамбль только при убедительной самостоятельной пользе и комплементарности. При отсутствии такого сигнала остановиться.",
+  "neural_policy": "Не устанавливать новый torch stack в production; defer, если нет обоснования затрат сравнительно с representation PoC.",
+  "limitations": "Ретроспективные повторно использованные окна; фиксированный существующий каталог, 12 комбинаций без продаж. Нет untouched test. Raw incumbent forecasts уже доступны, результаты новых кандидатов ещё не вычислены."
+}

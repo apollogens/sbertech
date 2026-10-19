@@ -1,0 +1,29 @@
+﻿INFO:     127.0.0.1:58396 - "GET /health HTTP/1.1" 200 OK
+docker : INFO:     Started server process [1]
+At D:\SberTech\consolidation\docker_verify.ps1:34 char:5
++     docker logs $name 2>&1 | Out-File -Encoding utf8 (Join-Path $out  ...
++     ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO:     Started server process [1]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO:     127.0.0.1:58404 - "GET /predict/all HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:58408 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43840 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60360 - "GET /predict/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60370 - "GET /predict?article=char_article_0&warehouse=warehouse_name_0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60376 - "GET /predict/all?format=json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37712 - "POST /predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:37726 - "GET /predict/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57164 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57172 - "GET /predict/all HTTP/1.1" 409 Conflict
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)

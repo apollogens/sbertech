@@ -1,0 +1,21 @@
+{
+  "rows": 562496,
+  "max_abs_difference": 3.552713678800501e-15,
+  "tolerance": 1e-07,
+  "repeated_post_byte_identical": true,
+  "offline_seconds": 10.653146300001026,
+  "post_seconds": 33.534926300000734,
+  "repeated_post_seconds": 35.383400200000324,
+  "get_csv_seconds": 1.2928321000017604,
+  "get_json_seconds": 0.9313257999983762,
+  "peak_process_rss_bytes": 2334744576,
+  "holdout_180day_input_metrics": {
+    "smape": 158.6871617213434,
+    "wape": 80.43006567684449,
+    "rmse": 0.8662841487164723,
+    "bias": 80.5655572662628,
+    "rmsle": 0.3126153218811934
+  },
+  "status": "passed",
+  "input_policy": "Full sales history; negative and conflicting stock records removed explicitly"
+}

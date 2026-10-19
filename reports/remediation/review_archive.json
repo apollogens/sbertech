@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "archive": "D:\\SberTech\\nonton_solution_remediated_verified.zip",
+  "archive_bytes": 246181627,
+  "archive_sha256": "b56525b5144d77aa7411922db790fe519452e7d5ba33d6dd2fedb7006398325a",
+  "files": 409,
+  "all_zip_member_sizes_hashes_crc_and_local_files_match": true,
+  "zip_inventory_equals_delivery_manifest": true,
+  "private_input_cache_venv_git_and_nested_archives_absent": true,
+  "model_manifest_record_source_binding_valid": true,
+  "image_source_and_model_hashes_equal_archive": true,
+  "bundle_id": "9267e65f0ca9e62b636d185fe7731a71b4e24a8b5110fa830701d5beb0d0f50a",
+  "image_id": "sha256:5bb1ea1fea5a136cfc54c2a80701baefd1f97d23a50e17d9b1a42b476913faef",
+  "seconds": 2.077403100000083,
+  "limitation": "Проверено содержимое готового архива; повторное обучение и inference из распакованной копии не выполнялись."
+}

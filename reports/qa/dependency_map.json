@@ -1,0 +1,188 @@
+[
+  {
+    "path": "src/__init__.py",
+    "lines": 1,
+    "imports": "",
+    "entry_functions": ""
+  },
+  {
+    "path": "src/baselines.py",
+    "lines": 27,
+    "imports": ".features, numpy",
+    "entry_functions": "baseline_predict"
+  },
+  {
+    "path": "src/data.py",
+    "lines": 145,
+    "imports": "dataclasses, json, numpy, pandas, pathlib",
+    "entry_functions": "read_inputs, catalog_from_sales, Panel, clean_stock, build_panel, prepare_cache, load_panel"
+  },
+  {
+    "path": "src/features.py",
+    "lines": 69,
+    "imports": "numpy, pandas",
+    "entry_functions": "snapshot, horizon_features, training_data"
+  },
+  {
+    "path": "src/metrics.py",
+    "lines": 83,
+    "imports": "collections.abc, numpy",
+    "entry_functions": "_arrays, compute_metrics, smape_include_zero_zero, normalize_metrics, weighted_score, evaluate"
+  },
+  {
+    "path": "src/predict.py",
+    "lines": 63,
+    "imports": ".baselines, .data, .features, .submission, json, lightgbm, numpy, pandas, pathlib",
+    "entry_functions": "load_bundle, predict_panel, predict_64"
+  },
+  {
+    "path": "src/submission.py",
+    "lines": 41,
+    "imports": "numpy, pandas, pathlib",
+    "entry_functions": "forecast_frame, validate_submission, write_submission"
+  },
+  {
+    "path": "src/train.py",
+    "lines": 23,
+    "imports": ".features, lightgbm",
+    "entry_functions": "train_model"
+  },
+  {
+    "path": "app/__init__.py",
+    "lines": 1,
+    "imports": "",
+    "entry_functions": ""
+  },
+  {
+    "path": "app/main.py",
+    "lines": 112,
+    "imports": ".predictor, .validators, contextlib, fastapi, fastapi.exceptions, fastapi.responses, logging, os, pathlib, starlette.concurrency, starlette.exceptions",
+    "entry_functions": "csv_chunks, json_chunks, csv_response, create_app"
+  },
+  {
+    "path": "app/predictor.py",
+    "lines": 51,
+    "imports": "numpy, pandas, pathlib, src.predict, threading",
+    "entry_functions": "Predictor"
+  },
+  {
+    "path": "app/validators.py",
+    "lines": 98,
+    "imports": "csv, io, numpy, pandas, warnings",
+    "entry_functions": "InputError, read_csv, validate_history"
+  },
+  {
+    "path": "scripts/audit_inputs.py",
+    "lines": 65,
+    "imports": "collections, csv, json, math, pathlib, time",
+    "entry_functions": "audit"
+  },
+  {
+    "path": "scripts/backtest_baselines.py",
+    "lines": 20,
+    "imports": "pandas, pathlib, src.baselines, src.data, src.metrics, sys",
+    "entry_functions": ""
+  },
+  {
+    "path": "scripts/container_probe.py",
+    "lines": 52,
+    "imports": "http.client, json, pathlib, time",
+    "entry_functions": "connection"
+  },
+  {
+    "path": "scripts/finalize_reports.py",
+    "lines": 144,
+    "imports": "hashlib, json, numpy, pandas, pathlib, src.predict, src.submission, subprocess, sys, zipfile",
+    "entry_functions": "digest, table, run"
+  },
+  {
+    "path": "scripts/official_score.py",
+    "lines": 372,
+    "imports": "argparse, json, numpy, pandas, pathlib, sys, typing",
+    "entry_functions": "smape_series, smape, wape, rmse, bias_abs_series, bias_abs, rmsle, compute_all_metrics, normalize_minmax, normalize_rank, validate_submission, main"
+  },
+  {
+    "path": "scripts/predict.py",
+    "lines": 20,
+    "imports": "argparse, pathlib, src.data, src.predict, src.submission, sys",
+    "entry_functions": ""
+  },
+  {
+    "path": "scripts/prepare_api_inputs.py",
+    "lines": 20,
+    "imports": "argparse, pathlib, src.data, sys",
+    "entry_functions": ""
+  },
+  {
+    "path": "scripts/qa_analysis.py",
+    "lines": 211,
+    "imports": "argparse, collections, hashlib, json, matplotlib, matplotlib.pyplot, numpy, pandas, pathlib, src.data, src.features, src.metrics, src.submission, sys",
+    "entry_functions": "bias_diagnostics, table, run"
+  },
+  {
+    "path": "scripts/qa_retrain.py",
+    "lines": 67,
+    "imports": "gc, hashlib, json, numpy, pandas, pathlib, psutil, src.data, src.metrics, src.predict, src.train, sys, threading, time",
+    "entry_functions": "run"
+  },
+  {
+    "path": "scripts/qa_stock_integrity.py",
+    "lines": 53,
+    "imports": "hashlib, json, numpy, pandas, pathlib, src.data, sys, time",
+    "entry_functions": "run"
+  },
+  {
+    "path": "scripts/qa_verify_submission.py",
+    "lines": 36,
+    "imports": "json, numpy, pandas, pathlib, src.data, src.predict, src.submission, sys, time",
+    "entry_functions": "run"
+  },
+  {
+    "path": "scripts/run_pipeline.py",
+    "lines": 140,
+    "imports": "argparse, gc, json, numpy, pandas, pathlib, psutil, src.baselines, src.data, src.features, src.metrics, src.predict, src.submission, src.train, sys, threading, time",
+    "entry_functions": "run"
+  },
+  {
+    "path": "scripts/train_final.py",
+    "lines": 21,
+    "imports": "json, pathlib, src.data, src.train, sys",
+    "entry_functions": ""
+  },
+  {
+    "path": "scripts/validate_submission.py",
+    "lines": 15,
+    "imports": "argparse, pandas, pathlib, src.predict, src.submission, sys",
+    "entry_functions": ""
+  },
+  {
+    "path": "scripts/verify_parity.py",
+    "lines": 90,
+    "imports": "app.main, fastapi.testclient, gc, io, json, lightgbm, numpy, pandas, pathlib, psutil, src.data, src.metrics, src.predict, src.submission, sys, threading, time",
+    "entry_functions": "run"
+  },
+  {
+    "path": "tests/test_api.py",
+    "lines": 221,
+    "imports": "app.main, app.predictor, fastapi.testclient, io, numpy, pandas, pytest",
+    "entry_functions": "setup, post, parse, test_full_contract_and_determinism, test_bad_query_error_shape, test_missing_file, test_bad_csv, test_invalid_history, test_stock_duplicate_policy, test_sales_duplicates_are_not_dropped, test_failed_post_preserves_cache_and_concurrent_post_rejected, test_invalid_model_output_not_cached, test_stock_article_alias, test_required_sales_metadata, test_actual_sales_schema_and_empty_categories, test_strict_date_format, test_unsupported_numeric_range_is_422_and_preserves_cache, test_truncated_metadata_csv_record_is_400"
+  },
+  {
+    "path": "tests/test_metrics.py",
+    "lines": 64,
+    "imports": "numpy, pandas, pytest, scripts, src.metrics",
+    "entry_functions": "as_frame, test_official_parity, test_smape_document_conflict_is_explicit, test_all_zero_truth_official_edge_case, test_normalization_and_score_parity, test_perfect_forecast_score, test_invalid_inputs_rejected"
+  },
+  {
+    "path": "tests/test_pipeline.py",
+    "lines": 167,
+    "imports": "json, numpy, pandas, pytest, src.data, src.features, src.predict, src.submission, src.train",
+    "entry_functions": "small_panel, test_future_data_invariance_snapshot_and_horizons, test_appending_future_input_rows_does_not_change_fixed_cutoff, test_departments_sum_missing_sales_zero_missing_stock_nan, test_stock_observability_is_not_confused_with_zero, test_training_labels_all_known_by_cutoff_and_correct_horizon, test_horizon_calendar_and_grid_serialization, test_tiny_trained_model_save_load_feature_order_and_determinism, test_conflicting_stock_duplicates_are_rejected, test_clean_stock_removes_all_ambiguous_rows_and_preserves_true_zero, test_shared_panel_rejects_conflicting_article_aliases"
+  },
+  {
+    "path": "tests/test_qa_regressions.py",
+    "lines": 146,
+    "imports": "app.validators, json, numpy, pandas, pytest, scripts.official_score, scripts.qa_analysis, src.data, src.metrics, src.predict, src.submission",
+    "entry_functions": "inputs, test_offline_requires_strict_date_format, test_panel_rejects_float32_overflow, test_panel_rejects_aggregation_overflow, test_offline_rejects_empty_identifier, test_forecast_rejects_wrong_axes_with_correct_element_count, test_unknown_model_kind_fails_at_load, test_required_bias_and_smape_independent_fixtures, test_csv_body_structure_is_strict, test_bundle_rejects_reordered_categorical_mapping, test_controlled_bias_edge_cases, test_bias_series_permutation_and_all_excluded_diagnostics, test_rank_ties_reproduce_original_evaluator_order_dependence, test_submission_key_and_finite_guards"
+  }
+]

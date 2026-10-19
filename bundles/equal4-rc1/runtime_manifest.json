@@ -1,0 +1,35 @@
+{
+  "runtime_contract_version": 2,
+  "files": {
+    "article.txt": "30f67b1648b2e18fdce4edd72f137e001d2391f8013adad05420718ec2f8cea7",
+    "config.json": "77047e1160a06e86f26dc7cfdf3016c161d102a62c1dde4cb050b690874e3a8b",
+    "daily.txt": "422dbe10ca758afa8cd3173e114b68a36b0123231864489b782b93995b506c1a",
+    "weekly.txt": "54a935b1cf1d24235da9895f5899d0aeee4d3ab570a6f7050b39d30d3a0a459e"
+  },
+  "runtime_sources": {
+    "src/runtime.py": "95fe4082e536946c4fc59bd8f77d7147a01b2677c65730bdc5697d0e58846395",
+    "src/catalog.py": "181c16a4d1216b21298d18e36afc814aadef3e6cbc7c5c5fcc11cc71892b6fbd",
+    "src/temporal.py": "38c2436eb9271404a715d36274805f62251c9f9c9005c548bfe411f51ee2305d",
+    "src/ensemble.py": "9f9e0932ce48fb61651e17fc153d41e0b3816aac57baa2bacaae9bdaaba5cd9b",
+    "src/components.py": "c72f307710fb6d923325b02504b828e835b02dabb9fd38083f01940744a214b2",
+    "src/data.py": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde",
+    "src/features.py": "7d841adb144542293d11d02b101a94d988c4215731c92d8d54831384fe050034",
+    "src/submission.py": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff",
+    "src/artifacts.py": "01e50397e772492fbf898c1a785250bb8451322aaaf0d90932c529fc09b6992a"
+  },
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "lightgbm": "4.7.0",
+    "python": "3.12"
+  },
+  "catalog_sha256": "48a1e4c9803a865175207ce3756b2a2a674b9e89b7dc29c0c1ad3202f03e32b3",
+  "parent": {
+    "path": "integration\\models\\final_experimental",
+    "manifest_sha256": "61d3a833a9087cf638fb18980b66da9ed6ea2c28a718cb20689eb020f7262107",
+    "config_sha256": "e65858fd77c3923a5347ff29711b2ec5e49782bb16c21e44f6fdae3aca5d17b9",
+    "migration": "Weights unchanged; runtime extraction; no retraining"
+  },
+  "previous_runtime_bundle_id": "340974cf12dbaf2f9369b94612601e745d889e2a3ace69db66da917dbcb5270e",
+  "bundle_id": "ed3f58bc05c50a05080734bf81b332091c3bffc3bb87b589fb561b4676c437de"
+}

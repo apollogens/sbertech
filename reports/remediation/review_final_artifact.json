@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "bundle_id": "9267e65f0ca9e62b636d185fe7731a71b4e24a8b5110fa830701d5beb0d0f50a",
+  "training_run_id": "final-20261018T181325Z-cdd29774bb1b",
+  "provenance_status": "training_recorded",
+  "model_sha256": "ebc9bafee00b294793f0ef2b01e9b8d1b42825bc461dc7fa4cdb603496fb3b52",
+  "training_record_sha256": "bba2703175623921225193af374deeda158890e27e9766edefa9cf026031b107",
+  "original_release_bytes_unchanged": {
+    "catalogs.json": true,
+    "config.json": true,
+    "lightgbm.txt": true
+  },
+  "training_rows": 1476552,
+  "cutoff": "2026-07-31",
+  "trees": 220,
+  "actual_input_hashes_match_record": true,
+  "actual_source_hashes_match_record": true,
+  "record_in_manifest_hashes": true,
+  "recorded_fit_seconds": 22.886229700001422,
+  "limitation": "Reviewer сверил реальный traceable refit output и журнал; не выполнял отдельный полный повторный fit"
+}

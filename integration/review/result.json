@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "fit_count": 0,
+  "case_forecasts": 215,
+  "raw_components": 20,
+  "model_reloaded_forecasts": 235,
+  "training_catalog_checks": 80,
+  "rounding_alias_checks": 50,
+  "max_abs_metric_error": 8.526512829121202e-14,
+  "primary_rank_checked": 90,
+  "quality_screen_passed": [
+    "equal4:P1",
+    "DA75:P1",
+    "DA50:P1",
+    "DS50:P1",
+    "source_DA70:P1"
+  ],
+  "max_abs_replay_error": 0.0,
+  "max_abs_coherence_error": 5.684341886080802e-14,
+  "protocol_sha256": "f6ee8c58385f224739e1a044a3faae003415188fcad6fe6b011dde16051c55e3",
+  "review_scope": "code and numerical artifacts; no release/API/Docker claim"
+}

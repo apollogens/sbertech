@@ -1,0 +1,17 @@
+{
+  "no_training": true,
+  "origins": [
+    "2025-09-14",
+    "2025-11-17",
+    "2026-01-20",
+    "2026-03-25",
+    "2026-05-28"
+  ],
+  "saved_files": 151,
+  "canonical_forecasts": 119,
+  "candidate_models": 25,
+  "rank_diagnostic_rows": 86352,
+  "elapsed_seconds": 59.56123759999173,
+  "official_scorer_sha256": "5c83fb1dd256a9636bd27cb7aa9eb978dbe6c76a60f74486ca773523139e1ee2",
+  "panel_sha256": "39e0563d6f79791ac08d8a81f26dafcc66ab392715023eb665d04acfa4a9aa8e"
+}

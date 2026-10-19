@@ -1,0 +1,16 @@
+model,origin,max_abs_error,scope
+weekly_allocation,2025-09-14,2.842170943040401e-14,pre_threshold_weekly_totals
+weekly_direct_shape,2025-09-14,5.684341886080802e-14,pre_threshold_weekly_totals
+article_topdown,2025-09-14,2.842170943040401e-14,pre_threshold_article_totals
+weekly_allocation,2025-11-17,2.842170943040401e-14,pre_threshold_weekly_totals
+weekly_direct_shape,2025-11-17,5.684341886080802e-14,pre_threshold_weekly_totals
+article_topdown,2025-11-17,2.842170943040401e-14,pre_threshold_article_totals
+weekly_allocation,2026-01-20,5.684341886080802e-14,pre_threshold_weekly_totals
+weekly_direct_shape,2026-01-20,2.842170943040401e-14,pre_threshold_weekly_totals
+article_topdown,2026-01-20,2.842170943040401e-14,pre_threshold_article_totals
+weekly_allocation,2026-03-25,2.842170943040401e-14,pre_threshold_weekly_totals
+weekly_direct_shape,2026-03-25,5.684341886080802e-14,pre_threshold_weekly_totals
+article_topdown,2026-03-25,1.4210854715202004e-14,pre_threshold_article_totals
+weekly_allocation,2026-05-28,2.842170943040401e-14,pre_threshold_weekly_totals
+weekly_direct_shape,2026-05-28,2.842170943040401e-14,pre_threshold_weekly_totals
+article_topdown,2026-05-28,2.842170943040401e-14,pre_threshold_article_totals

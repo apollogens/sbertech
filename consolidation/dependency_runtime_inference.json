@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "history_days": 180,
+  "results": [
+    {
+      "strategy": "nonton-v1",
+      "rows": 562496,
+      "sha256": "354ae527536640ce4e56012e233f3ead679e616ea51f1d2a6f423014b681377a",
+      "csv_byte_identical": true,
+      "load_seconds": 0.019669300003442913,
+      "inference_seconds": 6.039189500006614,
+      "loaded_models": [
+        "daily"
+      ]
+    },
+    {
+      "strategy": "equal4:P1",
+      "rows": 562496,
+      "sha256": "310d000f954f48e389661954c9a3d2ac38815d603bae7c9cfc40409015fbd164",
+      "csv_byte_identical": true,
+      "load_seconds": 3.0038913000025786,
+      "inference_seconds": 14.127473500004271,
+      "loaded_models": [
+        "article",
+        "daily",
+        "weekly"
+      ]
+    }
+  ],
+  "absent_packages": {
+    "pytest": true,
+    "httpx": true,
+    "psutil": true,
+    "matplotlib": true,
+    "coverage": true
+  }
+}

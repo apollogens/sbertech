@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "rows": 562496,
+  "dates": 64,
+  "warehouses": 11,
+  "articles": 799,
+  "origin": "2026-07-31",
+  "offline_api_max_abs_difference": 0.0,
+  "original_submission_max_abs_difference": 4.9918806865889565e-09,
+  "repeat_byte_identical": true,
+  "load_bundle_seconds": 0.019485299999359995,
+  "offline_seconds": 11.473378599999705,
+  "post_seconds": 34.80450430000201,
+  "repeat_post_seconds": 39.73705609999888,
+  "get_csv_seconds": 1.7213919000059832,
+  "get_json_seconds": 0.9477309999929275,
+  "peak_sampled_process_rss_bytes": 2838343680,
+  "submission_sha256": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1",
+  "api_sha256": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1",
+  "input_hashes": {
+    "sales": "73e04d9c495dfb9f28e2daed2d9e97b9e6fc4252bfbd734a758fd6ba4a3434b8",
+    "stock": "15e33cfaa114a7d642d27c6e1abae35e41aad087a8f4261535e7f11acc6a7e17"
+  }
+}

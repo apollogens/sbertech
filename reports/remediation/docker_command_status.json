@@ -1,0 +1,5 @@
+﻿{
+    "stdout":  "docker_repeat_stdout.txt",
+    "stderr":  "docker_repeat_stderr.txt",
+    "exit_code":  0
+}

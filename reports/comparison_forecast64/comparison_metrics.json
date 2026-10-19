@@ -1,0 +1,55 @@
+{
+  "origin": "2026-05-28",
+  "dates": [
+    "2026-05-29",
+    "2026-07-31"
+  ],
+  "rows": 562496,
+  "rival_rows": 561728,
+  "missing_rival_rows_filled_zero": 768,
+  "rival_iterations": {
+    "hurdle": {
+      "classifier": 75,
+      "regressor": 122
+    },
+    "lgbm": 101
+  },
+  "models": {
+    "ours": {
+      "smape": 158.6871617213434,
+      "wape": 80.43006567684449,
+      "rmse": 0.8662841487164723,
+      "bias": 80.5655572662628,
+      "rmsle": 0.3126153218811934,
+      "smape_include_zero_zero": 47.08955612112918,
+      "zero_fraction": 0.7252318238707475
+    },
+    "rival": {
+      "smape": 165.0368607676604,
+      "wape": 74.2366587621096,
+      "rmse": 0.9214475532309642,
+      "bias": 91.77624540529115,
+      "rmsle": 0.33333476338699336,
+      "smape_include_zero_zero": 29.723457600817643,
+      "zero_fraction": 0.899977955398794
+    },
+    "zero": {
+      "smape": 176.40232108317215,
+      "wape": 100.0,
+      "rmse": 1.3954298669573262,
+      "bias": 100.0,
+      "rmsle": 0.46936818015359544,
+      "smape_include_zero_zero": 35.82461030833997,
+      "zero_fraction": 1.0
+    },
+    "ours_rounded_diagnostic": {
+      "smape": 160.31920204639383,
+      "wape": 75.9039688229563,
+      "rmse": 0.8833442728262657,
+      "bias": 89.20411332403229,
+      "rmsle": 0.3286992320974367,
+      "smape_include_zero_zero": 31.983198399063518,
+      "zero_fraction": 0.8404468653999317
+    }
+  }
+}

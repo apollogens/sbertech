@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "origins": [
+    "2025-09-14",
+    "2025-11-17",
+    "2026-01-20",
+    "2026-03-25",
+    "2026-05-28"
+  ],
+  "training_performed": false,
+  "input_hashes": {
+    "sales": "34fe562dc1e0742aac1387d71ae20711e2f533fb56bbf34ce6363318e59a8e6b",
+    "stock": "d744cac7f82fb14ec42e12818f6257c07392ea315f050355d357d3865ec8b166"
+  },
+  "runtime_sources": {
+    "src/runtime.py": "95fe4082e536946c4fc59bd8f77d7147a01b2677c65730bdc5697d0e58846395",
+    "src/catalog.py": "181c16a4d1216b21298d18e36afc814aadef3e6cbc7c5c5fcc11cc71892b6fbd",
+    "src/temporal.py": "38c2436eb9271404a715d36274805f62251c9f9c9005c548bfe411f51ee2305d",
+    "src/ensemble.py": "9f9e0932ce48fb61651e17fc153d41e0b3816aac57baa2bacaae9bdaaba5cd9b",
+    "src/components.py": "c72f307710fb6d923325b02504b828e835b02dabb9fd38083f01940744a214b2",
+    "src/data.py": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde",
+    "src/features.py": "7d841adb144542293d11d02b101a94d988c4215731c92d8d54831384fe050034",
+    "src/submission.py": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff",
+    "src/artifacts.py": "01e50397e772492fbf898c1a785250bb8451322aaaf0d90932c529fc09b6992a"
+  },
+  "official_scorer_sha256": "5c83fb1dd256a9636bd27cb7aa9eb978dbe6c76a60f74486ca773523139e1ee2",
+  "elapsed_seconds": 166.03884689998813
+}

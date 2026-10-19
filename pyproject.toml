@@ -1,0 +1,15 @@
+[tool.ruff]
+target-version = "py312"
+include = ["src/**/*.py", "app/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E9", "F"]
+
+[tool.deptry]
+requirements_files = ["requirements.txt"]
+known_first_party = ["src", "app"]
+exclude = ["^tests/", "^scripts/", "^research/", "^integration/", "^consolidation/", "^reports/", "^bundles/", "^model/", "^data/", "^cache/", "^\\.venv"]
+
+[tool.deptry.per_rule_ignores]
+# Uvicorn is the explicit Docker/CLI entry point. Multipart implements File/UploadFile parsing.
+DEP002 = ["uvicorn", "python-multipart"]

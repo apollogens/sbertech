@@ -1,0 +1,17 @@
+*
+!requirements.txt
+!requirements.lock
+!Dockerfile
+!app/
+!app/**
+!src/
+!src/**
+!config/
+!config/runtime.json
+!model/
+!model/**
+!bundles/
+!bundles/equal4-rc1/
+!bundles/equal4-rc1/**
+**/__pycache__/
+**/*.pyc

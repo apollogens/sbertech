@@ -1,0 +1,76 @@
+{
+  "nonton:consolidated-v1": {
+    "image_id": "sha256:eec978ddc812e8599afd82c04d6da2325b247a0bd0ac51a969ba7738b31d75bb",
+    "size_bytes": 143563315,
+    "sources": {
+      "app/__init__.py": "4421e5593cb7a26efb6b367635bdc8d3c74f0a022e66417c3f0af7f90e6bfe94",
+      "app/main.py": "bc998d096e2480159e89efe05d107466c5dec9bd9d7c8079943cb4bb4f357c40",
+      "app/predictor.py": "202aa1c10f1063fe8feebefcfa4e418ed463e30f816996be7a94a705f01f7859",
+      "app/validators.py": "9937c2f5ee667c141d5e562b0e68f706e34d5640f40184113d2c51c4269a6eb6",
+      "src/__init__.py": "41bb5c6de0f565ea756a631e0ac483c306cfeaacb9dfc778df1823571c720657",
+      "src/artifacts.py": "01e50397e772492fbf898c1a785250bb8451322aaaf0d90932c529fc09b6992a",
+      "src/baselines.py": "9625e20b128b3e0e97a4d6b82939021221272cc269aef739f3d6631f3105d90d",
+      "src/catalog.py": "181c16a4d1216b21298d18e36afc814aadef3e6cbc7c5c5fcc11cc71892b6fbd",
+      "src/cli.py": "15b8cbafb280fe127ffb3c7d7bafc0b5529ed2d26b827a19645fec929e5a0531",
+      "src/components.py": "c72f307710fb6d923325b02504b828e835b02dabb9fd38083f01940744a214b2",
+      "src/data.py": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde",
+      "src/ensemble.py": "9f9e0932ce48fb61651e17fc153d41e0b3816aac57baa2bacaae9bdaaba5cd9b",
+      "src/features.py": "7d841adb144542293d11d02b101a94d988c4215731c92d8d54831384fe050034",
+      "src/metrics.py": "6c045f4b385a415aaf62534a4232ac26b827d2861e6cb7491d36f7ae32884d96",
+      "src/predict.py": "01ec4f36b9150cdb714cd0d392530e949f065239003ea0ecaf324f69d80387ae",
+      "src/remediation_models.py": "9c3d063b4f0e0bd3782700766d831c1eb94b6f00c37625599eb42c8084b061ab",
+      "src/runtime.py": "95fe4082e536946c4fc59bd8f77d7147a01b2677c65730bdc5697d0e58846395",
+      "src/submission.py": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff",
+      "src/temporal.py": "38c2436eb9271404a715d36274805f62251c9f9c9005c548bfe411f51ee2305d",
+      "src/train.py": "38f87aa7732622b13dc82abbb7c71bc3f2121d439ae445cd284ef6634f852faf"
+    },
+    "selected_model_dir": "/app/model",
+    "selected_strategy": "nonton-v1",
+    "model_files": [
+      "catalogs.json",
+      "config.json",
+      "lightgbm.txt",
+      "manifest.json",
+      "training_record.json"
+    ],
+    "forbidden_files": [],
+    "manifest_sha256": "20b2ee9e10b77d17e538789c503eb6595efd7a7fbad10cc1da05c896696e8805"
+  },
+  "nonton:consolidated-equal4": {
+    "image_id": "sha256:6ce94440b4f5a040d0a7129787af28340afa222e81bd2fe793ed81a3e181e8fc",
+    "size_bytes": 147131116,
+    "sources": {
+      "app/__init__.py": "4421e5593cb7a26efb6b367635bdc8d3c74f0a022e66417c3f0af7f90e6bfe94",
+      "app/main.py": "bc998d096e2480159e89efe05d107466c5dec9bd9d7c8079943cb4bb4f357c40",
+      "app/predictor.py": "202aa1c10f1063fe8feebefcfa4e418ed463e30f816996be7a94a705f01f7859",
+      "app/validators.py": "9937c2f5ee667c141d5e562b0e68f706e34d5640f40184113d2c51c4269a6eb6",
+      "src/__init__.py": "41bb5c6de0f565ea756a631e0ac483c306cfeaacb9dfc778df1823571c720657",
+      "src/artifacts.py": "01e50397e772492fbf898c1a785250bb8451322aaaf0d90932c529fc09b6992a",
+      "src/baselines.py": "9625e20b128b3e0e97a4d6b82939021221272cc269aef739f3d6631f3105d90d",
+      "src/catalog.py": "181c16a4d1216b21298d18e36afc814aadef3e6cbc7c5c5fcc11cc71892b6fbd",
+      "src/cli.py": "15b8cbafb280fe127ffb3c7d7bafc0b5529ed2d26b827a19645fec929e5a0531",
+      "src/components.py": "c72f307710fb6d923325b02504b828e835b02dabb9fd38083f01940744a214b2",
+      "src/data.py": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde",
+      "src/ensemble.py": "9f9e0932ce48fb61651e17fc153d41e0b3816aac57baa2bacaae9bdaaba5cd9b",
+      "src/features.py": "7d841adb144542293d11d02b101a94d988c4215731c92d8d54831384fe050034",
+      "src/metrics.py": "6c045f4b385a415aaf62534a4232ac26b827d2861e6cb7491d36f7ae32884d96",
+      "src/predict.py": "01ec4f36b9150cdb714cd0d392530e949f065239003ea0ecaf324f69d80387ae",
+      "src/remediation_models.py": "9c3d063b4f0e0bd3782700766d831c1eb94b6f00c37625599eb42c8084b061ab",
+      "src/runtime.py": "95fe4082e536946c4fc59bd8f77d7147a01b2677c65730bdc5697d0e58846395",
+      "src/submission.py": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff",
+      "src/temporal.py": "38c2436eb9271404a715d36274805f62251c9f9c9005c548bfe411f51ee2305d",
+      "src/train.py": "38f87aa7732622b13dc82abbb7c71bc3f2121d439ae445cd284ef6634f852faf"
+    },
+    "selected_model_dir": "/app/model",
+    "selected_strategy": "equal4:P1",
+    "model_files": [
+      "article.txt",
+      "config.json",
+      "daily.txt",
+      "runtime_manifest.json",
+      "weekly.txt"
+    ],
+    "forbidden_files": [],
+    "manifest_sha256": "17043805cd80e48ccd0a8c5472fcf743e039112193e4d55fff6d6af85fbd1e60"
+  }
+}

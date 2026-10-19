@@ -1,0 +1,146 @@
+[
+  {
+    "repo": "Nixtla/hierarchicalforecast",
+    "commit": "56cc4fac0c5c7b4ff33884d4a8a929f3cd8f03ec",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/Nixtla/hierarchicalforecast/56cc4fac0c5c7b4ff33884d4a8a929f3cd8f03ec/LICENSE",
+    "sha256": "801dc3c84e5d4bee31962f29132c112d127de8ed7536f4194a4397516a8e05b9",
+    "local": "research\\source_inspection\\hf_LICENSE"
+  },
+  {
+    "repo": "Nixtla/hierarchicalforecast",
+    "commit": "56cc4fac0c5c7b4ff33884d4a8a929f3cd8f03ec",
+    "path": "pyproject.toml",
+    "url": "https://raw.githubusercontent.com/Nixtla/hierarchicalforecast/56cc4fac0c5c7b4ff33884d4a8a929f3cd8f03ec/pyproject.toml",
+    "sha256": "a193b3e974f28463a77f1085914a6aa1afb05d6bdcf24c4587b97428a4e39d65",
+    "local": "research\\source_inspection\\hf_pyproject.toml"
+  },
+  {
+    "repo": "Nixtla/hierarchicalforecast",
+    "commit": "56cc4fac0c5c7b4ff33884d4a8a929f3cd8f03ec",
+    "path": "hierarchicalforecast/methods.py",
+    "url": "https://raw.githubusercontent.com/Nixtla/hierarchicalforecast/56cc4fac0c5c7b4ff33884d4a8a929f3cd8f03ec/hierarchicalforecast/methods.py",
+    "sha256": "d5d98442a9b3559fc7f7e919b0083c20d7750880972a4f841e8e8d22707efbca",
+    "local": "research\\source_inspection\\hf_hierarchicalforecast__methods.py"
+  },
+  {
+    "repo": "Nixtla/neuralforecast",
+    "commit": "6c11accfbcfdd62a40ef69a7c81e3d9c7f272682",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/Nixtla/neuralforecast/6c11accfbcfdd62a40ef69a7c81e3d9c7f272682/LICENSE",
+    "sha256": "d392f3d2969e354d7e6aef8fc6df5590ef5c20eea4b946191bd76a6138b4e81c",
+    "local": "research\\source_inspection\\nf_LICENSE"
+  },
+  {
+    "repo": "Nixtla/neuralforecast",
+    "commit": "6c11accfbcfdd62a40ef69a7c81e3d9c7f272682",
+    "path": "pyproject.toml",
+    "url": "https://raw.githubusercontent.com/Nixtla/neuralforecast/6c11accfbcfdd62a40ef69a7c81e3d9c7f272682/pyproject.toml",
+    "sha256": "78d54463eb6d7335c0003437c927e5a5b888005e8b54cc50c696cd52e2a9791c",
+    "local": "research\\source_inspection\\nf_pyproject.toml"
+  },
+  {
+    "repo": "Nixtla/neuralforecast",
+    "commit": "6c11accfbcfdd62a40ef69a7c81e3d9c7f272682",
+    "path": "neuralforecast/models/nhits.py",
+    "url": "https://raw.githubusercontent.com/Nixtla/neuralforecast/6c11accfbcfdd62a40ef69a7c81e3d9c7f272682/neuralforecast/models/nhits.py",
+    "sha256": "0cfcc06f688ae872cdb5ef98a87d05812ddbfe2e31c3cee9cdb70f60201d1662",
+    "local": "research\\source_inspection\\nf_neuralforecast__models__nhits.py"
+  },
+  {
+    "repo": "Nixtla/neuralforecast",
+    "commit": "6c11accfbcfdd62a40ef69a7c81e3d9c7f272682",
+    "path": "neuralforecast/models/tide.py",
+    "url": "https://raw.githubusercontent.com/Nixtla/neuralforecast/6c11accfbcfdd62a40ef69a7c81e3d9c7f272682/neuralforecast/models/tide.py",
+    "sha256": "c24fb488e00055f5739176849df6f3e2f0dc22a14f64554ff1747095357ba11a",
+    "local": "research\\source_inspection\\nf_neuralforecast__models__tide.py"
+  },
+  {
+    "repo": "Dingdong-Inc/frn-50k-baseline",
+    "commit": "8af694a09a5a427d1d50648d348c022565a781f2",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/Dingdong-Inc/frn-50k-baseline/8af694a09a5a427d1d50648d348c022565a781f2/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "local": "research\\source_inspection\\frn_LICENSE"
+  },
+  {
+    "repo": "Dingdong-Inc/frn-50k-baseline",
+    "commit": "8af694a09a5a427d1d50648d348c022565a781f2",
+    "path": "requirements.txt",
+    "url": "https://raw.githubusercontent.com/Dingdong-Inc/frn-50k-baseline/8af694a09a5a427d1d50648d348c022565a781f2/requirements.txt",
+    "sha256": "11b6cad4541b510fa688469e3755f49a2e4d162a6724dd4fe13eb7a00cbc6df1",
+    "local": "research\\source_inspection\\frn_requirements.txt"
+  },
+  {
+    "repo": "Dingdong-Inc/frn-50k-baseline",
+    "commit": "8af694a09a5a427d1d50648d348c022565a781f2",
+    "path": "demand_forecasting/SSA/ssa_forecasting.py",
+    "url": "https://raw.githubusercontent.com/Dingdong-Inc/frn-50k-baseline/8af694a09a5a427d1d50648d348c022565a781f2/demand_forecasting/SSA/ssa_forecasting.py",
+    "sha256": "505b6ff537856e376a45b7fd89901543376c2bf1a41c9bb09fc8e14c9637b69b",
+    "local": "research\\source_inspection\\frn_demand_forecasting__SSA__ssa_forecasting.py"
+  },
+  {
+    "repo": "google-research/google-research",
+    "commit": "3ef52111c1fabc301880818f5a547570e926a76b",
+    "path": "tide/README.md",
+    "url": "https://raw.githubusercontent.com/google-research/google-research/3ef52111c1fabc301880818f5a547570e926a76b/tide/README.md",
+    "sha256": "57c6e2ee1c48d889c3ea6e81607871c6e6f76042e60f716582b94e0d6ed368e8",
+    "local": "research\\source_inspection\\tide_tide__README.md"
+  },
+  {
+    "repo": "google-research/google-research",
+    "commit": "3ef52111c1fabc301880818f5a547570e926a76b",
+    "path": "tide/models.py",
+    "url": "https://raw.githubusercontent.com/google-research/google-research/3ef52111c1fabc301880818f5a547570e926a76b/tide/models.py",
+    "sha256": "ad8fd8d498809deeed9c847a169cada42134cbd0351b03e750706132a5d151c7",
+    "local": "research\\source_inspection\\tide_tide__models.py"
+  },
+  {
+    "repo": "google-research/google-research",
+    "commit": "3ef52111c1fabc301880818f5a547570e926a76b",
+    "path": "tide/train.py",
+    "url": "https://raw.githubusercontent.com/google-research/google-research/3ef52111c1fabc301880818f5a547570e926a76b/tide/train.py",
+    "sha256": "3edd19eed01f92ef50cadca73fbe8a793c701d34edb5ea376c6bcc55e92f0854",
+    "local": "research\\source_inspection\\tide_tide__train.py"
+  },
+  {
+    "repo": "google-research/google-research",
+    "commit": "3ef52111c1fabc301880818f5a547570e926a76b",
+    "path": "tide/requirements.txt",
+    "url": "https://raw.githubusercontent.com/google-research/google-research/3ef52111c1fabc301880818f5a547570e926a76b/tide/requirements.txt",
+    "sha256": "30d08dbfb6aad55c7cae60617ae93c66a0fb0c4784cf343843aa5a303394453d",
+    "local": "research\\source_inspection\\tide_tide__requirements.txt"
+  },
+  {
+    "repo": "google-research/google-research",
+    "commit": "3ef52111c1fabc301880818f5a547570e926a76b",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/google-research/google-research/3ef52111c1fabc301880818f5a547570e926a76b/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "local": "research\\source_inspection\\tide_LICENSE"
+  },
+  {
+    "repo": "Nixtla/neuralforecast",
+    "commit": "6c11accfbcfdd62a40ef69a7c81e3d9c7f272682",
+    "path": "neuralforecast/common/_base_model.py",
+    "url": "https://raw.githubusercontent.com/Nixtla/neuralforecast/6c11accfbcfdd62a40ef69a7c81e3d9c7f272682/neuralforecast/common/_base_model.py",
+    "sha256": "217ebf45cc1926824ec209bf6edc9505a94ec767a6a6b6d9d52c5f4275960e5f",
+    "local": "research\\source_inspection\\nf_neuralforecast__common___base_model.py"
+  },
+  {
+    "repo": "google-research/google-research",
+    "commit": "3ef52111c1fabc301880818f5a547570e926a76b",
+    "path": "tide/data_loader.py",
+    "url": "https://raw.githubusercontent.com/google-research/google-research/3ef52111c1fabc301880818f5a547570e926a76b/tide/data_loader.py",
+    "sha256": "3c8844369f7482a394b75231d58c4917f3f3aa18748e0c36924c2aef09d16959",
+    "local": "research\\source_inspection\\tide_tide__data_loader.py"
+  },
+  {
+    "repo": "Dingdong-Inc/frn-50k-baseline",
+    "commit": "8af694a09a5a427d1d50648d348c022565a781f2",
+    "path": "latent_demand_recovery/exp/app.py",
+    "url": "https://raw.githubusercontent.com/Dingdong-Inc/frn-50k-baseline/8af694a09a5a427d1d50648d348c022565a781f2/latent_demand_recovery/exp/app.py",
+    "sha256": "638077072755077d00fed841757d0f858e130ce272c2bebd3b346b2f5e530547",
+    "local": "research\\source_inspection\\frn_latent_demand_recovery__exp__app.py"
+  }
+]

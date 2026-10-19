@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "extracted_files_verified": 1003,
+  "snapshot_sha256": "24ad0e89ddf31f37bb78315c94fa877244b3d90d114aba8a2e2af60ea3eb84a7",
+  "extracted_directory": "D:\\SberTech\\consolidation\\rollback_verified_complete",
+  "replay": {
+    "status": "passed",
+    "rows": 562496,
+    "max_abs_difference": 3.552713678800501e-15
+  }
+}

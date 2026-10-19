@@ -1,0 +1,18 @@
+{
+  "assertions_passed": true,
+  "numpy": "2.5.4",
+  "nonnegative_fixture_values": 10010,
+  "four_postprocess_policies_source_parity": true,
+  "P2_equals_P3": true,
+  "source_DA70_matches_round_after_original_scale_blend": true,
+  "files_sha256": {
+    "integration\\ensemble_engine.py": "595d112b37ab7109fc9fe45377da0703d0577264fc53a0038d1496416ce4cdfb",
+    "integration\\test_ensemble_engine.py": "34baaa17d1d80a6baff43f69faa39b8dc00e49273b9d8aecd2af3fd443fabdab",
+    "integration\\experiment_protocol.md": "f6ee8c58385f224739e1a044a3faae003415188fcad6fe6b011dde16051c55e3"
+  },
+  "limitations": [
+    "The fixed 0.7 D + 0.3 A blend is an adaptation of combination algebra, not the external hurdle predictor",
+    "Second user-downloaded source remains unidentified",
+    "Synthetic comparison does not establish forecast improvement"
+  ]
+}

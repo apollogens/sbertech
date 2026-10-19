@@ -1,0 +1,28 @@
+{
+  "winner": "lgb_tweedie_z0.25",
+  "selection_scores": {
+    "lgb_tweedie_z0.25": 0.832382646918983,
+    "lgb_l2_z0.25": 0.8337666651640845,
+    "lgb_tweedie_z0.5": 0.8370982654880634,
+    "lgb_l2_z0.5": 0.8372227551980538,
+    "tsb": 0.8543954828828175,
+    "lgb_tweedie": 0.8577149523775374,
+    "mean90": 0.8596205871233007,
+    "lgb_l2": 0.8618935922510381,
+    "mean28": 0.8641770292204012,
+    "seasonal56": 0.8701847508480608,
+    "zero": 0.9306442936120192,
+    "last": 1.0
+  },
+  "holdout_was_used_for_selection": false,
+  "objectives": {
+    "lgb_l2": "regression",
+    "lgb_tweedie": "tweedie"
+  },
+  "rounds": 220,
+  "fold_origins": [
+    "2026-01-20",
+    "2026-03-25",
+    "2026-05-28"
+  ]
+}

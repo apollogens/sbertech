@@ -1,0 +1,40 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1"
+  },
+  "fingerprints": {
+    "model\\catalogs.json": "76b2e036d2b61ce984a9b81ea3e4d73e07645c6bd59d0cf6af27be0dad8d119c",
+    "model\\config.json": "494f2370133f4a13c0b0c752fadc146affc0a264b33d0bb9922973a530d84473",
+    "model\\lightgbm.txt": "ebc9bafee00b294793f0ef2b01e9b8d1b42825bc461dc7fa4cdb603496fb3b52",
+    "model\\manifest.json": "20b2ee9e10b77d17e538789c503eb6595efd7a7fbad10cc1da05c896696e8805",
+    "model\\training_record.json": "bba2703175623921225193af374deeda158890e27e9766edefa9cf026031b107",
+    "src\\__init__.py": "41bb5c6de0f565ea756a631e0ac483c306cfeaacb9dfc778df1823571c720657",
+    "src\\artifacts.py": "01e50397e772492fbf898c1a785250bb8451322aaaf0d90932c529fc09b6992a",
+    "src\\baselines.py": "9625e20b128b3e0e97a4d6b82939021221272cc269aef739f3d6631f3105d90d",
+    "src\\data.py": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde",
+    "src\\features.py": "7d841adb144542293d11d02b101a94d988c4215731c92d8d54831384fe050034",
+    "src\\metrics.py": "6c045f4b385a415aaf62534a4232ac26b827d2861e6cb7491d36f7ae32884d96",
+    "src\\predict.py": "01ec4f36b9150cdb714cd0d392530e949f065239003ea0ecaf324f69d80387ae",
+    "src\\remediation_models.py": "9c3d063b4f0e0bd3782700766d831c1eb94b6f00c37625599eb42c8084b061ab",
+    "src\\submission.py": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff",
+    "src\\train.py": "38f87aa7732622b13dc82abbb7c71bc3f2121d439ae445cd284ef6634f852faf",
+    "app\\__init__.py": "4421e5593cb7a26efb6b367635bdc8d3c74f0a022e66417c3f0af7f90e6bfe94",
+    "app\\main.py": "23fe4e967cdcd1b70fa6395479be35be44478a3d69cd785b7bef3415d47eae52",
+    "app\\predictor.py": "0584a4727f916cf57657f71b33a68c240bd4f949e1790e594c748464a5cf35b6",
+    "app\\validators.py": "9937c2f5ee667c141d5e562b0e68f706e34d5640f40184113d2c51c4269a6eb6",
+    "submission.csv": "57cf81142dc312c87230a02d48d9d9714263d50f454dfb8470cd275a872abf0d",
+    "cache\\panel.npz": "39e0563d6f79791ac08d8a81f26dafcc66ab392715023eb665d04acfa4a9aa8e",
+    "cache\\catalogs.json": "d6bab28ee1a112aa7f8104294ae2d64e68f0be56833b0867f6129001a0724e45",
+    "requirements.lock": "813c6bbe4c02ea34a0623d57a154c4a070d0f57fcf9738c616e8cfdcdf6bc3f3",
+    "requirements-dev.txt": "7fa95bc65c9817dde70f4447279423ac5346e768493f70ec954f72fa5c856677",
+    "Dockerfile": "5876c8050f4d01371a2b13d2bb4a80efa53850bb4c74de62b768b21d6c1fee85"
+  },
+  "git_status": "?? .dockerignore\n?? .gitignore\n?? Dockerfile\n?? README.md\n?? app/\n?? docs/\n?? model/\n?? nonton_solution.zip\n?? nonton_solution_qa_verified.zip\n?? nonton_solution_remediated_verified.zip\n?? reports/\n?? requirements-dev.txt\n?? requirements.lock\n?? requirements.txt\n?? research/\n?? scripts/\n?? src/\n?? submission.csv\n?? submission_baseline.csv\n?? tests/\n",
+  "note": "Снимок текущего состояния в ходе исследования; исторические release hashes проверяются отдельно. Git пока без commits; rollback обеспечен прежними архивами и неизменностью файлов."
+}

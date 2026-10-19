@@ -1,0 +1,48 @@
+{
+  "protocol_version": 1,
+  "frozen_before_challenger_execution": true,
+  "origins": [
+    "2025-09-14",
+    "2025-11-17",
+    "2026-01-20",
+    "2026-03-25",
+    "2026-05-28"
+  ],
+  "horizon": 64,
+  "development_origins": [
+    "2025-09-14",
+    "2025-11-17",
+    "2026-01-20",
+    "2026-03-25"
+  ],
+  "terminal_origin_role": "Ранее открытый holdout: только ретроспективная диагностика, не untouched test",
+  "rounds": 220,
+  "seed": 20261018,
+  "statistical_history_days": 180,
+  "candidates": [
+    "current_tweedie_z0.25",
+    "tweedie_raw",
+    "lgb_l1",
+    "lgb_l1_z0.25",
+    "two_part_gamma",
+    "two_part_gamma_z0.25",
+    "sba_official",
+    "tsb_official",
+    "adida_official",
+    "mean28",
+    "mean90",
+    "seasonal56",
+    "tsb",
+    "last",
+    "zero"
+  ],
+  "new_threshold_search": false,
+  "two_part": {
+    "occurrence": "binary",
+    "positive_magnitude": "gamma",
+    "prediction": "p*m",
+    "probability_class_weights": false
+  },
+  "selection_policy": "Сохранить incumbent, если нет воспроизводимого улучшения среднего официального взвешенного rank на фиксированном наборе кандидатов по четырём development windows, локального minmax и устойчивости по окнам. Никакой гарантии competitor-relative leaderboard. Terminal не используется для выбора. Все пять метрик и ухудшения публикуются. Никакой настройки после просмотра результатов.",
+  "limitations": "Ретроспективные окна; даты ранних окон входят в обучение более поздних моделей. Это rolling-origin backtest, не независимые статистические репликации и не новый untouched holdout."
+}

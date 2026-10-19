@@ -1,0 +1,5 @@
+,train_seconds,train_seconds,inference_seconds,inference_seconds,process_peak_rss_bytes,process_peak_rss_bytes
+,mean,max,mean,max,mean,max
+model,,,,,,
+article_topdown,1.6554155799996806,1.9681563999911305,0.30427333999832623,0.4123967999912565,1096136294.4,1299886080
+weekly_allocation,18.735434959997654,23.57591179999872,0.49233858000079633,0.5522306999919238,1096136294.4,1299886080

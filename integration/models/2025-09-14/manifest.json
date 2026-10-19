@@ -1,0 +1,18 @@
+{
+  "files": {
+    "article.txt": "c7e77d77f0ad065badb48ba00cf794f18df8b3d905afc45a2c22618b7309f6f7",
+    "config.json": "bb83622d2c7ffdaca182f0c53935efa66fb62fbf6b6260e3dde601ece3129967",
+    "daily.txt": "e322bf6179ac9b81762be6a285890d408aea49d60c85b6844511bc1a70732ccc",
+    "weekly.txt": "519ec1c81edefefe5fe71e083154e00151dadded270b120f2e8e0b880320b858"
+  },
+  "source_hashes": {
+    "integration/corrected_models.py": "3c8bb39e680b4b5730a95a78fac5a7c93198046d1b2f459df75fde399cd795db",
+    "integration/catalog_policy.py": "dd9e750ecc31a6553f38da7e32d18d67a6a5a543b04451c421d9365ec1c46d4a",
+    "integration/ensemble_engine.py": "595d112b37ab7109fc9fe45377da0703d0577264fc53a0038d1496416ce4cdfb",
+    "scripts/architecture_experiments.py": "ef515c46c265a6794f595c1ef3b05f977fa0eeae395a29c7701c88e56827148e",
+    "src/features.py": "7d841adb144542293d11d02b101a94d988c4215731c92d8d54831384fe050034",
+    "src/data.py": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde",
+    "src/train.py": "38f87aa7732622b13dc82abbb7c71bc3f2121d439ae445cd284ef6634f852faf",
+    "src/submission.py": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff"
+  }
+}

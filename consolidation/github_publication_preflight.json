@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "staged_files": 1223,
+  "secret_pattern_findings": [],
+  "forbidden_staged_paths": [],
+  "normal_git_blobs_over_100mib": [],
+  "changed_runtime_sources": [],
+  "frozen_release_sha256": "d2306a62b61e7817ccaaa7c2036e4d6019995df72e7a737dc16b73f3a7466803",
+  "source_files_byte_identical": 20,
+  "secret_scan_scope": "High-confidence token/private-key patterns in text files under10MB; not a guarantee against all secrets"
+}

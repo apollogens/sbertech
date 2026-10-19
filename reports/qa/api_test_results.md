@@ -1,0 +1,13 @@
+# Проверка API и надёжности
+
+Оригинальные68 tests PASS; финальные main tests98PASS/0FAIL/0SKIP (`final_pytest.txt`). Отдельный independent pytest backend21PASS/0FAIL/0SKIP (`independent_backend_run.txt`), не складывается с повторными13metric tests как с новыми уникальными тестами. Independent concurrent tests используют реальный параллельный HTTP с Event-barrier, а не только ручную блокировку. Полные случаи/команды/среда — reviewer_backend.md.
+
+Проверены POST multipart both files, missing file422, empty/invalid CSV400, missing columns422, strict/bad dates422, minimum180 inclusive days и длинная история, negative/NaN/Inf/non-numeric/unknown ID/stock conflict422, numeric/aggregation overflow422, stock alias, departments aggregation. API errors содержат строковый detail и code; status400/422→VALIDATION_ERROR,404/409/500→REQUEST_ERROR. Поломанное тело CSV до fix давало200, после400. Явно пустая ячейка и quoted newline остаются допустимыми. Before16pass4fail independent→after21pass.
+
+GET /predict article-only/warehouse-only/both дают704/51136/64 строк на официальном catalog; neither400,unknown404, beforePOST409. GET /predict/all CSV и JSON проверены на562496 rows, content types, exact keys и quantities. Invalid format400. /health при реальной загрузке statusok/model_loadedtrue. Недоступная модель вызывает fail startup; отдельный negative Docker test exit1 ожидаем.
+
+Cache/concurrency: identical request deterministic; concurrent identical/different POST→409 при занятом post_lock; GET старого полного snapshot во время compute, атомарная смена после успеха; failed validation/inference/output validation не заменяют cache. Restart real Docker→409. Поддержан1worker; shared multiprocess cache не реализован и не заявляется.
+
+Два уровня данных: unit/concurrency tests используют synthetic model stub, small training tests реальные tiny models; отдельный `check_backend_independent.py --real` загружает genuine LightGBM на контролируемых180days и выдаёт весь grid. Последняя проверка Docker использует полные реальные очищенные CSV и настоящие веса, не mocks: POST33.768355s,repeat32.386739s,GETCSV0.890852s,GETJSON0.483800s. Все562496 keys validated; offline maxdiff3.5527136788005009e-15,atol1e-7/rtol0,JSON также проверен полностью. Repeat/get CSV bytes identical. Повреждённый CSV через реальный HTTP400,cache сохранён.
+
+Ошибка первого QA Docker probe была в sys.path самого harness, исправлена и прогон повторён; это не production failure и не засчитанный PASS. DeprecationWarning Starlette/httpx остаётся неблокирующим. Signoff Agent C:PASS. Числа и image identification — docker_benchmark.json.

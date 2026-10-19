@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "archive_sha256": "d2306a62b61e7817ccaaa7c2036e4d6019995df72e7a737dc16b73f3a7466803",
+  "archive_bytes": 136818696,
+  "archive_members": 237,
+  "manifest_files_verified": 236,
+  "manifest_sha256": "09627005a60e49f5ca960c9ab6003c55c2bee276c9d89044caee7de57aa7c1f2",
+  "exact_member_set": true,
+  "all_member_sizes_and_hashes_verified": true,
+  "model_manifests_closed_over_release": true,
+  "src_app_match_final_host": true,
+  "active_strategy": "nonton-v1",
+  "candidate_strategy": "equal4:P1",
+  "forbidden_paths": [],
+  "review_scope": "Independent agent C; authored CLI/tests disclosed in main report; no second model fit.",
+  "extracted_files_independently_rehashed": 236,
+  "extracted_execution": {
+    "executed_by": "root; independently inspected logs and actual extracted artifacts by agent C",
+    "import_isolation_passed": true,
+    "package_scope_tests_passed": 222,
+    "workspace_scope_tests_passed": 238,
+    "forecasts": {
+      "nonton-v1": {
+        "rows": 562496,
+        "sha256": "ec1423820e9d13689f38b5d9dd2d82b2eb067f7e06fe123fecab9898991d98c3",
+        "reference_lf_normalized_byte_identical": true
+      },
+      "equal4": {
+        "rows": 562496,
+        "sha256": "2d03b46160c62d33f540259b5f4aba94a932e752c10a48ad8efeb77b9bf159a9",
+        "reference_lf_normalized_byte_identical": true
+      }
+    }
+  },
+  "archive_hash_reverified_after_extracted_execution": true,
+  "package_manifest_closed": true
+}

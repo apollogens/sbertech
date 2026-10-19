@@ -1,0 +1,10 @@
+{
+  "rows": 562496,
+  "dates": 64,
+  "status": "passed",
+  "repeat_prediction_bitwise_equal": true,
+  "original_submission_max_abs_difference": 0.0,
+  "tolerance": 1e-07,
+  "output": "reports\\qa\\submission_verified.csv",
+  "seconds": 7.765903299998172
+}

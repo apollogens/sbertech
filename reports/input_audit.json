@@ -1,0 +1,90 @@
+{
+  "sales": {
+    "path": "C:\\Users\\apollo\\Desktop\\выборка\\sales_dataset_hakaton_train.csv",
+    "bytes": 257634668,
+    "columns": [
+      "date",
+      "composite_division",
+      "cities_name",
+      "warehouse_name",
+      "category_lvl_1",
+      "category_lvl_2",
+      "category_lvl_3",
+      "article",
+      "characteristic",
+      "quantity",
+      "sales_sum",
+      "discount_sum"
+    ],
+    "rows": 1492370,
+    "date_min": "2024-01-01",
+    "date_max": "2026-07-31",
+    "unique_dates": 943,
+    "warehouses": [
+      "warehouse_name_0",
+      "warehouse_name_1",
+      "warehouse_name_10",
+      "warehouse_name_2",
+      "warehouse_name_3",
+      "warehouse_name_4",
+      "warehouse_name_5",
+      "warehouse_name_6",
+      "warehouse_name_7",
+      "warehouse_name_8",
+      "warehouse_name_9"
+    ],
+    "article_count": 799,
+    "observed_pairs": 8777,
+    "cartesian_pairs": 8789,
+    "value_column": "quantity",
+    "minimum": 1.0,
+    "maximum": 200.0,
+    "sum": 1826791.0,
+    "counts": {
+      "negative": 0,
+      "zero": 0
+    },
+    "elapsed_seconds": 5.849,
+    "limitations": "Первичный потоковый аудит: без проверки дублей ключей и синтаксиса дат."
+  },
+  "stock": {
+    "path": "C:\\Users\\apollo\\Desktop\\выборка\\stock_dataset_hakaton_train.csv",
+    "bytes": 295578780,
+    "columns": [
+      "date",
+      "warehouse_name",
+      "article",
+      "stock"
+    ],
+    "rows": 6153988,
+    "date_min": "2023-12-13",
+    "date_max": "2026-07-31",
+    "unique_dates": 962,
+    "warehouses": [
+      "warehouse_name_0",
+      "warehouse_name_1",
+      "warehouse_name_10",
+      "warehouse_name_2",
+      "warehouse_name_3",
+      "warehouse_name_4",
+      "warehouse_name_5",
+      "warehouse_name_6",
+      "warehouse_name_7",
+      "warehouse_name_8",
+      "warehouse_name_9"
+    ],
+    "article_count": 799,
+    "observed_pairs": 8458,
+    "cartesian_pairs": 8789,
+    "value_column": "stock",
+    "minimum": -2.0,
+    "maximum": 1375.0,
+    "sum": 38035376.0,
+    "counts": {
+      "negative": 57,
+      "zero": 3862474
+    },
+    "elapsed_seconds": 19.862,
+    "limitations": "Первичный потоковый аудит: без проверки дублей ключей и синтаксиса дат."
+  }
+}

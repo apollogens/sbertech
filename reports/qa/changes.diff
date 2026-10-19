@@ -1,0 +1,687 @@
+--- before/app/validators.py
++++ after/app/validators.py
+@@ -25,11 +25,20 @@
+     if not content or not content.strip():
+         raise InputError(f"{name}: empty CSV", 400)
+     try:
+-        # Проверяем заголовок до pandas, который переименовывает дубли колонок.
++        # pandas допускает недостающие поля и часть повреждённых кавычек.
++        # Проверяем структуру всех записей до числового/семантического разбора.
+         decoded = content.decode("utf-8-sig")
+-        header = next(csv.reader(io.StringIO(decoded), strict=True))
++        records = csv.reader(io.StringIO(decoded), strict=True)
++        header = next(records)
++        if not header:
++            raise InputError(f"{name}: missing CSV header", 400)
+         if len(header) != len(set(header)):
+             raise InputError(f"{name}: duplicate column names", 400)
++        for row in records:
++            if not row or (len(row) == 1 and not row[0].strip()):
++                continue  # Same blank-line policy as pandas.
++            if len(row) != len(header):
++                raise InputError(f"{name}: inconsistent CSV field count", 400)
+         with warnings.catch_warnings():
+             warnings.simplefilter("error", pd.errors.ParserWarning)
+             frame = pd.read_csv(io.StringIO(decoded), dtype=str, keep_default_na=False, index_col=False)
+@@ -71,7 +80,13 @@
+     numeric = pd.to_numeric(frame[value], errors="coerce")
+     if not np.isfinite(numeric.to_numpy(dtype=float)).all() or (numeric < 0).any():
+         raise InputError(f"{name}: {value} must be finite numeric values >= 0")
++    if (numeric > np.finfo(np.float32).max).any():
++        raise InputError(f"{name}: {value} exceeds supported numeric range")
+     frame[value] = numeric
++    if name == "sales":
++        totals = frame.groupby(["date", "warehouse_name", "article"], observed=True)[value].sum().to_numpy(dtype=float)
++        if not np.isfinite(totals).all() or (totals > np.finfo(np.float32).max).any():
++            raise InputError("sales: aggregated quantity exceeds supported numeric range")
+     if name == "stock":
+         keys = ["date", "warehouse_name", "article"]
+         duplicated = frame.duplicated(keys, keep=False)
+--- before/README.md
++++ after/README.md
+@@ -1,4 +1,8 @@
+ # Прогноз продаж Nonton
++
++Независимый QA-аудит от 18.10.2026: итог и ограничения — [`reports/qa/final_qa_verdict.md`](reports/qa/final_qa_verdict.md). Исправлены строгий разбор тела CSV, проверки числового диапазона, offline-дат/ID, схемы модели, порядка каталога и формы прогноза. Исходные веса и submission сохранены. Проверенный повторный прогноз: `reports/qa/submission_verified.csv`. Предыдущий `nonton_solution.zip` сохранён как исторический артефакт; актуальная QA-поставка — `nonton_solution_qa_verified.zip`.
++
++Для воспроизведения QA установите `requirements-dev.txt`, затем выполните `python -X utf8 -m pytest -q`, `python -X utf8 reports/qa/check_metrics_independent.py`, `python -X utf8 reports/qa/check_temporal_independent.py`, `python -X utf8 -m pytest reports/qa/check_backend_independent.py -q`. Диагностики: `scripts/qa_analysis.py`, `scripts/qa_stock_integrity.py`, `scripts/qa_verify_submission.py`; изолированное повторное обучение фиксированных конфигураций — `scripts/qa_retrain.py`. Команды выполняются локальным Python из `.venv`, как в примерах ниже. QA не заявляет улучшения качества модели.
+ 
+ В проекте обучена единая прямая модель LightGBM Tweedie для 64-дневного прогноза по складам и товарам. Итоговый файл `submission.csv` содержит 562 496 строк на 2026-08-01–2026-10-03. Модель, данные экспериментов, FastAPI и Docker находятся в этой папке. Исходные пользовательские CSV не изменялись.
+ 
+--- before/requirements-dev.txt
++++ after/requirements-dev.txt
+@@ -1,3 +1,5 @@
+ -r requirements.txt
+ pytest==9.1.1
+ httpx==0.28.1
++coverage==7.16.2
++matplotlib==3.11.2
+--- before/scripts/qa_analysis.py
++++ after/scripts/qa_analysis.py
+@@ -0,0 +1,211 @@
++"""Recompute QA diagnostics from preserved historical predictions; never tune them."""
++import argparse
++from collections import Counter
++import hashlib
++import json
++from pathlib import Path
++import sys
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT))
++import numpy as np
++import pandas as pd
++from src.data import load_panel
++from src.features import snapshot
++from src.metrics import compute_metrics
++from src.submission import validate_submission
++
++
++def bias_diagnostics(truth, prediction):
++    actual = truth.astype(np.float64).sum(axis=0)
++    predicted = prediction.astype(np.float64).sum(axis=0)
++    eligible = actual != 0
++    signed = 100 * (predicted[eligible] - actual[eligible]) / np.abs(actual[eligible])
++    absolute = np.abs(signed)
++    return {
++        "series": len(actual), "eligible": int(eligible.sum()), "excluded": int((~eligible).sum()),
++        "official_bias_pct": float(absolute.mean()) if len(absolute) else 0.,
++        "mean_signed_series_bias_pct": float(signed.mean()) if len(signed) else None,
++        "global_signed_volume_bias_pct": float(100 * (predicted.sum() - actual.sum()) / np.abs(actual).sum()) if np.abs(actual).sum() else None,
++        "median_abs_pct": float(np.median(absolute)) if len(absolute) else None,
++        "p75_abs_pct": float(np.quantile(absolute, .75)) if len(absolute) else None,
++        "p90_abs_pct": float(np.quantile(absolute, .90)) if len(absolute) else None,
++        "p95_abs_pct": float(np.quantile(absolute, .95)) if len(absolute) else None,
++        "overforecast_pct": float(100 * (signed > 0).mean()) if len(signed) else None,
++        "underforecast_pct": float(100 * (signed < 0).mean()) if len(signed) else None,
++        "exact_total_pct": float(100 * (signed == 0).mean()) if len(signed) else None,
++    }
++
++
++def table(frame):
++    def value(v):
++        if isinstance(v, (float, np.floating)):
++            return f"{v:.6f}" if np.isfinite(v) else "NOT MEASURABLE"
++        return str(v)
++    return "\n".join(["| " + " | ".join(frame.columns) + " |", "|" + "|".join(["---"] * len(frame.columns)) + "|"] + ["| " + " | ".join(value(v) for v in row) + " |" for row in frame.itertuples(index=False, name=None)])
++
++
++def run(data_dir):
++    out = ROOT / 'reports/qa'
++    out.mkdir(exist_ok=True)
++    panel = load_panel()
++    selected = json.loads((ROOT/'reports/selection_frozen.json').read_text())['winner']
++    origins = [len(panel.dates)-193, len(panel.dates)-129, len(panel.dates)-65]
++    categories = [Counter() for _ in origins]
++    category_counts = Counter()
++    source_rows = 0
++    cols = ['date', 'article', 'category_lvl_1', 'category_lvl_2', 'category_lvl_3']
++    for chunk in pd.read_csv(data_dir/'sales_dataset_hakaton_train.csv', usecols=cols, dtype=str, keep_default_na=False, chunksize=100000):
++        source_rows += len(chunk)
++        for level in cols[2:]:
++            for article, category in chunk[['article', level]].drop_duplicates().itertuples(index=False, name=None):
++                if category:
++                    category_counts[(level, article, category)] = 1
++        for i, origin in enumerate(origins):
++            history = chunk.loc[chunk.date <= str(panel.dates[origin].date())]
++            for (article, category), count in history.groupby(['article', 'category_lvl_1']).size().items():
++                categories[i][(article, category)] += int(count)
++    conflicts = {}
++    for level in cols[2:]:
++        per_article = Counter(article for lvl, article, category in category_counts if lvl == level)
++        conflicts[level] = sum(n > 1 for n in per_article.values())
++
++    horizon_rows, segment_rows, summaries, extreme_rows, baseline_rows = [], [], [], [], []
++    windows = {'1–14': slice(0,14), '15–35': slice(14,35), '36–64': slice(35,64), '57–64': slice(56,64), '1–64': slice(0,64)}
++    for fold, origin in enumerate(origins, 1):
++        saved = np.load(ROOT/f'reports/oof/{selected}_fold{fold}.npz')
++        assert str(saved['origin']) == str(panel.dates[origin].date())
++        prediction = saved['prediction']
++        truth = panel.y[origin+1:origin+65]
++        summary = {'fold': fold, 'origin': str(panel.dates[origin].date()),
++                   'first_date': str(panel.dates[origin+1].date()), 'last_date': str(panel.dates[origin+64].date()),
++                   **compute_metrics(truth,prediction), **bias_diagnostics(truth,prediction)}
++        assert abs(summary['bias'] - summary['official_bias_pct']) < 1e-10
++        summaries.append(summary)
++        for label, window in windows.items():
++            horizon_rows.append({'fold':fold, 'days':label, **compute_metrics(truth[window],prediction[window]), **bias_diagnostics(truth[window],prediction[window])})
++        snap = snapshot(panel, origin)
++        narticles = len(panel.catalogs['articles'])
++        warehouse = np.repeat(panel.catalogs['warehouses'], narticles)
++        articles = np.tile(panel.catalogs['articles'], len(panel.catalogs['warehouses']))
++        mapping = {}
++        for article in panel.catalogs['articles']:
++            options = [(count, category) for (a, category), count in categories[fold-1].items() if a == article]
++            mapping[article] = max(options)[1] if options else 'unknown'
++        category = np.array([mapping[a] for a in articles])
++        volume = snap.mean_180.to_numpy()
++        masks = [('warehouse', w, warehouse == w) for w in np.unique(warehouse)]
++        masks += [('category_lvl_1', c, category == c) for c in np.unique(category)]
++        masks += [('demand', 'intermittent_freq_lt_0.1', snap.freq_180.to_numpy() < .1), ('demand', 'regular_freq_ge_0.1', snap.freq_180.to_numpy() >= .1)]
++        masks += [('volume', 'low_le_historical_median', volume <= np.median(volume)), ('volume', 'high_gt_historical_median', volume > np.median(volume)), ('volume', 'top10pct', volume >= np.quantile(volume,.9))]
++        coverage, zero = snap.stock_coverage.to_numpy(), snap.stock_zero_rate.to_numpy()
++        masks += [('stockout', 'unobserved', coverage == 0), ('stockout', 'observed_zero_rate_le_0.5', (coverage > 0) & (zero <= .5)), ('stockout', 'observed_zero_rate_gt_0.5', (coverage > 0) & (zero > .5))]
++        for kind, name, mask in masks:
++            if mask.any():
++                segment_rows.append({'fold': fold, 'segment_type': kind, 'segment': name, **compute_metrics(truth[:,mask],prediction[:,mask]), **bias_diagnostics(truth[:,mask],prediction[:,mask])})
++        totals, ptotal = truth.astype(float).sum(axis=0), prediction.astype(float).sum(axis=0)
++        eligible_indices = np.flatnonzero(totals != 0)
++        signed = 100 * (ptotal[eligible_indices] - totals[eligible_indices]) / totals[eligible_indices]
++        for direction, indices in [('over', np.argsort(signed)[-5:][::-1]), ('under', np.argsort(signed)[:5])]:
++            for i in indices:
++                index = eligible_indices[i]
++                anon = hashlib.sha256(f'{warehouse[index]}|{articles[index]}'.encode()).hexdigest()[:12]
++                extreme_rows.append({'fold': fold, 'direction': direction, 'anonymized_series_id': anon, 'signed_bias_pct': signed[i], 'actual_total': totals[index], 'predicted_total': ptotal[index]})
++        for name in ['zero','last','mean28','mean90','seasonal56','tsb',selected]:
++            pred = np.load(ROOT/f'reports/oof/{name}_fold{fold}.npz')['prediction']
++            baseline_rows.append({'fold': fold, 'model':name, **compute_metrics(truth,pred), **bias_diagnostics(truth,pred)})
++
++    for name, rows in [('bias_summary',summaries),('horizon_metrics',horizon_rows),('bias_segments',segment_rows),('extreme_series',extreme_rows),('baseline_comparison',baseline_rows)]:
++        pd.DataFrame(rows).to_csv(out/f'{name}.csv',index=False)
++    frame = pd.read_csv(ROOT/'submission.csv',dtype={'date':str,'warehouse_name':str,'article':str})
++    validity = validate_submission(frame,panel.dates[-1],panel.catalogs)
++    # Independent set comparison catches equal-row-count replacement keys.
++    expected = set(pd.MultiIndex.from_product([pd.date_range(panel.dates[-1]+pd.Timedelta(days=1), periods=64).strftime('%Y-%m-%d'), panel.catalogs['warehouses'], panel.catalogs['articles']]))
++    actual = set(frame[['date','warehouse_name','article']].itertuples(index=False,name=None))
++    validity.update(missing_keys=len(expected-actual), unexpected_keys=len(actual-expected), unique_keys=len(actual), first_date=frame.date.min(), last_date=frame.date.max())
++    assert expected == actual
++    original = {key.replace('\\', '/'): value for key, value in json.loads((out/'initial_manifest.json').read_text()).items()}
++    preserved = {}
++    for path in ['submission.csv','submission_baseline.csv','model/lightgbm.txt','model/config.json','model/catalogs.json','nonton_solution.zip']:
++        with (ROOT/path).open('rb') as stream:
++            current = hashlib.file_digest(stream,'sha256').hexdigest()
++        preserved[path] = current == original[path]['sha256']
++        assert preserved[path], path
++    stats = {'source_sales_rows_read': source_rows, 'category_conflicting_articles':conflicts, 'submission':validity, 'preserved_original_hashes':preserved}
++    (out/'analysis_summary.json').write_text(json.dumps(stats,ensure_ascii=False,indent=2),encoding='utf8')
++
++    summary_frame = pd.DataFrame(summaries)
++    holdout = summaries[-1]
++    segments = pd.DataFrame(segment_rows)
++    compact = ['segment','series','eligible','excluded','official_bias_pct','mean_signed_series_bias_pct','global_signed_volume_bias_pct']
++    bias_report = f'''# Независимый анализ Bias
++
++Проверка 18.10.2026. Данные анонимизированы и преобразованы: проценты не являются денежным или физическим отклонением запасов компании.
++
++Для ряда s: `100 * abs(sum(pred_s) - sum(actual_s)) / abs(sum(actual_s))`; затем среднее по рядам с ненулевым actual. Никакого epsilon. Ссылка реализации: `scripts/official_score.py::bias_abs_series,bias_abs`; `src/metrics.py::compute_metrics`. Полностью нулевой набор получает fallback 0% по scorer, что неинформативно.
++
++## Исторические окна и распределение
++
++Folds 1 и 2 использовались для выбора модели/порога; fold 3 — единственный holdout. Здесь сохранённые OOF сверены с реальными наблюдениями. Полный CSV: `bias_summary.csv`.
++
++{table(summary_frame[['fold','first_date','last_date','series','eligible','excluded','official_bias_pct','mean_signed_series_bias_pct','global_signed_volume_bias_pct','median_abs_pct','p75_abs_pct','p90_abs_pct','p95_abs_pct','overforecast_pct','underforecast_pct','exact_total_pct']])}
++
++Mean signed series Bias и global signed volume Bias — отдельные диагностические величины; обе не равны официальному абсолютному Bias. Самые крайние ряды представлены только хешированными ID в `extreme_series.csv`.
++
++## Сегменты holdout
++
++Группы строятся только по истории до origin. Intermittent: доля положительных дней за последние 180 дней <0.1; regular >=0.1. Low/high volume: разделение по медиане исторического среднего. Stockout — доля нулевых остатков среди наблюдавшихся; отсутствие записей выделено отдельно. Категория — наиболее частая category_lvl_1 до cutoff; конфликты категорий по всему train: {conflicts}. Это описательная группировка, не автоматическое изменение категории в модели.
++
++В каждой группе пересчитана официальная формула на полном 64-дневном горизонте. Нулевые ряды исключаются внутри группы. Это совпадает с усреднением eligible full-horizon ratios для выбранных рядов; при нарезке дней знаменатели пересчитываются.
++
++{table(segments.loc[(segments.fold==3)&(segments.segment_type=='warehouse'),compact])}
++
++{table(segments.loc[(segments.fold==3)&(segments.segment_type!='warehouse'),compact])}
++
++## Горизонты holdout
++
++Для каждого диапазона дней заново рассчитаны actual/predicted totals и eligible-ряды; это не среднее 64-дневных Bias. Диапазон 57–64 входит в 36–64.
++
++{table(pd.DataFrame(horizon_rows).query('fold==3')[['days','eligible','excluded','official_bias_pct','mean_signed_series_bias_pct','global_signed_volume_bias_pct']])}
++
++## Сравнение с базовыми моделями
++
++{table(pd.DataFrame(baseline_rows).query('fold==3')[['model','smape','wape','rmse','bias','rmsle','mean_signed_series_bias_pct','global_signed_volume_bias_pct']])}
++
++Изменения QA затрагивают проверки и отклонение повреждённого ввода, не признаки, обучение, веса или порог. Для допустимого исходного ввода метрики до/после одинаковы; улучшение Bias не заявляется. Порог 0.25 имеет компромисс: на selection хуже Bias/RMSE/RMSLE относительно raw Tweedie, лучше SMAPE/WAPE. Другие варианты не подбирались по holdout.
++
++Будущий Bias на submission 2026-08-01–2026-10-03: **NOT MEASURABLE** — скрытые фактические продажи не предоставлены. Нет доказательства устойчивости по множеству независимых holdout.
++'''
++    (out/'bias_analysis.md').write_text(bias_report,encoding='utf8')
++    horizon_report = f'''# Качество по горизонту
++
++Фактические результаты выбранной модели `{selected}`. Полные числа: `horizon_metrics.csv`; данные получены из сохранённых OOF и исторической панели. Дни в каждой группе заново проходят все официальные формулы, в том числе исключение zero/zero в SMAPE и zero-actual рядов в Bias.
++
++{table(pd.DataFrame(horizon_rows)[['fold','days','smape','wape','rmse','bias','rmsle']])}
++
++Это прямая horizon-conditioned модель: предыдущие прогнозы не поступают обратно в lag. Отсутствие рекурсивного накопления не гарантирует точность дня 64. Различия окон включают календарь и состав ненулевого спроса; это не изолированное измерение дрейфа. Значения не обязаны монотонно ухудшаться с горизонтом. Единственный untouched holdout — fold3; folds1/2 участвовали в выборе. По этим данным нельзя отделить дрейф распределения от случайной вариации или заявить статистически устойчивый прирост.
++
++Проверки sparse/high-volume/stockout/warehouses/category — `bias_segments.csv` и `bias_analysis.md`. График `horizon_quality.png` построен из вычисленных чисел. В `bias_distribution.png` показано распределение signed Bias holdout eligible рядов, крайние значения визуально обрезаны до [-100,300] исключительно на рисунке; CSV и процентили не клиппируются. Полное представление правого хвоста — `bias_tail.png`.
++'''
++    (out/'horizon_analysis.md').write_text(horizon_report,encoding='utf8')
++    import matplotlib
++    matplotlib.use('Agg')
++    import matplotlib.pyplot as plt
++    hframe = pd.DataFrame(horizon_rows)
++    fig, axes = plt.subplots(1,3,figsize=(12,3.5))
++    for ax, metric in zip(axes,['smape','wape','bias']):
++        for fold in [1,2,3]:
++            rows = hframe.loc[(hframe.fold==fold)&hframe.days.isin(['1–14','15–35','36–64','57–64'])]
++            ax.plot(rows.days,rows[metric],marker='o',label=f'Срез {fold}')
++        ax.set_title(metric.upper()+' (%)');ax.set_xlabel('Дни горизонта');ax.grid(alpha=.2)
++    axes[-1].legend();fig.tight_layout();fig.savefig(out/'horizon_quality.png',dpi=160);plt.close(fig)
++    origin = origins[-1];truth=panel.y[origin+1:origin+65].astype(float)
++    pred=np.load(ROOT/f'reports/oof/{selected}_fold3.npz')['prediction'].astype(float)
++    eligible=truth.sum(axis=0)!=0;signed=100*(pred.sum(axis=0)[eligible]-truth.sum(axis=0)[eligible])/truth.sum(axis=0)[eligible]
++    fig,ax=plt.subplots(figsize=(8,3.5));ax.hist(np.clip(signed,-100,300),bins=60);ax.set_xlabel('Signed Bias по ряду (%), клиппирование только графика');ax.set_ylabel('Число рядов');fig.tight_layout();fig.savefig(out/'bias_distribution.png',dpi=160);plt.close(fig)
++    fig,ax=plt.subplots(figsize=(8,3.5));ax.plot(np.arange(1,len(signed)+1)/len(signed)*100,np.sort(np.abs(signed)));ax.set_yscale('symlog',linthresh=1);ax.set_xlabel('Перцентиль рядов');ax.set_ylabel('Абсолютный Bias (%), symlog');ax.grid(alpha=.2);fig.tight_layout();fig.savefig(out/'bias_tail.png',dpi=160);plt.close(fig)
++    print(json.dumps({'holdout':holdout,**stats},ensure_ascii=False,indent=2))
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser();parser.add_argument('--data-dir',type=Path,default=Path(r'C:\Users\apollo\Desktop\выборка'));args=parser.parse_args();run(args.data_dir)
+--- before/scripts/qa_retrain.py
++++ after/scripts/qa_retrain.py
+@@ -0,0 +1,67 @@
++"""Isolated reproduction of frozen fits; no tuning and no production overwrites."""
++from pathlib import Path
++import gc
++import hashlib
++import json
++import sys
++import threading
++from time import perf_counter
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++import numpy as np
++import pandas as pd
++import psutil
++from src.data import load_panel
++from src.train import train_model
++from src.predict import predict_panel
++from src.metrics import compute_metrics
++
++
++def run():
++    out=Path('reports/qa/retrained');out.mkdir(exist_ok=True)
++    panel=load_panel();last=len(panel.dates)-1
++    selected=json.loads(Path('reports/selection_frozen.json').read_text())
++    assert selected['winner']=='lgb_tweedie_z0.25' and selected['rounds']==220
++    plan=[('lgb_l2_fold1',last-192,'regression',0.,'reports/oof/lgb_l2_fold1.txt'),
++          ('lgb_l2_fold2',last-128,'regression',0.,'reports/oof/lgb_l2_fold2.txt'),
++          ('lgb_tweedie_fold1',last-192,'tweedie',0.,'reports/oof/lgb_tweedie_fold1.txt'),
++          ('lgb_tweedie_fold2',last-128,'tweedie',0.,'reports/oof/lgb_tweedie_fold2.txt'),
++          ('lgb_tweedie_z0.25_fold3',last-64,'tweedie',.25,'reports/oof/selected_holdout.txt'),
++          ('final',last,'tweedie',.25,'model/lightgbm.txt')]
++    records=[];peak=[0];stop=threading.Event()
++    def monitor():
++        process=psutil.Process()
++        while not stop.wait(.05):peak[0]=max(peak[0],process.memory_info().rss)
++    thread=threading.Thread(target=monitor,daemon=True);thread.start();started=perf_counter()
++    try:
++        for name,cutoff,objective,threshold,reference in plan:
++            start=perf_counter();bundle=train_model(panel,cutoff,objective,selected['rounds']);fit_seconds=perf_counter()-start
++            bundle['config']['zero_threshold']=threshold
++            target=out/f'{name}.txt';bundle['model'].save_model(str(target))
++            new_hash=hashlib.sha256(target.read_bytes()).hexdigest()
++            original_hash=hashlib.sha256(Path(reference).read_bytes()).hexdigest()
++            assert new_hash==original_hash,(name,'model bytes differ')
++            prediction=predict_panel(panel,cutoff,bundle)
++            if name=='final':
++                original=pd.read_csv('submission.csv').quantity.to_numpy().reshape(64,-1)
++                tolerance=1e-7
++                assert bundle['config']==json.loads(Path('model/config.json').read_text())
++            else:
++                original=np.load(f'reports/oof/{name}.npz')['prediction']
++                tolerance=0.
++            delta=float(np.abs(prediction-original).max());assert delta<=tolerance
++            record={'name':name,'cutoff':str(panel.dates[cutoff].date()),'fit_seconds':fit_seconds,
++                    'training_rows':bundle['config']['training_rows'],'trees':bundle['model'].num_trees(),
++                    'model_sha256':new_hash,'original_sha256':original_hash,'model_bytes_identical':True,
++                    'prediction_max_abs_difference':delta,'prediction_tolerance':tolerance}
++            if name!='final':record['metrics']=compute_metrics(panel.y[cutoff+1:cutoff+65],prediction)
++            records.append(record);print(json.dumps(record),flush=True)
++            del bundle,prediction,original;gc.collect()
++    finally:stop.set();thread.join()
++    result={'fits':records,'seconds':perf_counter()-started,'peak_process_rss_bytes':peak[0],
++            'passed':len(records),'failed':0,'skipped':0,'source':'verified cache from raw sales and stock',
++            'scope':'same installed builds, 4 threads, fixed seed/rounds/objectives/threshold; no new selection'}
++    Path('reports/qa/retraining_reproduction.json').write_text(json.dumps(result,indent=2),encoding='utf8')
++    print(json.dumps({k:v for k,v in result.items() if k!='fits'}),flush=True)
++
++
++if __name__=='__main__':run()
+--- before/scripts/qa_stock_integrity.py
++++ after/scripts/qa_stock_integrity.py
+@@ -0,0 +1,53 @@
++"""Independent bounded-memory raw stock reconstruction against the saved panel."""
++from pathlib import Path
++import hashlib
++import json
++import sys
++from time import perf_counter
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++import numpy as np
++import pandas as pd
++from src.data import load_panel
++
++
++def run():
++    start=perf_counter(); panel=load_panel(); out=Path('reports/qa')
++    source=Path(r'C:\Users\apollo\Desktop\выборка\stock_dataset_hakaton_train.csv')
++    historical=json.loads(Path('reports/input_audit.json').read_text())['stock']
++    days=pd.date_range(historical['date_min'],historical['date_max'])
++    width=len(panel.pairs); shape=(len(days),width)
++    rawmin=np.full(shape,np.inf);rawmax=np.full(shape,-np.inf)
++    cleanmin=np.full(shape,np.inf);cleanmax=np.full(shape,-np.inf)
++    count=np.zeros(shape,dtype=np.int32)
++    rows=negative=zero=0; total=0.
++    for chunk in pd.read_csv(source,dtype={'date':str,'warehouse_name':str,'article':str},chunksize=150000):
++        assert chunk.date.str.fullmatch(r'\d{4}-\d{2}-\d{2}').all()
++        dates=pd.to_datetime(chunk.date,format='%Y-%m-%d',errors='raise')
++        di=days.get_indexer(dates)
++        pi=panel.pairs.get_indexer(pd.MultiIndex.from_frame(chunk[['warehouse_name','article']]))
++        assert (di>=0).all() and (pi>=0).all()
++        values=pd.to_numeric(chunk.stock,errors='raise').to_numpy(dtype=float)
++        assert np.isfinite(values).all()
++        rows+=len(values);negative+=int((values<0).sum());zero+=int((values==0).sum());total+=values.sum()
++        np.add.at(count,(di,pi),1)
++        np.minimum.at(rawmin,(di,pi),values);np.maximum.at(rawmax,(di,pi),values)
++        keep=values>=0
++        np.minimum.at(cleanmin,(di[keep],pi[keep]),values[keep]);np.maximum.at(cleanmax,(di[keep],pi[keep]),values[keep])
++    observed=count>0; clean=np.isfinite(cleanmin)&(cleanmin==cleanmax)
++    dates_index=days.get_indexer(panel.dates);assert (dates_index>=0).all()
++    independent=np.where(clean,cleanmin,np.nan)[dates_index].astype(np.float32)
++    np.testing.assert_array_equal(independent,panel.stock)
++    with source.open('rb') as stream: digest=hashlib.file_digest(stream,'sha256').hexdigest()
++    initial=json.loads(Path('reports/input_manifest.json').read_text())
++    assert digest==initial[str(source)]['sha256']
++    result={'raw_rows':rows,'negative_rows':negative,'zero_rows':zero,'sum':float(total),
++            'raw_unique_keys':int(observed.sum()),'duplicate_key_rows':int((count-np.minimum(count,1)).sum()),
++            'raw_conflicting_keys':int((observed&(rawmin!=rawmax)).sum()),
++            'clean_unique_keys':int(clean.sum()),'conflicts_after_negative_removal':int((np.isfinite(cleanmin)&(cleanmin!=cleanmax)).sum()),
++            'observed_pairs':int(observed.any(axis=0).sum()),'calendar_days':len(days),'date_min':str(days[0].date()),'date_max':str(days[-1].date()),
++            'panel_stock_bitwise_equal':True,'raw_source_sha256':digest,'seconds':perf_counter()-start}
++    (out/'stock_integrity.json').write_text(json.dumps(result,indent=2),encoding='utf8')
++    print(json.dumps(result,indent=2))
++
++
++if __name__=='__main__':run()
+--- before/scripts/qa_verify_submission.py
++++ after/scripts/qa_verify_submission.py
+@@ -0,0 +1,36 @@
++"""Fresh real artifact inference, two-run determinism and preserved output parity."""
++from pathlib import Path
++import json
++import sys
++from time import perf_counter
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++import numpy as np
++import pandas as pd
++from src.data import load_panel
++from src.predict import load_bundle,predict_panel
++from src.submission import forecast_frame,write_submission,validate_submission
++
++
++def run():
++    start=perf_counter();panel=load_panel();bundle=load_bundle()
++    assert panel.catalogs==bundle['catalogs']
++    origin=len(panel.dates)-1
++    pred=predict_panel(panel,origin,bundle)
++    repeat=predict_panel(panel,origin,bundle)
++    np.testing.assert_array_equal(pred,repeat)
++    frame=forecast_frame(pred,panel.dates[origin],panel.catalogs)
++    target=Path('reports/qa/submission_verified.csv')
++    write_submission(frame,target,panel.dates[origin],panel.catalogs)
++    actual=pd.read_csv(target,dtype={'date':str,'warehouse_name':str,'article':str})
++    original=pd.read_csv('submission.csv',dtype={'date':str,'warehouse_name':str,'article':str})
++    assert actual.iloc[:,:3].equals(original.iloc[:,:3])
++    difference=float(np.abs(actual.quantity-original.quantity).max())
++    assert difference<=1e-7
++    result={**validate_submission(actual,panel.dates[origin],panel.catalogs),
++            'repeat_prediction_bitwise_equal':True,'original_submission_max_abs_difference':difference,
++            'tolerance':1e-7,'output':str(target),'seconds':perf_counter()-start}
++    Path('reports/qa/fresh_inference.json').write_text(json.dumps(result,indent=2),encoding='utf8')
++    print(json.dumps(result,indent=2))
++
++
++if __name__=='__main__':run()
+--- before/src/data.py
++++ after/src/data.py
+@@ -58,9 +58,16 @@
+         required = {"date", "warehouse_name", "article", value}
+         if not required.issubset(frame.columns):
+             raise ValueError(f"Missing columns: {required - set(frame.columns)}")
++        if not pd.api.types.is_datetime64_any_dtype(frame["date"]):
++            if not frame["date"].astype(str).str.fullmatch(r"\d{4}-\d{2}-\d{2}").all():
++                raise ValueError("Invalid date format; expected YYYY-MM-DD")
+         frame["date"] = pd.to_datetime(frame["date"], format="%Y-%m-%d", errors="raise")
++        if not frame["date"].eq(frame["date"].dt.normalize()).all():
++            raise ValueError("Invalid date: time of day is not supported")
+         if frame[["date", "warehouse_name", "article"]].isna().any().any():
+             raise ValueError("Missing key")
++        if any(frame[key].astype(str).str.strip().eq("").any() for key in ("warehouse_name", "article")):
++            raise ValueError("Empty key identifier")
+         frame[value] = pd.to_numeric(frame[value], errors="raise")
+         if not np.isfinite(frame[value].to_numpy(dtype=float)).all():
+             raise ValueError(f"Nonfinite {value}")
+@@ -86,6 +93,11 @@
+         raise ValueError("Conflicting stock duplicates")
+     stock = stock.drop_duplicates(keys)
+     sales = sales.groupby(keys, observed=True, as_index=False).quantity.sum()
++    # Finite float64 inputs can overflow during aggregation or the float32 cast.
++    for frame, value in [(sales, "quantity"), (stock, "stock")]:
++        values = frame[value].to_numpy(dtype=float)
++        if not np.isfinite(values).all() or (np.abs(values) > np.finfo(np.float32).max).any():
++            raise ValueError(f"{value} is outside the finite float32 range after aggregation")
+     dates = pd.date_range(sales.date.min(), cutoff, freq="D")
+     pairs = pd.MultiIndex.from_product([catalogs["warehouses"], catalogs["articles"]])
+     width = len(pairs)
+--- before/src/predict.py
++++ after/src/predict.py
+@@ -14,7 +14,19 @@
+     config = json.loads((path / "config.json").read_text(encoding="utf-8"))
+     if config["schema_version"] != 1 or config["horizon"] != 64:
+         raise ValueError("Unsupported model schema")
++    if config["kind"] not in ("lightgbm", "baseline"):
++        raise ValueError("Unsupported model kind")
++    if config["kind"] == "baseline" and config.get("baseline") not in ("zero", "last", "mean28", "mean90", "seasonal56", "tsb"):
++        raise ValueError("Unsupported baseline kind")
++    threshold = config.get("zero_threshold", 0.)
++    if not isinstance(threshold, (int, float)) or not np.isfinite(threshold) or threshold < 0:
++        raise ValueError("Invalid zero threshold")
+     bundle = {"config": config, "catalogs": json.loads((path / "catalogs.json").read_text(encoding="utf-8"))}
++    for key in ("warehouses", "articles"):
++        values = bundle["catalogs"][key]
++        # The training encoder always uses catalog_from_sales' sorted order.
++        if not values or any(not isinstance(v, str) or not v.strip() for v in values) or len(set(values)) != len(values) or values != sorted(values):
++            raise ValueError(f"Invalid {key} catalog")
+     if config["kind"] == "lightgbm":
+         bundle["model"] = lgb.Booster(model_file=str(path / "lightgbm.txt"))
+         if bundle["model"].feature_name() != config["features"]:
+--- before/src/submission.py
++++ after/src/submission.py
+@@ -4,6 +4,10 @@
+ 
+ 
+ def forecast_frame(predictions, origin, catalogs):
++    predictions = np.asarray(predictions)
++    expected_shape = (64, len(catalogs["warehouses"]) * len(catalogs["articles"]))
++    if predictions.shape != expected_shape:
++        raise ValueError(f"Wrong prediction shape: expected {expected_shape}, got {predictions.shape}")
+     dates = pd.date_range(pd.Timestamp(origin) + pd.Timedelta(days=1), periods=64)
+     grid = pd.MultiIndex.from_product([dates, catalogs["warehouses"], catalogs["articles"]],
+                                       names=["date", "warehouse_name", "article"])
+--- before/tests/test_api.py
++++ after/tests/test_api.py
+@@ -190,3 +190,32 @@
+     client, _, sales, stock = setup
+     sales.loc[0, "date"] = "2025-1-1"
+     assert post(client, sales, stock).status_code == 422
++
++
++@pytest.mark.parametrize("kind", ["sales", "stock", "aggregated_sales"])
++def test_unsupported_numeric_range_is_422_and_preserves_cache(setup, kind):
++    client, _, sales, stock = setup
++    good = post(client, sales, stock)
++    if kind == "sales":
++        sales.loc[0, "quantity"] = 1e40
++    elif kind == "stock":
++        stock.loc[0, "stock"] = 1e40
++    else:
++        sales.quantity = 2e38
++        sales = pd.concat([sales, sales], ignore_index=True)
++    response = post(client, sales, stock)
++    assert response.status_code == 422
++    assert response.json()["code"] == "VALIDATION_ERROR"
++    assert client.get("/predict/all").content == good.content
++
++
++def test_truncated_metadata_csv_record_is_400(setup):
++    client, _, sales, stock = setup
++    lines = sales.to_csv(index=False).splitlines()
++    lines[1] = lines[1].rsplit(",", 1)[0]
++    response = client.post("/predict", files={
++        "sales": ("sales.csv", "\n".join(lines).encode()),
++        "stock": ("stock.csv", stock.to_csv(index=False).encode()),
++    })
++    assert response.status_code == 400
++    assert response.json()["code"] == "VALIDATION_ERROR"
+--- before/tests/test_qa_regressions.py
++++ after/tests/test_qa_regressions.py
+@@ -0,0 +1,146 @@
++"""Controlled regressions discovered during the independent QA audit."""
++import json
++
++import numpy as np
++import pandas as pd
++import pytest
++
++from src.data import build_panel
++from src.predict import load_bundle
++from src.submission import forecast_frame
++
++
++def inputs():
++    sales = pd.DataFrame({"date": ["2025-01-01", "2025-06-30"],
++                          "warehouse_name": "w", "article": "a", "quantity": [1., 2.]})
++    return sales, sales.drop(columns="quantity").assign(stock=1.)
++
++
++@pytest.mark.parametrize("date", ["2025-1-1", "2025-01-01 00:00:00"])
++def test_offline_requires_strict_date_format(date):
++    sales, stock = inputs()
++    sales.loc[0, "date"] = date
++    with pytest.raises(ValueError, match="date|format"):
++        build_panel(sales, stock)
++
++
++@pytest.mark.parametrize("kind", ["sales", "stock"])
++def test_panel_rejects_float32_overflow(kind):
++    sales, stock = inputs()
++    (sales if kind == "sales" else stock).loc[0, "quantity" if kind == "sales" else "stock"] = 1e40
++    with pytest.raises(ValueError, match="range|finite|overflow"):
++        build_panel(sales, stock)
++
++
++def test_panel_rejects_aggregation_overflow():
++    sales, stock = inputs()
++    sales.quantity = 2e38
++    sales = pd.concat([sales, sales], ignore_index=True)
++    with pytest.raises(ValueError, match="range|finite|overflow"):
++        build_panel(sales, stock)
++
++
++@pytest.mark.parametrize("identifier", ["", "   "])
++def test_offline_rejects_empty_identifier(identifier):
++    sales, stock = inputs()
++    sales.warehouse_name = stock.warehouse_name = identifier
++    with pytest.raises(ValueError, match="key|identifier"):
++        build_panel(sales, stock)
++
++
++def test_forecast_rejects_wrong_axes_with_correct_element_count():
++    catalogs = {"warehouses": ["w"], "articles": ["a", "b"]}
++    with pytest.raises(ValueError, match="shape"):
++        forecast_frame(np.arange(128).reshape(2, 64), "2025-06-30", catalogs)
++
++
++def test_unknown_model_kind_fails_at_load(tmp_path):
++    (tmp_path / "config.json").write_text(json.dumps({"schema_version": 1, "horizon": 64, "kind": "typo"}))
++    (tmp_path / "catalogs.json").write_text(json.dumps({"warehouses": ["w"], "articles": ["a"]}))
++    with pytest.raises(ValueError, match="kind"):
++        load_bundle(tmp_path)
++
++
++def test_required_bias_and_smape_independent_fixtures():
++    from src.metrics import compute_metrics, smape_include_zero_zero
++    truth = np.array([[0., 2., 0.], [10., 2., 0.]])
++    prediction = np.array([[0., 4., 1.], [8., 4., 1.]])
++    # Hand calculation: series A -20%, B +100%; C excluded -> 60%.
++    assert compute_metrics(truth, prediction)["bias"] == pytest.approx(60.)
++    sparse = np.array([[0.], [0.], [0.], [10.]])
++    assert compute_metrics(sparse, np.zeros_like(sparse))["smape"] == 200.
++    assert smape_include_zero_zero(sparse, np.zeros_like(sparse)) == 50.
++
++
++@pytest.mark.parametrize("payload", [b'a,b,c\n1,2\n', b'a,b\n"broken"suffix,2\n'])
++def test_csv_body_structure_is_strict(payload):
++    from app.validators import InputError, read_csv
++    with pytest.raises(InputError):
++        read_csv(payload, "sales")
++
++
++def test_bundle_rejects_reordered_categorical_mapping(tmp_path):
++    (tmp_path / "config.json").write_text(json.dumps({"schema_version": 1, "horizon": 64, "kind": "baseline", "baseline": "zero"}))
++    (tmp_path / "catalogs.json").write_text(json.dumps({"warehouses": ["w"], "articles": ["b", "a"]}))
++    with pytest.raises(ValueError, match="catalog"):
++        load_bundle(tmp_path)
++
++
++@pytest.mark.parametrize("actual,predicted,expected", [
++    ([1., 2.], [1., 2.], 0.),
++    ([1., 2.], [2., 4.], 100.),
++    ([1., 2.], [0., 0.], 100.),
++    ([0., 0.], [4., 5.], 0.),  # Official fallback, not an informative Bias.
++    ([1e-12, 0.], [2e-12, 0.], 100.),
++    ([1., 0.], [1000., 0.], 99900.),
++    ([0., 10.], [10., 0.], 0.),
++])
++def test_controlled_bias_edge_cases(actual, predicted, expected):
++    from src.metrics import compute_metrics
++    truth = np.array(actual)[:, None]
++    prediction = np.array(predicted)[:, None]
++    assert compute_metrics(truth, prediction)["bias"] == pytest.approx(expected, abs=1e-10)
++
++
++def test_bias_series_permutation_and_all_excluded_diagnostics():
++    from scripts.qa_analysis import bias_diagnostics
++    from src.metrics import compute_metrics
++    truth = np.array([[0., 2., 0.], [10., 2., 0.]])
++    prediction = np.array([[0., 4., 1.], [8., 4., 1.]])
++    expected = compute_metrics(truth, prediction)
++    assert compute_metrics(truth[:, [2, 0, 1]], prediction[:, [2, 0, 1]]) == pytest.approx(expected)
++    diagnostics = bias_diagnostics(truth, prediction)
++    assert diagnostics["official_bias_pct"] == 60
++    assert diagnostics["mean_signed_series_bias_pct"] == 40
++    assert diagnostics["global_signed_volume_bias_pct"] == pytest.approx(100 * 4 / 14)
++    assert diagnostics["excluded"] == 1
++    empty = bias_diagnostics(np.zeros((2, 3)), np.ones((2, 3)))
++    assert empty["official_bias_pct"] == 0
++    assert empty["mean_signed_series_bias_pct"] is None
++    assert empty["global_signed_volume_bias_pct"] is None
++    assert empty["excluded"] == 3
++
++
++def test_rank_ties_reproduce_original_evaluator_order_dependence():
++    from scripts.official_score import METRIC_WEIGHTS, normalize_rank
++    identical = dict.fromkeys(METRIC_WEIGHTS, 1.)
++    ranked = normalize_rank({"a": identical, "b": identical})
++    reversed_rank = normalize_rank({"b": identical, "a": identical})
++    assert set(ranked["a"].values()) == {0.}
++    assert set(ranked["b"].values()) == {1.}
++    assert reversed_rank["a"] == ranked["b"]
++
++
++@pytest.mark.parametrize("problem", ["missing", "duplicate", "nan", "inf"])
++def test_submission_key_and_finite_guards(problem):
++    from src.submission import validate_submission
++    catalogs = {"warehouses": ["w"], "articles": ["a", "b"]}
++    frame = forecast_frame(np.ones((64, 2)), "2025-06-30", catalogs)
++    if problem == "missing":
++        frame = frame.iloc[1:]
++    elif problem == "duplicate":
++        frame.iloc[0] = frame.iloc[1]
++    else:
++        frame.loc[0, "quantity"] = np.nan if problem == "nan" else np.inf
++    with pytest.raises(ValueError):
++        validate_submission(frame, "2025-06-30", catalogs)

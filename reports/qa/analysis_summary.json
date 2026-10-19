@@ -1,0 +1,26 @@
+{
+  "source_sales_rows_read": 1492370,
+  "category_conflicting_articles": {
+    "category_lvl_1": 0,
+    "category_lvl_2": 0,
+    "category_lvl_3": 0
+  },
+  "submission": {
+    "rows": 562496,
+    "dates": 64,
+    "status": "passed",
+    "missing_keys": 0,
+    "unexpected_keys": 0,
+    "unique_keys": 562496,
+    "first_date": "2026-08-01",
+    "last_date": "2026-10-03"
+  },
+  "preserved_original_hashes": {
+    "submission.csv": true,
+    "submission_baseline.csv": true,
+    "model/lightgbm.txt": true,
+    "model/config.json": true,
+    "model/catalogs.json": true,
+    "nonton_solution.zip": true
+  }
+}

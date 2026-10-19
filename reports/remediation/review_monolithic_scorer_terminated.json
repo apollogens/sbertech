@@ -1,0 +1,8 @@
+﻿{
+    "action":  "terminated",
+    "reason":  "Освобождение CPU для изолированного полноразмерного API-бенчмарка; монолитный scorer не завершён",
+    "process_id":  28316,
+    "cpu_seconds":  562.6875,
+    "elapsed_seconds":  565.02748939999992,
+    "command":  "\"C:\\Users\\apollo\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" reports/remediation/review_oof_scoring.py"
+}

@@ -1,0 +1,31 @@
+# Preserve the exact bytes required by source-bound model manifests.
+* -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text
+bundles/**/*.txt filter=lfs diff=lfs merge=lfs -text
+integration/models/**/*.txt filter=lfs diff=lfs merge=lfs -text
+consolidation/docker_equal4/forecast.csv filter=lfs diff=lfs merge=lfs -text
+consolidation/docker_equal4/reference.csv filter=lfs diff=lfs merge=lfs -text
+consolidation/docker_nonton-v1/forecast.csv filter=lfs diff=lfs merge=lfs -text
+consolidation/docker_nonton-v1/reference.csv filter=lfs diff=lfs merge=lfs -text
+consolidation/independent_review_evidence/submission.csv filter=lfs diff=lfs merge=lfs -text
+consolidation/regression/equal4.csv filter=lfs diff=lfs merge=lfs -text
+consolidation/regression/nonton-v1.csv filter=lfs diff=lfs merge=lfs -text
+consolidation/submission.csv filter=lfs diff=lfs merge=lfs -text
+integration/release/api.csv filter=lfs diff=lfs merge=lfs -text
+integration/release/archive_equal4.csv filter=lfs diff=lfs merge=lfs -text
+integration/release/container_forecast.csv filter=lfs diff=lfs merge=lfs -text
+integration/release/experimental180/D_P1.csv filter=lfs diff=lfs merge=lfs -text
+integration/release/experimental180/equal4_P1.csv filter=lfs diff=lfs merge=lfs -text
+integration/release/experimental180/incumbent_P1.csv filter=lfs diff=lfs merge=lfs -text
+integration/release/submission.csv filter=lfs diff=lfs merge=lfs -text
+reports/container_forecast.csv filter=lfs diff=lfs merge=lfs -text
+reports/qa/submission_verified.csv filter=lfs diff=lfs merge=lfs -text
+reports/remediation/backend_fullsize/cached.csv filter=lfs diff=lfs merge=lfs -text
+reports/remediation/backend_fullsize/during.csv filter=lfs diff=lfs merge=lfs -text
+reports/remediation/backend_fullsize/first.csv filter=lfs diff=lfs merge=lfs -text
+reports/remediation/backend_fullsize/second.csv filter=lfs diff=lfs merge=lfs -text
+reports/remediation/docker_forecast.csv filter=lfs diff=lfs merge=lfs -text
+research/scoring_audit/weighted_rank_sensitivity.csv filter=lfs diff=lfs merge=lfs -text
+submission.csv filter=lfs diff=lfs merge=lfs -text
+submission_baseline.csv filter=lfs diff=lfs merge=lfs -text

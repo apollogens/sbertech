@@ -1,0 +1,10 @@
+﻿nonton-consolidated-nonton-v1-20261019203340
+{
+  "status": "passed",
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_version": "nonton-v1"
+  },
+  "empty_cache_after_restart": true
+}

@@ -1,0 +1,52 @@
+{
+  "sales": {
+    "rows": 1492370,
+    "duplicate_key_rows": 521693,
+    "negative_values": 0,
+    "missing_by_column": {
+      "date": 0,
+      "composite_division": 0,
+      "cities_name": 0,
+      "warehouse_name": 0,
+      "category_lvl_1": 0,
+      "category_lvl_2": 0,
+      "category_lvl_3": 1491432,
+      "article": 0,
+      "characteristic": 0,
+      "quantity": 0,
+      "sales_sum": 3,
+      "discount_sum": 316955
+    },
+    "calendar_unique_days": 943
+  },
+  "stock": {
+    "rows": 6153988,
+    "duplicate_key_rows": 1269790,
+    "negative_values": 57,
+    "missing_by_column": {
+      "date": 0,
+      "warehouse_name": 0,
+      "article": 0,
+      "stock": 0
+    },
+    "calendar_unique_days": 962,
+    "conflicting_duplicate_keys": 804588,
+    "clean_rows": 4079621
+  },
+  "panel": {
+    "shape": [
+      943,
+      8789
+    ],
+    "zero_fraction": 0.8828820176382147,
+    "stock_missing_fraction": 0.510950676198328,
+    "sales_missing_dates": 0,
+    "pair_positive_day_quantiles": [
+      0.0,
+      0.02545068928950159,
+      0.05408271474019088,
+      0.14422057264050903,
+      0.9713679745493107
+    ]
+  }
+}

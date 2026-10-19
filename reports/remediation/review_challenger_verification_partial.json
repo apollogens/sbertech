@@ -1,0 +1,8 @@
+{
+  "status": "partial_scope_passed",
+  "rows": 62,
+  "all_prediction_hashes_valid": true,
+  "max_metric_or_score_difference": 5.684341886080802e-14,
+  "seconds": 7.793173000001843,
+  "limitations": "Проверены только существующие записи; полный candidate matrix и rank не проверены"
+}

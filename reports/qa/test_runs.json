@@ -1,0 +1,63 @@
+{
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "baseline": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m pytest -q",
+    "passed": 68,
+    "failed": 0,
+    "skipped": 0
+  },
+  "final": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m coverage run --append --branch --source=src,app,scripts --data-file=reports/qa/.coverage -m pytest -q",
+    "passed": 98,
+    "failed": 0,
+    "skipped": 0
+  },
+  "independent_backend": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m pytest reports/qa/check_backend_independent.py -q",
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0
+  },
+  "independent_temporal": {
+    "command": ".venv/Scripts/python.exe -X utf8 reports/qa/check_temporal_independent.py",
+    "passed_assertion_groups": 11,
+    "failed": 0,
+    "skipped": 0
+  },
+  "independent_metrics": {
+    "command": ".venv/Scripts/python.exe -X utf8 reports/qa/check_metrics_independent.py",
+    "verified_oof_files": 31,
+    "failed": 0
+  },
+  "isolated_fits": {
+    "command": ".venv/Scripts/python.exe -X utf8 scripts/qa_retrain.py",
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0
+  },
+  "coverage_core": {
+    "covered_lines": 500,
+    "lines": 550,
+    "covered_branches": 164,
+    "branches": 196
+  },
+  "coverage_all_instrumented": {
+    "covered_lines": 797,
+    "num_statements": 1440,
+    "percent_covered": 56.52412280701754,
+    "percent_covered_display": "57",
+    "missing_lines": 643,
+    "excluded_lines": 0,
+    "percent_statements_covered": 55.34722222222222,
+    "percent_statements_covered_display": "55",
+    "num_branches": 384,
+    "num_partial_branches": 26,
+    "covered_branches": 234,
+    "missing_branches": 150,
+    "percent_branches_covered": 60.9375,
+    "percent_branches_covered_display": "61"
+  }
+}

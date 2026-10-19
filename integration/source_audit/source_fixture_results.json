@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-19",
+  "numpy_version": "2.5.4",
+  "source": "C:\\Users\\apollo\\AppData\\Local\\Temp\\forecast-comparison-7371efa0b4b14184a05e39ed9dc127b8",
+  "remote": "https://github.com/filipp880/forecast-64-v1.git",
+  "commit": "f8a8c6e60edaf12af2fd351e290c35e6875afea0",
+  "tracked_license_candidates": [],
+  "source_hashes": {
+    "app/models/base.py": "4dbcb21cefea8815093b05c317009af86d126b0332b4a3efae0c7f14192492b7",
+    "app/models/blend_model.py": "1cc973860215606919a19b9941f51d53a6aeb60690b80e1fcd83c04880f77f87",
+    "app/models/hurdle_model.py": "737f74182273975c1d17b36a792b9a23096fa878bcb3f28cb075e25efd9099bb",
+    "app/models/lightgbm_model.py": "bfc10af284cfbd53fcabe18819893775140d003df343c6695fc488ff7e150dd7",
+    "app/features.py": "911f9c55cb6f62c9d3c09f0389890703436e401ac55a095bccc9bec9cc08ab29",
+    "app/predictor.py": "a0264a1d42e0e2128255fe7ab941c992d3e53feb4a50f9ac2c76107ea59fc2b4",
+    "train.py": "3c83b58be200f1fadb0e4d4fd736ad525571736e54b1fae0c47f38326257db59",
+    "evaluate.py": "13eadb72b88d1bfb93626aeae715655d0695a69b111454d3a8e86e77ff0917b3",
+    "requirements.txt": "f58b4f1562a4518134bd553fad02fbd75ff553a8c80a4efc7934174b3d031cd5",
+    "model/config.json": "67e0318c99e856896c9a39800289841bd9715d031b3011fcd33e7129c6c06b20",
+    "README.md": "c5b0c0a62b2bb6f476158c6f413d5bcaea15bb2c6a54f303806e68a18b81fe03"
+  },
+  "fixture_assertions_passed": true,
+  "rounding": {
+    "input": [
+      -2.0,
+      0.0,
+      0.01,
+      0.24999999999999997,
+      0.25,
+      0.25000000000000006,
+      0.49999999999999994,
+      0.5,
+      0.5000000000000001,
+      1.5,
+      2.5,
+      3.5,
+      1000000000000.0
+    ],
+    "threshold_025_then_rint": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      2.0,
+      2.0,
+      4.0,
+      1000000000000.0
+    ],
+    "half_even": [
+      0.0,
+      2.0,
+      2.0,
+      4.0
+    ],
+    "nonfinite_result": [
+      "NaN",
+      "+Infinity",
+      0
+    ]
+  },
+  "hurdle_probability": [
+    0.49,
+    0.5,
+    0.9
+  ],
+  "hurdle_magnitude": [
+    10,
+    10,
+    10
+  ],
+  "hurdle_prediction": [
+    0.0,
+    10.0,
+    10.0
+  ],
+  "blend_prediction": [
+    0.7,
+    2.6999999999999997,
+    4.7
+  ],
+  "order_fixture": {
+    "round_after_mean": [
+      1.0
+    ],
+    "mean_after_round": [
+      0.5
+    ]
+  },
+  "archives": {
+    "D:\\SberTech\\nonton_solution.zip": {
+      "sha256": "9ae0a2dddfa971adbfa151109e6814c4e2867cf28690a2b80af2ac91a8be7715",
+      "entries": 62,
+      "source_indicators": [
+        "docs/requirements_matrix.md",
+        "README.md",
+        "requirements-dev.txt",
+        "requirements.lock",
+        "requirements.txt"
+      ]
+    },
+    "D:\\SberTech\\nonton_solution_qa_verified.zip": {
+      "sha256": "473a1567be7ac84df90c7c3262be9bbaba20ddb3eacb20956faab3f6f8fe16c0",
+      "entries": 172,
+      "source_indicators": [
+        "docs/requirements_matrix.md",
+        "README.md",
+        "requirements-dev.txt",
+        "requirements.lock",
+        "requirements.txt"
+      ]
+    },
+    "D:\\SberTech\\nonton_solution_remediated_verified.zip": {
+      "sha256": "b56525b5144d77aa7411922db790fe519452e7d5ba33d6dd2fedb7006398325a",
+      "entries": 409,
+      "source_indicators": [
+        "README.md",
+        "docs/requirements_matrix.md",
+        "reports/remediation/statsforecast_requirements.lock",
+        "requirements-dev.txt",
+        "requirements.lock",
+        "requirements.txt",
+        "src/remediation_models.py",
+        "tests/test_remediation_models.py"
+      ]
+    },
+    "C:\\Users\\apollo\\Desktop\\выборка\\hakaton.zip": {
+      "sha256": "3fa9f5c80296328a571f80875d77dfb0b03f97859c96f59b75e86f4bcf8f3529",
+      "entries": 2,
+      "source_indicators": []
+    }
+  },
+  "limitations": [
+    "Only one relevant local Nonton external repository identified; no assertion that M5/Favorita are the two requested user downloads",
+    "Only selected inspected numeric AST functions executed with synthetic stubs; no upstream training, setup, pickle loading or full serving replay"
+  ],
+  "tracked_source_tree_clean": true,
+  "supplemental_research_clones": {
+    "M5": {
+      "commit": "18e4e776cfa1ded3b387fabe008c6c2c44922007",
+      "remote": "https://github.com/Mcompetitions/M5-methods.git",
+      "file": "research\\sources\\M5-methods\\Code of Winning Methods\\A1\\3. code\\3. predict\\3-1. Final ensemble.py",
+      "sha256": "850ee579268dd9f7614d7193020681ad08ceb70dbc94ef78c08e5d10b32552a0",
+      "fixture_F1_after_key_alignment": [
+        3.5,
+        7.0
+      ]
+    },
+    "Favorita": {
+      "commit": "6c6cf2f7e69ac32ae989cdf348b9bcf272fb78e9",
+      "remote": "https://github.com/LenzDu/Kaggle-Competition-Favorita.git",
+      "file": "research\\sources\\Favorita-LenzDu\\Utils.py",
+      "sha256": "19d678b3e32ebd2abc76ece64e86fea840658138bf380bf70001f22186fc80b2",
+      "fixture_csv_prefix": [
+        "id,unit_sales",
+        "0,0.1235",
+        "1,1000.0000"
+      ],
+      "license_sha256": "aaf8ecb0546e4baf704a1a1aad7c062b309d87b62edc85c0acb71eed2fbf7e5a"
+    }
+  }
+}

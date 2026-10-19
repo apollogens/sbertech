@@ -1,0 +1,8 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "dependencies": "annotated-doc==0.0.5\nannotated-types==0.8.0\nanyio==4.15.1\ncertifi==2026.7.22\nclick==8.5.0\ncolorama==0.4.6\ncontourpy==1.4.0\ncoverage==7.16.2\ncycler==0.12.1\nfastapi==0.146.0\nfonttools==4.67.0\nh11==0.16.0\nhttpcore==1.0.9\nhttpx==0.28.1\nidna==3.20\niniconfig==2.3.1\nkiwisolver==1.5.1\nlightgbm==4.7.0\nmatplotlib==3.11.2\nnarwhals==2.27.1\nnumpy==2.5.4\nopentelemetry-api==1.45.1\npackaging==26.3\npandas==3.0.6\npillow==13.0.0\npluggy==1.7.0\npsutil==7.2.2\npydantic==2.14.1\npydantic_core==2.50.1\nPygments==2.21.0\npyparsing==3.3.3\npytest==9.1.1\npython-dateutil==2.9.0.post0\npython-multipart==0.0.32\nscipy==1.18.1\nsix==1.17.0\nstarlette==1.8.0\ntyping-inspection==0.4.4\ntyping_extensions==4.16.0\ntzdata==2026.5\nuvicorn==0.54.0\n",
+  "logical_cpus": 16,
+  "physical_cpus": 8,
+  "ram_bytes": 16964587520
+}

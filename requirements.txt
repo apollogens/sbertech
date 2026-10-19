@@ -1,0 +1,8 @@
+# Python 3.12; serving and offline inference
+numpy==2.5.4
+pandas==3.0.6
+lightgbm==4.7.0
+fastapi==0.146.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+starlette==1.8.0

@@ -1,0 +1,16 @@
+SNAPSHOT=C:\Users\apollo\AppData\Local\Temp\nonton-review-baseline-xtm_vtfz
+COMMAND=D:\SberTech\.venv\Scripts\python.exe ['reports/qa/check_temporal_independent.py']
+{"test": "future_append_new_id_fixed_cutoff_row_order_sales_aggregation", "status": "PASS", "seconds": 0.09}
+{"test": "stock_duplicate_negative_and_shuffle_policy", "status": "PASS", "seconds": 0.018}
+{"test": "training_boundary_label_alignment_feature_parity", "status": "PASS", "seconds": 0.191}
+{"test": "tiny_saved_model_future_parameter_invariance", "status": "PASS", "seconds": 0.179}
+{"test": "calendar_leap_year_and_year_boundaries", "status": "PASS", "seconds": 0.031}
+{"test": "real_artifact_schema_catalog_and_training_origins", "status": "PASS", "seconds": 0.214}
+{"test": "root_guards_and_catalog_remap_rejection", "status": "PASS", "seconds": 0.04}
+{"test": "real_model_future_perturbation_invariance", "status": "PASS", "seconds": 5.194}
+{"test": "real_all_18_baseline_oof_reproduction", "status": "PASS", "seconds": 0.406}
+{"test": "real_ml_3fold_oof_reproduction_and_full_vs_180", "status": "PASS", "seconds": 22.731}
+{"test": "future_catalog_expansion_and_actual_fold_catalogs", "status": "PASS", "seconds": 5.012}
+{"passed": 11, "failed": 0, "report": "reports/qa/reviewer_leakage.md"}
+
+PROCESS_EXIT_CODE=0

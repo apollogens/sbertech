@@ -1,0 +1,53 @@
+{
+  "tool": "uv 0.12.6",
+  "python_target": "3.12",
+  "universal": true,
+  "installed_existing_venv": false,
+  "locks": {
+    "requirements-dev.lock": {
+      "sha256": "ca010e9eb4adacb09f4249ec293592acc336aa3941890d306dba5f3167700df1",
+      "total_pins": 38,
+      "installed_counts_excluding_pip": {
+        "Windows": 38,
+        "Linux": 36
+      },
+      "baseline_version_changes": [],
+      "new_packages": {
+        "deptry": "0.25.1",
+        "requirements-parser": "0.13.1",
+        "ruff": "0.17.1",
+        "tomli": "2.5.0"
+      }
+    },
+    "requirements-research.lock": {
+      "sha256": "dc23c05b132d75d2d300403d6b31a04d8f94d7834473ed9992fac2174eebf2a5",
+      "total_pins": 32,
+      "installed_counts_excluding_pip": {
+        "Windows": 32,
+        "Linux": 31
+      },
+      "baseline_version_changes": [],
+      "new_packages": {}
+    },
+    "requirements-training.lock": {
+      "sha256": "7141710cd4a761032bf731e172471b0bd31413df22faecd71f8aab3c8d831428",
+      "total_pins": 24,
+      "installed_counts_excluding_pip": {
+        "Windows": 24,
+        "Linux": 23
+      },
+      "baseline_version_changes": [],
+      "new_packages": {}
+    },
+    "requirements.lock": {
+      "sha256": "2db9530b21b5c0cff8644208057b4fa6d0462d01afcbe643135d29d678dae14c",
+      "total_pins": 23,
+      "installed_counts_excluding_pip": {
+        "Windows": 23,
+        "Linux": 22
+      },
+      "baseline_version_changes": [],
+      "new_packages": {}
+    }
+  }
+}

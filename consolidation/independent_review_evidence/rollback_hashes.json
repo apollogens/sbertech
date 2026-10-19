@@ -1,0 +1,10 @@
+{
+  "snapshot_sha256_verified": true,
+  "extracted_member_hashes_verified": 1003,
+  "independent_replay_performed": false,
+  "root_replay_reference": {
+    "status": "passed",
+    "rows": 562496,
+    "max_abs_difference": 3.552713678800501e-15
+  }
+}

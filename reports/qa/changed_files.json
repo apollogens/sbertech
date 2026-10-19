@@ -1,0 +1,74 @@
+[
+  {
+    "path": "app/validators.py",
+    "status": "modified",
+    "before_sha256": "f692c3815108e1b4947bb1b342eb952c899923b356c0fe428dba0dca772125fa",
+    "after_sha256": "9937c2f5ee667c141d5e562b0e68f706e34d5640f40184113d2c51c4269a6eb6"
+  },
+  {
+    "path": "README.md",
+    "status": "modified",
+    "before_sha256": "77e4449787edc0a344e561fff2e0fa971d8f2deffadd9357ae6f9b7cba66c1f1",
+    "after_sha256": "90823238c1a854da13642fee2d418476b965fe0cf7019873b0a238fed8820da9"
+  },
+  {
+    "path": "requirements-dev.txt",
+    "status": "modified",
+    "before_sha256": "d8051f37f45da475d5b993671bf8c0e87d980a5bcd5ca9aa3e7e3ce99079e1d3",
+    "after_sha256": "7fa95bc65c9817dde70f4447279423ac5346e768493f70ec954f72fa5c856677"
+  },
+  {
+    "path": "scripts/qa_analysis.py",
+    "status": "added",
+    "before_sha256": null,
+    "after_sha256": "2f543a461338807184caa876c4c3187f841a226346a62d0bac288d001d2ef026"
+  },
+  {
+    "path": "scripts/qa_retrain.py",
+    "status": "added",
+    "before_sha256": null,
+    "after_sha256": "d46a77f60e8295fec1dbc062ea7590ef292da03a0110c9fc14954381f7170111"
+  },
+  {
+    "path": "scripts/qa_stock_integrity.py",
+    "status": "added",
+    "before_sha256": null,
+    "after_sha256": "d2a732f1917857c45a3ba58bea5b642d964d7f76e19e4fd362f91433cf9d32ed"
+  },
+  {
+    "path": "scripts/qa_verify_submission.py",
+    "status": "added",
+    "before_sha256": null,
+    "after_sha256": "1974e86c9ff6f28ede142236c1d53fb0390a6ade40741535dea98f474a655d33"
+  },
+  {
+    "path": "src/data.py",
+    "status": "modified",
+    "before_sha256": "186fca76fa6257746cd1d49bf94446a800f24086557f10e3b864cfd643e05665",
+    "after_sha256": "f13639b8e6c67b4ab0106abd1dc16b5ab191bd2c3b06f04fc4e94f0a6b88ebde"
+  },
+  {
+    "path": "src/predict.py",
+    "status": "modified",
+    "before_sha256": "ecc4766d89386bcb4e098eef0943f1dc1f9642cc9d08d7c9bc4567818baef459",
+    "after_sha256": "67c7a36178f2bfb1bbb7d465fa4aee98e977ab969c26bfd4687f2fc97a20bc47"
+  },
+  {
+    "path": "src/submission.py",
+    "status": "modified",
+    "before_sha256": "fde5c292ba4e0b831ce8c5de075622697190efc5bbc83d35a0c269dfa8e92302",
+    "after_sha256": "97626f668108143ececc488d9ed113964035a2e27f5d49d888a6cacfb3b6b6ff"
+  },
+  {
+    "path": "tests/test_api.py",
+    "status": "modified",
+    "before_sha256": "f02344e9fce18931c3abf07a06b4797f505cf159fca12e86d8dc2ea5c7b3ddcf",
+    "after_sha256": "a40a9e34d94687d6fb8e52a2aede5c40f109bcf8bde07a12f55e140b503fb596"
+  },
+  {
+    "path": "tests/test_qa_regressions.py",
+    "status": "added",
+    "before_sha256": null,
+    "after_sha256": "25710991e5dc74948904070431ca12188e4ae98c9fbf945d223c14eca8d9cc94"
+  }
+]

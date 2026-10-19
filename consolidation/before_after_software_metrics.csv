@@ -1,0 +1,6 @@
+measure,before,after,scope
+runtime_packages_windows_excluding_pip,33,23,resolved mixed old lock versus runtime-only new lock
+explicit_regression_cases,193,238,same 193 old cases plus45 new
+separate_component_boosters,3,3,unchanged model architecture; S shares D/W
+duplicate_release_adapters_active,6,0,six ledger entries archived; historical originals preserved
+legacy_helper_file_lines,425,250,four rewritten historical files only; excludes new runtime and validation code

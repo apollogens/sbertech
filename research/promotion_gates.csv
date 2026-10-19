@@ -1,0 +1,7 @@
+model,smape_better_windows,bias_better_windows,all_mean_metrics_improve,promotion_gate
+article_topdown,0,4,False,False
+article_topdown_z0.25,0,2,False,False
+weekly_allocation,0,4,False,False
+weekly_allocation_z0.25,4,4,False,False
+weekly_direct_shape,0,4,False,False
+weekly_direct_shape_z0.25,4,4,False,False

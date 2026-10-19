@@ -1,0 +1,19 @@
+﻿{
+  "status": "passed",
+  "rows": 562496,
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_version": "nonton-v1"
+  },
+  "post_seconds": 34.375978207,
+  "get_csv_seconds": 1.0162275929999964,
+  "get_filtered_seconds": 0.03890792500001794,
+  "get_json_seconds": 0.5177922010000202,
+  "offline_container_max_abs_difference": 3.552713678800501e-15,
+  "container_csv_sha256": "10cd625f921ef958a5626ff733005343a5996919963d5e81a183ea18b908bd8e",
+  "cgroup_memory_peak_bytes": 3810914304,
+  "cpu_max": "400000 100000",
+  "memory_max": "6442450944",
+  "network_mode": "none"
+}

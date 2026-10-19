@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "history_days": 180,
+  "results": [
+    {
+      "strategy": "nonton-v1",
+      "rows": 562496,
+      "load_seconds": 0.020619700007955544,
+      "inference_seconds": 4.883137600001646,
+      "max_abs_difference": 3.552713678800501e-15,
+      "csv_byte_identical": true,
+      "sha256": "354ae527536640ce4e56012e233f3ead679e616ea51f1d2a6f423014b681377a",
+      "loaded_models": [
+        "daily"
+      ]
+    },
+    {
+      "strategy": "equal4",
+      "rows": 562496,
+      "load_seconds": 2.3574261000030674,
+      "inference_seconds": 13.525359200008097,
+      "max_abs_difference": 3.552713678800501e-15,
+      "csv_byte_identical": true,
+      "sha256": "310d000f954f48e389661954c9a3d2ac38815d603bae7c9cfc40409015fbd164",
+      "loaded_models": [
+        "article",
+        "daily",
+        "weekly"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "released_model": "nonton-v1",
+  "production_changed": false,
+  "production_bundle_id": "9267e65f0ca9e62b636d185fe7731a71b4e24a8b5110fa830701d5beb0d0f50a",
+  "experimental_model": "nonton-integration-experimental-v1",
+  "experimental_promoted": false,
+  "successful_historical_fits": 15,
+  "successful_final_experimental_fits": 3,
+  "failed_attempts_before_metrics": 1,
+  "candidate_origin_predictions": 215,
+  "source_identification": {
+    "required": 2,
+    "verified_user_repositories": 1,
+    "missing_second": true
+  },
+  "unresolved": [
+    "leaderboard normalization/ties/SMAPE ambiguity",
+    "no untouched final test",
+    "large experimental categorical bitset artifacts"
+  ],
+  "files": {
+    "submission.csv": {
+      "bytes": 28767600,
+      "sha256": "57cf81142dc312c87230a02d48d9d9714263d50f454dfb8470cd275a872abf0d"
+    },
+    "nonton_solution_remediated_verified.zip": {
+      "bytes": 246181627,
+      "sha256": "b56525b5144d77aa7411922db790fe519452e7d5ba33d6dd2fedb7006398325a"
+    },
+    "model\\manifest.json": {
+      "bytes": 39568,
+      "sha256": "20b2ee9e10b77d17e538789c503eb6595efd7a7fbad10cc1da05c896696e8805"
+    },
+    "integration\\release\\submission.csv": {
+      "bytes": 29958995,
+      "sha256": "dd8c2b34b1a7900a7392dc427b8eae7116f0f49828693942c925d47342f61dc1"
+    },
+    "integration\\release\\pre_integration_snapshot.zip": {
+      "bytes": 695549893,
+      "sha256": "e9d505e4d2deb622897e3a7e4d9936e342696bd878efeec3f7f9e30d2dd9a548"
+    },
+    "integration\\nonton_experimental_verified.zip": {
+      "bytes": 4294969,
+      "sha256": "b1dcfbbe07b9bca9f4f5adf2b27612d730532b20af842a1a1afb0fb39bf8c5ca"
+    },
+    "integration\\models\\final_experimental\\manifest.json": {
+      "bytes": 1194,
+      "sha256": "61d3a833a9087cf638fb18980b66da9ed6ea2c28a718cb20689eb020f7262107"
+    },
+    "integration\\models\\final_experimental\\config.json": {
+      "bytes": 110720,
+      "sha256": "e65858fd77c3923a5347ff29711b2ec5e49782bb16c21e44f6fdae3aca5d17b9"
+    },
+    "integration\\executed_protocol.json": {
+      "bytes": 1756,
+      "sha256": "fa75f626a9a9811063581ec726efc5ee42f95afb5ab6b2c7379b1da384444ad1"
+    },
+    "integration\\learned_weights.json": {
+      "bytes": 533,
+      "sha256": "125b88719baaea6bb42322a296b15cbce85510cb3fd15b81d018a7572ee895ca"
+    }
+  },
+  "release_test_evidence": "integration/release_tests.md",
+  "independent_evidence": "integration/independent_verification.md",
+  "archive_extraction_smoke": {
+    "status": "passed",
+    "archive_sha256": "b1dcfbbe07b9bca9f4f5adf2b27612d730532b20af842a1a1afb0fb39bf8c5ca",
+    "output_sha256": "310d000f954f48e389661954c9a3d2ac38815d603bae7c9cfc40409015fbd164",
+    "matches_original_workspace": true,
+    "extracted_source": "D:\\SberTech\\integration\\release\\extracted_experimental_560367c5",
+    "production": false,
+    "cli": {
+      "candidate": "equal4:P1",
+      "rows": 562496,
+      "seconds": 17.923177699994994,
+      "sha256": "310d000f954f48e389661954c9a3d2ac38815d603bae7c9cfc40409015fbd164",
+      "production": false
+    }
+  }
+}

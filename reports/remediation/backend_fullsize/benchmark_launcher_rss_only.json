@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "model_id": "9267e65f0ca9e62b636d185fe7731a71b4e24a8b5110fa830701d5beb0d0f50a",
+  "rows": 562496,
+  "date_min": "2026-08-01",
+  "date_max": "2026-10-03",
+  "input_sha256": {
+    "sales": "73e04d9c495dfb9f28e2daed2d9e97b9e6fc4252bfbd734a758fd6ba4a3434b8",
+    "stock": "15e33cfaa114a7d642d27c6e1abae35e41aad087a8f4261535e7f11acc6a7e17"
+  },
+  "post_seconds": 36.824355799999466,
+  "replacement_post_seconds": 33.61917840000024,
+  "concurrent_post_status": 409,
+  "failed_post_status": 400,
+  "cache_versions": [
+    "1",
+    "2"
+  ],
+  "during_get_matches_previous": true,
+  "repeated_post_byte_identical": true,
+  "failed_post_preserves_cache": true,
+  "max_abs_offline_difference": 0.0,
+  "peak_server_rss_bytes": 4055040,
+  "network": "local loopback; no external service"
+}

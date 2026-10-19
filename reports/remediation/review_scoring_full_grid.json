@@ -1,0 +1,46 @@
+{
+  "official_full_grid_metrics": {
+    "smape": 158.6871617213434,
+    "wape": 80.43006567684449,
+    "rmse": 0.8662841487164723,
+    "bias": 80.56555726626279,
+    "rmsle": 0.3126153218811934
+  },
+  "written_spec_diagnostic_smape": 47.08955612112918,
+  "scorer_execution": "Exact original per-series primitives + original global primitives; known full-grid aggregation",
+  "grid_rows": 562496,
+  "eligible_series": 7752,
+  "excluded_series": 1037,
+  "mean_signed_series_bias": -62.834934485864856,
+  "global_signed_volume_bias": -19.105414359749904,
+  "median_absolute_bias": 100.0,
+  "p90_absolute_bias": 100.0,
+  "p95_absolute_bias": 100.0,
+  "positive_actual_zero_forecast_series": 5078,
+  "oof_files": 31,
+  "unique_origins": [
+    "2026-01-20",
+    "2026-03-25",
+    "2026-05-28"
+  ],
+  "per_origin_counts": {
+    "2026-01-20": 12,
+    "2026-03-25": 12,
+    "2026-05-28": 7
+  },
+  "source_provenance": {
+    "C:\\Users\\apollo\\Desktop\\\u0432\u044b\u0431\u043e\u0440\u043a\u0430\\markdown hakaton.md": {
+      "bytes": 53187,
+      "sha256": "2739c3b674bcce805aab6e51f94b0f0806b1816d1e03ea172cc5a2eceff73e07"
+    },
+    "C:\\Users\\apollo\\Desktop\\\u0432\u044b\u0431\u043e\u0440\u043a\u0430\\sales_dataset_hakaton_train.csv": {
+      "bytes": 257634668,
+      "sha256": "34fe562dc1e0742aac1387d71ae20711e2f533fb56bbf34ce6363318e59a8e6b"
+    },
+    "C:\\Users\\apollo\\Desktop\\\u0432\u044b\u0431\u043e\u0440\u043a\u0430\\stock_dataset_hakaton_train.csv": {
+      "bytes": 295578780,
+      "sha256": "d744cac7f82fb14ec42e12818f6257c07392ea315f050355d357d3865ec8b166"
+    }
+  },
+  "seconds": 1.241497300001356
+}

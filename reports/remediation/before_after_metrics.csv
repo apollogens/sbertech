@@ -1,0 +1,6 @@
+metric,before,after,difference,relative_difference_pct,period,eligible_bias_series,before_version,after_version,decision
+smape,158.6871617213434,158.6871617213434,0.0,0.0,2026-05-29–2026-07-31,7752,nonton-v1 original,nonton-v1 traceable bundle,incumbent retained; no quality improvement claimed
+wape,80.43006567684449,80.43006567684449,0.0,0.0,2026-05-29–2026-07-31,7752,nonton-v1 original,nonton-v1 traceable bundle,incumbent retained; no quality improvement claimed
+rmse,0.8662841487164723,0.8662841487164723,0.0,0.0,2026-05-29–2026-07-31,7752,nonton-v1 original,nonton-v1 traceable bundle,incumbent retained; no quality improvement claimed
+bias,80.5655572662628,80.5655572662628,0.0,0.0,2026-05-29–2026-07-31,7752,nonton-v1 original,nonton-v1 traceable bundle,incumbent retained; no quality improvement claimed
+rmsle,0.3126153218811934,0.3126153218811934,0.0,0.0,2026-05-29–2026-07-31,7752,nonton-v1 original,nonton-v1 traceable bundle,incumbent retained; no quality improvement claimed
